@@ -141,6 +141,7 @@ messages:
   multimeter: '&bStored Energy: &3%stored% &b/ &3%capacity%'
   piglin-barter: '&4You cannot barter with piglins using Slimefun items'
   bee-suit-slow-fall: '&eYour Bee Wings will help you to get back to the ground safe and slow'
+  not-craftable: '&4%item% &cis not craftable!'
 
   multi-tool:
     mode-change: '&b%device% mode changed to: &9%mode%'

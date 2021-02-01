@@ -110,6 +110,7 @@ public class SlimefunItem implements Placeable {
     protected boolean disenchantable = true;
     protected boolean hidden = false;
     protected boolean useableInWorkbench = false;
+    protected boolean craftable = true;
 
     private Optional<String> wikiURL = Optional.empty();
 
@@ -432,6 +433,7 @@ public class SlimefunItem implements Placeable {
                 SlimefunPlugin.getItemCfg().setDefaultValue(id + ".hide-in-guide", hidden);
                 SlimefunPlugin.getItemCfg().setDefaultValue(id + ".allow-enchanting", enchantable);
                 SlimefunPlugin.getItemCfg().setDefaultValue(id + ".allow-disenchanting", disenchantable);
+                SlimefunPlugin.getItemCfg().setDefaultValue(id + ".can-be-crafted", craftable);
 
                 // Load all item settings
                 for (ItemSetting<?> setting : itemSettings) {
@@ -454,6 +456,7 @@ public class SlimefunItem implements Placeable {
                 hidden = SlimefunPlugin.getItemCfg().getBoolean(id + ".hide-in-guide");
                 enchantable = SlimefunPlugin.getItemCfg().getBoolean(id + ".allow-enchanting");
                 disenchantable = SlimefunPlugin.getItemCfg().getBoolean(id + ".allow-disenchanting");
+                craftable = SlimefunPlugin.getItemCfg().getBoolean(id + ".can-be-crafted");
             } else if (this instanceof VanillaItem) {
                 state = ItemState.VANILLA_FALLBACK;
             } else {
@@ -710,6 +713,27 @@ public class SlimefunItem implements Placeable {
         this.useableInWorkbench = useable;
 
         return this;
+    }
+
+    /**
+     * This method returns whether or not this {@link SlimefunItem} is allowed to be used crafted.
+     *
+     * @see #setUseableInWorkbench(boolean)
+     *
+     * @return Whether this {@link SlimefunItem} may be used in a Workbench.
+     */
+    public boolean isCraftable() {
+        return this.craftable;
+    }
+
+    /**
+     * This sets whether or not this {@link SlimefunItem} is allowed to be crafted.
+     *
+     * @param craftable
+     *            Whether this {@link SlimefunItem} should be craftable.
+     */
+    public void setCraftable(boolean craftable) {
+        this.craftable = craftable;
     }
 
     /**

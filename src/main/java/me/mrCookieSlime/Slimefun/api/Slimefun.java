@@ -118,6 +118,53 @@ public final class Slimefun {
     }
 
     /**
+     * Checks if this player can craft this item.
+     *
+     * @param p
+     *          The player who is trying to craft the item.
+     * @param item
+     *          The item which is being crafted.
+     * @param message
+     *          Whether a message should be sent to the player or not.
+     *
+     * @return <code>true</code> if the item is a {@link SlimefunItem} and can be crafted.
+     *         <code>false otherwise</code>
+     */
+    public static boolean canBeCrafted(Player p, ItemStack item, boolean message) {
+        SlimefunItem slimefunItem = SlimefunItem.getByItem(item);
+
+        if (slimefunItem != null) {
+            return canBeCrafted(p, slimefunItem, message);
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Checks if this player can craft this item.
+     *
+     * @param p
+     *          The player who is trying to craft the item.
+     * @param item
+     *          The item which is being crafted.
+     * @param message
+     *          Whether a message should be sent to the player or not.
+     *
+     * @return <code>true</code> if the {@link SlimefunItem} and can be crafted.
+     *         <code>false otherwise</code>
+     */
+    public static boolean canBeCrafted(Player p, SlimefunItem item, boolean message) {
+        if (!item.isCraftable()) {
+            if (message) {
+                SlimefunPlugin.getLocalization().sendMessage(p, "messages.not-craftable", true,
+                    msg -> msg.replace("%item%", item.getId()));
+            }
+            return false;
+        }
+        return true;
+    }
+
+    /**
      * Checks if this item is enabled in the world this player is in.
      *
      * @param p
