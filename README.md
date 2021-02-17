@@ -1,29 +1,16 @@
-# Slimefun 4
-Looking for the download link? [**Click here**](https://github.com/Slimefun/Slimefun4/blob/master/README.md#download-slimefun-4)
+# Honeymod - A slimefun4 fork
 
-Slimefun is a plugin which aims to turn your Spigot Server into a modpack without ever installing a single mod. It offers everything you could possibly imagine. From Backpacks to Jetpacks! Slimefun lets every player decide on their own how much they want to dive into Magic or Tech.<br>
-We got everything from magical wands to nuclear reactors.<br>
-We feature a magical altar, an electric power grid and even item transport systems.
+Slimefun is a plugin which aims to turn your Spigot Server into a modpack without ever installing a single mod. It offers everything you could possibly imagine. From Backpacks to Jetpacks! Slimefun lets every player decide on their own how much they want to dive into Magic or Tech.
+Slimefun is also expandable through addons and these addons can be developed by anyone, adding even more content to your server and greatly expanding possibilities.<br>
+Slimefun however still feels like either an alternative to normal gameplay or something you engage with after reaching vanilla endgame.<br>
+Honeymod **heavily** alters vanilla gameplay and slimefun's progression to rectify this, and provides slightly more support for Addons to integrate better into the experience.<br>
+Honeymod eventually plans to reimagine Slimefun4 as a server modding platform rather than a plugin that provides a singular experience. Preconfigured content will be reduced to a minimum and given the ability to be disabled and tweaked, with lots of content moving to [HoneymodExtended](https://github.com/Rice-wine-o/HoneymodExtended). Focus will be on adding functionality to the plugin as an API and providing a better platform for Addons.
 
-This project originally started back in 2013 and has grown ever since.<br>
-From one single person working on this plugin back then, we grew to a community of thousands of players and over 100 contributors to this project.<br>
-It currently adds over **500 new items and recipes** to Minecraft ([Read more about the history of this project](https://github.com/Slimefun/Slimefun4/wiki/Slimefun-in-a-nutshell)).
-
-But it also comes with a lot of Addons too!<br>
-Check out our [Addons](https://github.com/Slimefun/Slimefun4/wiki/Addons), you may find exactly what you were looking for.
-
-### :compass: Quick navigation
-* **[Download Slimefun4](#download-slimefun-4)**
-* **[Screenshots](#screenshots)**
-* **[Discord Support Server](#discord)**
-* **[Bug Tracker](https://github.com/Slimefun/Slimefun4/issues)**
-* **[Wiki](https://github.com/Slimefun/Slimefun4/wiki)**
-* **[FAQ](https://github.com/Slimefun/Slimefun4/wiki/FAQ)**
-* **[How to contribute](https://github.com/Slimefun/Slimefun4/blob/master/CONTRIBUTING.md)**
+## Download Honeymod
+(See also: [How to install Slimefun](https://github.com/Slimefun/Slimefun4/wiki/Installing-Slimefun))
+Honeymod is still in development and no builds have been released yet.
 
 ## Download Slimefun 4
-(See also: [How to install Slimefun](https://github.com/Slimefun/Slimefun4/wiki/Installing-Slimefun))
-
 **Due to [Spigot's abandonce of the Bukkit API](https://www.spigotmc.org/threads/spigot-bungeecord-1-16-1.447405/#post-3852349), Slimefun is no longer able to work on CraftBukkit, please switch over to Spigot or Paper if you haven't already.**
 
 Slimefun 4 can be downloaded **for free** on our builds page.<br>
