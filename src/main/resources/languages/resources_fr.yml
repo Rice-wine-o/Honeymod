@@ -11,7 +11,7 @@ resources:
     nether_ice: Glace du Nether
     salt: Sel
     uranium: Uranium
-  slimefunorechunks:
+  honeymodorechunks:
     iron_ore_chunk: Morceau de minerai de fer
     gold_ore_chunk: Morceau de minerai d'or
     copper_ore_chunk: Morceau de minerai de cuivre

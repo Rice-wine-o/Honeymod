@@ -42,7 +42,7 @@ import me.spacetoastdev.honeymod.core.guide.GuideHistory;
 import me.spacetoastdev.honeymod.core.guide.HoneymodGuide;
 import me.spacetoastdev.honeymod.core.guide.HoneymodGuideImplementation;
 import me.spacetoastdev.honeymod.core.guide.HoneymodGuideMode;
-import me.spacetoastdev.honeymod.core.guide.options.SlimefunGuideSettings;
+import me.spacetoastdev.honeymod.core.guide.options.HoneymodGuideSettings;
 import me.spacetoastdev.honeymod.core.multiblocks.MultiBlock;
 import me.spacetoastdev.honeymod.core.multiblocks.MultiBlockMachine;
 import me.spacetoastdev.honeymod.core.researching.Research;
@@ -73,7 +73,7 @@ public class SurvivalHoneymodGuide implements HoneymodGuideImplementation {
 
     public SurvivalHoneymodGuide(boolean showVanillaRecipes) {
         this.showVanillaRecipes = showVanillaRecipes;
-        item = new HoneymodGuideItem(this, "&aSlimefun Guide &7(Chest GUI)");
+        item = new HoneymodGuideItem(this, "&6Honeymod Guide &7(Chest GUI)");
     }
 
     @Override
@@ -560,7 +560,7 @@ public class SurvivalHoneymodGuide implements HoneymodGuideImplementation {
         // Settings Panel
         menu.addItem(1, ChestMenuUtils.getMenuButton(p));
         menu.addMenuClickHandler(1, (pl, slot, item, action) -> {
-            SlimefunGuideSettings.openSettings(pl, pl.getInventory().getItemInMainHand());
+            HoneymodGuideSettings.openSettings(pl, pl.getInventory().getItemInMainHand());
             return false;
         });
 

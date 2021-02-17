@@ -11,7 +11,7 @@ resources:
     nether_ice: ネザーアイス
     salt: 塩
     uranium: ウラニウム
-  slimefunorechunks:
+  honeymodorechunks:
     iron_ore_chunk: 鉄
     gold_ore_chunk: 金
     copper_ore_chunk: 銅

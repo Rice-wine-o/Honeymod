@@ -13,7 +13,7 @@ import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
 import me.spacetoastdev.honeymod.api.HoneymodAddon;
 
 /**
- * This represents an entry in our {@link SlimefunProfiler}.
+ * This represents an entry in our {@link HoneymodProfiler}.
  * It is a modification of {@link BlockPosition} to be as memory-efficient as possible.
  * 
  * @author TheBusyBiscuit

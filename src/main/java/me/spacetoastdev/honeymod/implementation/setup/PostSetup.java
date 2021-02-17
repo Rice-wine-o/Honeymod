@@ -85,16 +85,14 @@ public final class PostSetup {
         CommandSender sender = Bukkit.getConsoleSender();
 
         int total = HoneymodPlugin.getRegistry().getEnabledSlimefunItems().size();
-        int slimefunOnly = countNonAddonItems();
+        int honeymodOnly = countNonAddonItems();
 
         sender.sendMessage("");
-        sender.sendMessage(ChatColor.GREEN + "######################### - Slimefun v" + HoneymodPlugin.getVersion() + " - #########################");
+        sender.sendMessage(ChatColor.GREEN + "######################### - Honeymod v" + HoneymodPlugin.getVersion() + " - #########################");
         sender.sendMessage("");
         sender.sendMessage(ChatColor.GREEN + "Successfully loaded " + total + " Items and " + HoneymodPlugin.getRegistry().getResearches().size() + " Researches");
-        sender.sendMessage(ChatColor.GREEN + "( " + slimefunOnly + " Items from Slimefun, " + (total - slimefunOnly) + " Items from " + HoneymodPlugin.getInstalledAddons().size() + " Addons )");
+        sender.sendMessage(ChatColor.GREEN + "( " + honeymodOnly + " Items from Honeymod, " + (total - honeymodOnly) + " Items from " + HoneymodPlugin.getInstalledAddons().size() + " Addons )");
         sender.sendMessage("");
-        sender.sendMessage(ChatColor.GREEN + "Slimefun is an Open-Source project that is kept alive by a large community.");
-        sender.sendMessage(ChatColor.GREEN + "Consider helping us maintain this project by contributing on GitHub!");
 
         if (HoneymodPlugin.getUpdater().getBranch().isOfficial()) {
             sender.sendMessage("");
@@ -104,7 +102,7 @@ public final class PostSetup {
             sender.sendMessage(ChatColor.GREEN + " - Bug Reports:  https://github.com/Slimefun/Slimefun4/issues");
             sender.sendMessage(ChatColor.GREEN + " - Discord:      https://discord.gg/slimefun");
         } else {
-            sender.sendMessage(ChatColor.GREEN + " - UNOFFICIALLY MODIFIED BUILD - NO OFFICIAL SUPPORT GIVEN");
+            sender.sendMessage(ChatColor.GREEN + "  Honeymod - The premier server-modding API  ");
         }
 
         sender.sendMessage("");

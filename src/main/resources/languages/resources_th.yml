@@ -11,7 +11,7 @@ resources:
     nether_ice: น้ำแข็งนรก
     salt: เกลือ
     uranium: ยูเรเนียม
-  slimefunorechunks:
+  honeymodorechunks:
     iron_ore_chunk: ก้อนแร่เหล็ก
     gold_ore_chunk: ก้อนแร่ทอง
     copper_ore_chunk: ก้อนแร่ทองแดง

@@ -11,7 +11,7 @@ resources:
     nether_ice: Băng Âm Phủ
     salt: Muối
     uranium: Uranium ( Urani,U:Atom=92 )
-  slimefunorechunks:
+  honeymodorechunks:
     iron_ore_chunk: Mảng Quặng Sắt
     gold_ore_chunk: Mảng Quặng Vàng
     copper_ore_chunk: Mảng Quặng Đồng

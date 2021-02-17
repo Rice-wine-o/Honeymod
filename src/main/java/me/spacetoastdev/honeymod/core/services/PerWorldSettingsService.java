@@ -198,7 +198,7 @@ public class PerWorldSettingsService {
             Set<String> items = new LinkedHashSet<>();
             Config config = getConfig(world);
 
-            config.getConfiguration().options().header("This file is used to disable certain items in a particular world.\nYou can set any item to 'false' to disable it in the world '" + name + "'.\nYou can also disable an entire addon from Slimefun by setting the respective\nvalue of 'enabled' for that Addon.\n\nItems which are disabled in this world will not show up in the Slimefun Guide.\nYou won't be able to use these items either. Using them will result in a warning message.");
+            config.getConfiguration().options().header("This file is used to disable certain items in a particular world.\nYou can set any item to 'false' to disable it in the world '" + name + "'.\nYou can also disable an entire addon from Honeymod by setting the respective\nvalue of 'enabled' for that Addon.\n\nItems which are disabled in this world will not show up in the Honeymod Guide.\nYou won't be able to use these items either. Using them will result in a warning message.");
             config.getConfiguration().options().copyHeader(true);
             config.setDefaultValue("enabled", true);
 

@@ -65,7 +65,7 @@ public final class ResearchSetup {
         register("cactus_armor", 31, "Cactus Suit", 5, HoneymodItems.CACTUS_BOOTS, HoneymodItems.CACTUS_CHESTPLATE, HoneymodItems.CACTUS_HELMET, HoneymodItems.CACTUS_LEGGINGS);
         register("gold_pan", 32, "Gold Pan", 5, HoneymodItems.GOLD_PAN);
         register("magical_book_cover", 33, "Magical Book Binding", 5, HoneymodItems.MAGICAL_BOOK_COVER);
-        register("slimefun_metals", 34, "New Metals", 6, HoneymodItems.COPPER_INGOT, HoneymodItems.TIN_INGOT, HoneymodItems.SILVER_INGOT, HoneymodItems.LEAD_INGOT, HoneymodItems.ALUMINUM_INGOT, HoneymodItems.ZINC_INGOT, HoneymodItems.MAGNESIUM_INGOT);
+        register("honeymod_metals", 34, "New Metals", 6, HoneymodItems.COPPER_INGOT, HoneymodItems.TIN_INGOT, HoneymodItems.SILVER_INGOT, HoneymodItems.LEAD_INGOT, HoneymodItems.ALUMINUM_INGOT, HoneymodItems.ZINC_INGOT, HoneymodItems.MAGNESIUM_INGOT);
         register("ore_crusher", 35, "Ore Doubling", 6, HoneymodItems.ORE_CRUSHER);
         register("bronze", 36, "Bronze Creation", 8, HoneymodItems.BRONZE_INGOT);
         register("alloys", 37, "Advanced Alloys", 12, HoneymodItems.BILLON_INGOT, HoneymodItems.DURALUMIN_INGOT, HoneymodItems.ALUMINUM_BRASS_INGOT, HoneymodItems.ALUMINUM_BRONZE_INGOT, HoneymodItems.SOLDER_INGOT, HoneymodItems.CORINTHIAN_BRONZE_INGOT, HoneymodItems.BRASS_INGOT);

@@ -22,7 +22,7 @@ import me.spacetoastdev.honeymod.utils.ChestMenuUtils;
 import me.spacetoastdev.honeymod.utils.HeadTexture;
 import me.spacetoastdev.honeymod.utils.HoneymodUtils;
 
-class PlayerLanguageOption implements SlimefunGuideOption<String> {
+class PlayerLanguageOption implements HoneymodGuideOption<String> {
 
     @Override
     public HoneymodAddon getAddon() {
@@ -83,7 +83,7 @@ class PlayerLanguageOption implements SlimefunGuideOption<String> {
         for (int i = 0; i < 9; i++) {
             if (i == 1) {
                 menu.addItem(1, ChestMenuUtils.getBackButton(p, "", "&7" + HoneymodPlugin.getLocalization().getMessage(p, "guide.back.settings")), (pl, slot, item, action) -> {
-                    SlimefunGuideSettings.openSettings(pl, guide);
+                    HoneymodGuideSettings.openSettings(pl, guide);
                     return false;
                 });
             } else if (i == 7) {
@@ -106,7 +106,7 @@ class PlayerLanguageOption implements SlimefunGuideOption<String> {
 
             HoneymodPlugin.getLocalization().sendMessage(pl, "guide.languages.updated", msg -> msg.replace("%lang%", defaultLanguageString));
 
-            SlimefunGuideSettings.openSettings(pl, guide);
+            HoneymodGuideSettings.openSettings(pl, guide);
             return false;
         });
 
@@ -120,7 +120,7 @@ class PlayerLanguageOption implements SlimefunGuideOption<String> {
                 String name = language.getName(pl);
                 HoneymodPlugin.getLocalization().sendMessage(pl, "guide.languages.updated", msg -> msg.replace("%lang%", name));
 
-                SlimefunGuideSettings.openSettings(pl, guide);
+                HoneymodGuideSettings.openSettings(pl, guide);
                 return false;
             });
 

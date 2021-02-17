@@ -135,7 +135,7 @@ public class IntegrationsManager {
             // Load Protection plugin integrations
             protectionManager = new ProtectionManager(plugin.getServer());
         } catch (Exception | LinkageError x) {
-            HoneymodPlugin.logger().log(Level.WARNING, x, () -> "Failed to load Protection plugin integrations for Slimefun v" + HoneymodPlugin.getVersion());
+            HoneymodPlugin.logger().log(Level.WARNING, x, () -> "Failed to load Protection plugin integrations for Honeymod v" + HoneymodPlugin.getVersion());
         }
 
         isChestTerminalInstalled = isAddonInstalled("ChestTerminal");
@@ -151,7 +151,7 @@ public class IntegrationsManager {
      */
     private boolean isAddonInstalled(@Nonnull String addon) {
         if (plugin.getServer().getPluginManager().isPluginEnabled(addon)) {
-            HoneymodPlugin.logger().log(Level.INFO, "Hooked into Slimefun Addon: {0}", addon);
+            HoneymodPlugin.logger().log(Level.INFO, "Hooked into Honeymod Addon: {0}", addon);
             return true;
         } else {
             return false;
@@ -178,7 +178,7 @@ public class IntegrationsManager {
                 // Run our callback
                 consumer.accept(integration);
             } catch (Exception | LinkageError x) {
-                HoneymodPlugin.logger().log(Level.WARNING, "Maybe consider updating {0} or Slimefun?", pluginName);
+                HoneymodPlugin.logger().log(Level.WARNING, "Maybe consider updating {0} or Honeymod?", pluginName);
                 HoneymodPlugin.logger().log(Level.WARNING, x, () -> "Failed to hook into " + pluginName + " v" + version);
             }
         }

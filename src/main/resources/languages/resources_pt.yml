@@ -11,7 +11,7 @@ resources:
     nether_ice: Gelo do Nether
     salt: Sal
     uranium: 'Urânio '
-  slimefunorechunks:
+  honeymodorechunks:
     iron_ore_chunk: Pedaço de Minério de Ferro
     gold_ore_chunk: Pedaço de Minério de Ouro
     copper_ore_chunk: Pedaço de Minério de Cobre

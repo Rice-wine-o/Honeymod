@@ -107,7 +107,7 @@ public class HoneymodInteractListener implements Listener {
 
     @ParametersAreNonnullByDefault
     private boolean rightClickBlock(PlayerRightClickEvent event) {
-        Optional<SlimefunItem> optional = event.getSlimefunBlock();
+        Optional<SlimefunItem> optional = event.getHoneymodBlock();
 
         if (optional.isPresent()) {
             SlimefunItem sfItem = optional.get();

@@ -34,7 +34,7 @@ public class CheatSheetHoneymodGuide extends SurvivalHoneymodGuide {
     public CheatSheetHoneymodGuide() {
         super(false);
 
-        item = new HoneymodGuideItem(this, "&cSlimefun Guide &4(Cheat Sheet)");
+        item = new HoneymodGuideItem(this, "&6Honeymod Guide &4(Cheat Sheet)");
     }
 
     /**

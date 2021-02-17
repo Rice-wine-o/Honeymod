@@ -120,9 +120,7 @@ public class UpdaterService {
             updater.start();
         } else {
             printBorder();
-            plugin.getLogger().log(Level.WARNING, "It looks like you are using an unofficially modified build of Slimefun!");
-            plugin.getLogger().log(Level.WARNING, "Auto-Updates have been disabled, this build is not considered safe.");
-            plugin.getLogger().log(Level.WARNING, "Do not report bugs encountered in this Version of Slimefun to any official sources.");
+            plugin.getLogger().log(Level.WARNING, "What's a Slimefun?");
             printBorder();
         }
     }
@@ -143,12 +141,12 @@ public class UpdaterService {
      */
     public void disable() {
         printBorder();
-        plugin.getLogger().log(Level.WARNING, "It looks like you have disabled auto-updates for Slimefun!");
+        plugin.getLogger().log(Level.WARNING, "It looks like you have disabled auto-updates for Honeymod!");
         plugin.getLogger().log(Level.WARNING, "Auto-Updates keep your server safe, performant and bug-free.");
         plugin.getLogger().log(Level.WARNING, "We respect your decision.");
 
         if (branch != HoneymodBranch.STABLE) {
-            plugin.getLogger().log(Level.WARNING, "If you are just scared of Slimefun breaking, then please consider using a \"stable\" build instead of disabling auto-updates.");
+            plugin.getLogger().log(Level.WARNING, "If you are just scared of Honeymod breaking, then please consider using a \"stable\" build instead of disabling auto-updates.");
         }
 
         printBorder();

@@ -38,7 +38,7 @@ public class Multimeter extends SimpleHoneymodItem<ItemUseHandler> {
     @Override
     public ItemUseHandler getItemHandler() {
         return e -> {
-            Optional<SlimefunItem> block = e.getSlimefunBlock();
+            Optional<SlimefunItem> block = e.getHoneymodBlock();
 
             if (e.getClickedBlock().isPresent() && block.isPresent()) {
                 SlimefunItem item = block.get();

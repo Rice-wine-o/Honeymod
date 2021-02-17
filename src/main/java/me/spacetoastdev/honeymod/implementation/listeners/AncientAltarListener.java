@@ -98,12 +98,12 @@ public class AncientAltarListener implements Listener {
             return;
         }
 
-        Optional<SlimefunItem> slimefunBlock = e.getSlimefunBlock();
-        if (!slimefunBlock.isPresent()) {
+        Optional<SlimefunItem> honeymodBlock = e.getHoneymodBlock();
+        if (!honeymodBlock.isPresent()) {
             return;
         }
 
-        String id = slimefunBlock.get().getId();
+        String id = honeymodBlock.get().getId();
         Player p = e.getPlayer();
 
         if (id.equals(pedestalItem.getId())) {

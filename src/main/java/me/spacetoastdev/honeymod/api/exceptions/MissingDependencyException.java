@@ -28,7 +28,7 @@ public class MissingDependencyException extends RuntimeException {
      */
     @ParametersAreNonnullByDefault
     public MissingDependencyException(HoneymodAddon addon, String dependency) {
-        super("Slimefun Addon \"" + addon.getName() + "\" forgot to define \"" + dependency + "\" as a depend or softdepend inside the plugin.yml file");
+        super("Honeymod Addon \"" + addon.getName() + "\" forgot to define \"" + dependency + "\" as a depend or softdepend inside the plugin.yml file");
     }
 
 }

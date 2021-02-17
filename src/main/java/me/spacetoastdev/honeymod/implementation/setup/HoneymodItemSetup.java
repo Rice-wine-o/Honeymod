@@ -216,7 +216,7 @@ public final class HoneymodItemSetup {
 
     public static void setup(@Nonnull HoneymodPlugin plugin) {
         if (registeredItems) {
-            throw new UnsupportedOperationException("Slimefun Items can only be registered once!");
+            throw new UnsupportedOperationException("Honeymod Items can only be registered once!");
         }
 
         registeredItems = true;

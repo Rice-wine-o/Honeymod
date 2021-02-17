@@ -11,7 +11,7 @@ resources:
     nether_ice: Лед от Недъра
     salt: Сол
     uranium: Уран
-  slimefunorechunks:
+  honeymodorechunks:
     iron_ore_chunk: Чънк с Желязна Руда
     gold_ore_chunk: Чънк със Златна Руда
     copper_ore_chunk: Чънк с Медна Руда

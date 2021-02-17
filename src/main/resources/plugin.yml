@@ -11,7 +11,7 @@ description: Definitely not Slimefun
 main: me.spacetoastdev.honeymod.implementation.HoneymodPlugin
 api-version: '1.16'
 
-# (Soft) dependencies of Slimefun, we hook into these plugins.
+# (Soft) dependencies of Honeymod, we hook into these plugins.
 softdepend:
 - PlaceholderAPI
 - WorldEdit
@@ -20,7 +20,7 @@ softdepend:
 - ItemsAdder
 - Slimefun
 
-# We hook into these plugins too, but they depend on Slimefun.
+# We hook into these plugins too, but they depend on Honeymod.
 loadBefore:
 - ChestTerminal
 

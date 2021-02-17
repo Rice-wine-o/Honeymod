@@ -65,7 +65,7 @@ public class CustomTextureService {
     public void register(@Nonnull Collection<SlimefunItem> items, boolean save) {
         Validate.notEmpty(items, "items must neither be null or empty.");
 
-        config.setDefaultValue("SLIMEFUN_GUIDE", 0);
+        config.setDefaultValue("HONEYMOD_GUIDE", 0);
 
         config.setDefaultValue("_UI_BACKGROUND", 0);
         config.setDefaultValue("_UI_NO_PERMISSION", 0);

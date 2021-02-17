@@ -47,7 +47,7 @@ class GiveCommand extends SubCommand {
                     HoneymodPlugin.getLocalization().sendMessage(sender, "messages.not-online", true, msg -> msg.replace(PLACEHOLDER_PLAYER, args[1]));
                 }
             } else {
-                HoneymodPlugin.getLocalization().sendMessage(sender, "messages.usage", true, msg -> msg.replace("%usage%", "/hm give <Player> <Slimefun Item> [Amount]"));
+                HoneymodPlugin.getLocalization().sendMessage(sender, "messages.usage", true, msg -> msg.replace("%usage%", "/hm give <Player> <Item> [Amount]"));
             }
         } else {
             HoneymodPlugin.getLocalization().sendMessage(sender, "messages.no-permission", true);

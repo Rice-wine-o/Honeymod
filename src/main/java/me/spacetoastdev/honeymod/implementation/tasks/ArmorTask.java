@@ -85,7 +85,7 @@ public class ArmorTask implements Runnable {
                 ItemStack[] armor = p.getInventory().getArmorContents();
                 HashedArmorpiece[] cachedArmor = profile.getArmor();
 
-                handleSlimefunArmor(p, armor, cachedArmor);
+                handleHoneymodArmor(p, armor, cachedArmor);
 
                 if (hasSunlight(p)) {
                     checkForSolarHelmet(p);
@@ -97,7 +97,7 @@ public class ArmorTask implements Runnable {
     }
 
     @ParametersAreNonnullByDefault
-    private void handleSlimefunArmor(Player p, ItemStack[] armor, HashedArmorpiece[] cachedArmor) {
+    private void handleHoneymodArmor(Player p, ItemStack[] armor, HashedArmorpiece[] cachedArmor) {
         for (int slot = 0; slot < 4; slot++) {
             ItemStack item = armor[slot];
             HashedArmorpiece armorpiece = cachedArmor[slot];
@@ -115,10 +115,10 @@ public class ArmorTask implements Runnable {
 
             if (item != null && armorpiece.getItem().isPresent()) {
                 HoneymodPlugin.runSync(() -> {
-                    HoneymodArmorPiece slimefunArmor = armorpiece.getItem().get();
+                    HoneymodArmorPiece honeymodArmor = armorpiece.getItem().get();
 
-                    if (slimefunArmor.canUse(p, true)) {
-                        for (PotionEffect effect : slimefunArmor.getPotionEffects()) {
+                    if (honeymodArmor.canUse(p, true)) {
+                        for (PotionEffect effect : honeymodArmor.getPotionEffects()) {
                             p.removePotionEffect(effect.getType());
                             p.addPotionEffect(effect);
                         }

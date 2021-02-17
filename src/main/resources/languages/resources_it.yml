@@ -5,7 +5,7 @@ resources:
     oil: Petrolio
     salt: Sale
     uranium: Uranio
-  slimefunorechunks:
+  honeymodorechunks:
     aluminum_ore_chunk: Pezzo di Minerale di Alluminio
     cobalt_ore_chunk: Pezzo di Minerale di Cobalto
     copper_ore_chunk: Pezzo di Minerale di Rame

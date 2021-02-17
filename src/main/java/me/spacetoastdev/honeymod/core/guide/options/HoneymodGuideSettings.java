@@ -39,10 +39,10 @@ import me.spacetoastdev.honeymod.utils.HoneymodUtils;
  * @see HoneymodGuide
  *
  */
-public final class SlimefunGuideSettings {
+public final class HoneymodGuideSettings {
 
     private static final int[] BACKGROUND_SLOTS = { 1, 3, 5, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 26, 27, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 48, 50, 52, 53 };
-    private static final List<SlimefunGuideOption<?>> options = new ArrayList<>();
+    private static final List<HoneymodGuideOption<?>> options = new ArrayList<>();
 
     static {
         options.add(new GuideModeOption());
@@ -50,9 +50,9 @@ public final class SlimefunGuideSettings {
         options.add(new PlayerLanguageOption());
     }
 
-    private SlimefunGuideSettings() {}
+    private HoneymodGuideSettings() {}
 
-    public static <T> void addOption(@Nonnull SlimefunGuideOption<T> option) {
+    public static <T> void addOption(@Nonnull HoneymodGuideOption<T> option) {
         options.add(option);
     }
 
@@ -212,7 +212,7 @@ public final class SlimefunGuideSettings {
     private static void addConfigurableOptions(Player p, ChestMenu menu, ItemStack guide) {
         int i = 19;
 
-        for (SlimefunGuideOption<?> option : options) {
+        for (HoneymodGuideOption<?> option : options) {
             Optional<ItemStack> item = option.getDisplayItem(p, guide);
 
             if (item.isPresent()) {
@@ -238,7 +238,7 @@ public final class SlimefunGuideSettings {
      * @return Whether this {@link Player} wants to see fireworks when unlocking a {@link Research}
      */
     public static boolean hasFireworksEnabled(@Nonnull Player p) {
-        for (SlimefunGuideOption<?> option : options) {
+        for (HoneymodGuideOption<?> option : options) {
             if (option instanceof FireworksOption) {
                 FireworksOption fireworks = (FireworksOption) option;
                 ItemStack guide = HoneymodGuide.getItem(HoneymodGuideMode.SURVIVAL_MODE);

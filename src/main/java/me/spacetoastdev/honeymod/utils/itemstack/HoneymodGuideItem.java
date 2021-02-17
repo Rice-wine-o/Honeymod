@@ -42,7 +42,7 @@ public class HoneymodGuideItem extends ItemStack {
         meta.setLore(lore);
 
         PersistentDataAPI.setString(meta, HoneymodPlugin.getRegistry().getGuideDataKey(), type.name());
-        HoneymodPlugin.getItemTextureService().setTexture(meta, "SLIMEFUN_GUIDE");
+        HoneymodPlugin.getItemTextureService().setTexture(meta, "HONEYMOD_GUIDE");
 
         setItemMeta(meta);
     }

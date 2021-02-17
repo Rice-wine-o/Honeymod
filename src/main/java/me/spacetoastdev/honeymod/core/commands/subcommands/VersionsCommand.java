@@ -44,24 +44,24 @@ class VersionsCommand extends SubCommand {
             ComponentBuilder builder = new ComponentBuilder();
 
             // @formatter:off
-            builder.append("This Server uses the following setup of Slimefun:\n")
+            builder.append("This Server uses the following setup of Honeymod:\n")
                 .color(ChatColor.GRAY)
                 .append(serverSoftware)
-                .color(ChatColor.GREEN)
+                .color(ChatColor.YELLOW)
                 .append(" " + Bukkit.getVersion() + '\n')
-                .color(ChatColor.DARK_GREEN)
-                .append("Slimefun ")
-                .color(ChatColor.GREEN)
+                .color(ChatColor.YELLOW)
+                .append("Honeymod ")
+                .color(ChatColor.GOLD)
                 .append(HoneymodPlugin.getVersion() + '\n')
-                .color(ChatColor.DARK_GREEN);
+                .color(ChatColor.YELLOW);
             // @formatter:on
 
             if (HoneymodPlugin.getMetricsService().getVersion() != null) {
                 // @formatter:off
                 builder.append("Metrics-Module ")
-                    .color(ChatColor.GREEN)
+                    .color(ChatColor.GOLD)
                     .append("#" + HoneymodPlugin.getMetricsService().getVersion() + '\n')
-                    .color(ChatColor.DARK_GREEN);
+                    .color(ChatColor.YELLOW);
                 // @formatter:on
             }
 
@@ -114,7 +114,7 @@ class VersionsCommand extends SubCommand {
                 .event((HoverEvent) null);
             // @formatter:on
         } else {
-            builder.append("Java ").color(ChatColor.GREEN).append(version + "\n").color(ChatColor.DARK_GREEN);
+            builder.append("Java ").color(ChatColor.GOLD).append(version + "\n").color(ChatColor.YELLOW);
         }
     }
 
@@ -137,8 +137,8 @@ class VersionsCommand extends SubCommand {
             ChatColor secondaryColor;
 
             if (Bukkit.getPluginManager().isPluginEnabled(plugin)) {
-                primaryColor = ChatColor.GREEN;
-                secondaryColor = ChatColor.DARK_GREEN;
+                primaryColor = ChatColor.GOLD;
+                secondaryColor = ChatColor.YELLOW;
                 String authors = String.join(", ", plugin.getDescription().getAuthors());
 
                 if (plugin instanceof HoneymodAddon && ((HoneymodAddon) plugin).getBugTrackerURL() != null) {

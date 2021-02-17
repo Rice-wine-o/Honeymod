@@ -17,10 +17,10 @@ import me.spacetoastdev.honeymod.core.guide.HoneymodGuide;
  * @param <T>
  *            The type of value for this option
  */
-public interface SlimefunGuideOption<T> extends Keyed {
+public interface HoneymodGuideOption<T> extends Keyed {
 
     /**
-     * This returns the {@link HoneymodAddon} which added this {@link SlimefunGuideOption}.
+     * This returns the {@link HoneymodAddon} which added this {@link HoneymodGuideOption}.
      * 
      * @return The registering {@link HoneymodAddon}
      */

@@ -78,8 +78,8 @@ public class PlayerProfile {
         this.uuid = p.getUniqueId();
         this.name = p.getName();
 
-        configFile = new Config("data-storage/Slimefun/Players/" + uuid.toString() + ".yml");
-        waypointsFile = new Config("data-storage/Slimefun/waypoints/" + uuid.toString() + ".yml");
+        configFile = new Config("data-storage/Honeymod/Players/" + uuid.toString() + ".yml");
+        waypointsFile = new Config("data-storage/Honeymod/waypoints/" + uuid.toString() + ".yml");
 
         loadProfileData();
     }

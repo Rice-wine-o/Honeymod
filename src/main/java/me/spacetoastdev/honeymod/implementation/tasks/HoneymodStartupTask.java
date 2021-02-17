@@ -53,7 +53,7 @@ public class HoneymodStartupTask implements Runnable {
             try {
                 new BlockStorage(world);
             } catch (Exception x) {
-                HoneymodPlugin.logger().log(Level.SEVERE, x, () -> "An Error occurred while trying to load World \"" + world.getName() + "\" for Slimefun v" + HoneymodPlugin.getVersion());
+                HoneymodPlugin.logger().log(Level.SEVERE, x, () -> "An Error occurred while trying to load World \"" + world.getName() + "\" for Honeymod v" + HoneymodPlugin.getVersion());
             }
         }
 

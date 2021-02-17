@@ -11,7 +11,7 @@ resources:
     nether_ice: Nether Is
     salt: Salt
     uranium: Uranium
-  slimefunorechunks:
+  honeymodorechunks:
     iron_ore_chunk: Järnmalms Bit
     gold_ore_chunk: Guldmalms Bit
     copper_ore_chunk: Kopparmalm Bit

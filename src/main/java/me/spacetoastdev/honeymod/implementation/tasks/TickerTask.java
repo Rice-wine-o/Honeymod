@@ -131,7 +131,7 @@ public class TickerTask implements Runnable {
             reset();
             HoneymodPlugin.getProfiler().stop();
         } catch (Exception | LinkageError x) {
-            HoneymodPlugin.logger().log(Level.SEVERE, x, () -> "An Exception was caught while ticking the Block Tickers Task for Slimefun v" + HoneymodPlugin.getVersion());
+            HoneymodPlugin.logger().log(Level.SEVERE, x, () -> "An Exception was caught while ticking the Block Tickers Task for Honeymod v" + HoneymodPlugin.getVersion());
             reset();
         }
     }
@@ -205,7 +205,7 @@ public class TickerTask implements Runnable {
         } else if (errors == 4) {
             HoneymodPlugin.logger().log(Level.SEVERE, "X: {0} Y: {1} Z: {2} ({3})", new Object[] { l.getBlockX(), l.getBlockY(), l.getBlockZ(), item.getId() });
             HoneymodPlugin.logger().log(Level.SEVERE, "has thrown 4 error messages in the last 4 Ticks, the Block has been terminated.");
-            HoneymodPlugin.logger().log(Level.SEVERE, "Check your /plugins/Slimefun/error-reports/ folder for details.");
+            HoneymodPlugin.logger().log(Level.SEVERE, "Check your /plugins/Honeymod/error-reports/ folder for details.");
             HoneymodPlugin.logger().log(Level.SEVERE, " ");
             bugs.remove(position);
 

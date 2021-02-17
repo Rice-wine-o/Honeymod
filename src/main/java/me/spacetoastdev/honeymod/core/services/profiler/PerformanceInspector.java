@@ -6,7 +6,7 @@ import org.bukkit.Server;
 
 /**
  * This interface is used to identify someone as a {@link PerformanceInspector}.
- * A {@link PerformanceInspector} can query the {@link SlimefunProfiler} and get the
+ * A {@link PerformanceInspector} can query the {@link HoneymodProfiler} and get the
  * results send to them as a {@link PerformanceSummary}.
  * 
  * @author TheBusyBiscuit

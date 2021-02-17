@@ -31,7 +31,7 @@ public class WorldListener implements Listener {
         if (storage != null) {
             storage.saveAndRemove();
         } else {
-            HoneymodPlugin.logger().log(Level.SEVERE, "Could not save Slimefun Blocks for World \"{0}\"", e.getWorld().getName());
+            HoneymodPlugin.logger().log(Level.SEVERE, "Could not save Honeymod Blocks for World \"{0}\"", e.getWorld().getName());
         }
     }
 

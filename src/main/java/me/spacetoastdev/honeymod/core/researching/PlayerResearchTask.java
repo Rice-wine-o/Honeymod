@@ -12,7 +12,7 @@ import org.bukkit.entity.Player;
 
 import me.spacetoastdev.honeymod.api.events.ResearchUnlockEvent;
 import me.spacetoastdev.honeymod.api.player.PlayerProfile;
-import me.spacetoastdev.honeymod.core.guide.options.SlimefunGuideSettings;
+import me.spacetoastdev.honeymod.core.guide.options.HoneymodGuideSettings;
 import me.spacetoastdev.honeymod.implementation.HoneymodPlugin;
 import me.spacetoastdev.honeymod.utils.FireworkUtils;
 
@@ -109,7 +109,7 @@ public class PlayerResearchTask implements Consumer<PlayerProfile> {
         onFinish(p);
 
         // Check if the Server and the Player have enabled fireworks for researches
-        if (HoneymodPlugin.getRegistry().isResearchFireworkEnabled() && SlimefunGuideSettings.hasFireworksEnabled(p)) {
+        if (HoneymodPlugin.getRegistry().isResearchFireworkEnabled() && HoneymodGuideSettings.hasFireworksEnabled(p)) {
             FireworkUtils.launchRandom(p, 1);
         }
     }

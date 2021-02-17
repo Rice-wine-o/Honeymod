@@ -12,7 +12,7 @@ import io.github.thebusybiscuit.cscorelib2.item.CustomItem;
 import me.spacetoastdev.honeymod.api.HoneymodAddon;
 import me.spacetoastdev.honeymod.implementation.HoneymodPlugin;
 
-class FireworksOption implements SlimefunGuideOption<Boolean> {
+class FireworksOption implements HoneymodGuideOption<Boolean> {
 
     @Override
     public HoneymodAddon getAddon() {
@@ -38,7 +38,7 @@ class FireworksOption implements SlimefunGuideOption<Boolean> {
     @Override
     public void onClick(Player p, ItemStack guide) {
         setSelectedOption(p, guide, !getSelectedOption(p, guide).orElse(true));
-        SlimefunGuideSettings.openSettings(p, guide);
+        HoneymodGuideSettings.openSettings(p, guide);
     }
 
     @Override

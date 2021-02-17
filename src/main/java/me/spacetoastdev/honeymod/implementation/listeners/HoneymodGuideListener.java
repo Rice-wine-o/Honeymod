@@ -16,7 +16,7 @@ import me.spacetoastdev.honeymod.api.events.PlayerRightClickEvent;
 import me.spacetoastdev.honeymod.api.events.HoneymodGuideOpenEvent;
 import me.spacetoastdev.honeymod.core.guide.HoneymodGuide;
 import me.spacetoastdev.honeymod.core.guide.HoneymodGuideMode;
-import me.spacetoastdev.honeymod.core.guide.options.SlimefunGuideSettings;
+import me.spacetoastdev.honeymod.core.guide.options.HoneymodGuideSettings;
 import me.spacetoastdev.honeymod.implementation.HoneymodPlugin;
 import me.spacetoastdev.honeymod.utils.HoneymodUtils;
 
@@ -49,13 +49,13 @@ public class HoneymodGuideListener implements Listener {
 
         if (tryOpenGuide(p, e, HoneymodGuideMode.SURVIVAL_MODE) == Result.ALLOW) {
             if (p.isSneaking()) {
-                SlimefunGuideSettings.openSettings(p, e.getItem());
+                HoneymodGuideSettings.openSettings(p, e.getItem());
             } else {
                 openGuide(p, e, HoneymodGuideMode.SURVIVAL_MODE);
             }
         } else if (tryOpenGuide(p, e, HoneymodGuideMode.CHEAT_MODE) == Result.ALLOW) {
             if (p.isSneaking()) {
-                SlimefunGuideSettings.openSettings(p, e.getItem());
+                HoneymodGuideSettings.openSettings(p, e.getItem());
             } else {
                 /*
                  * We rather just run the command here, all

@@ -11,7 +11,7 @@ resources:
     nether_ice: جليد جهنمي
     salt: ملح
     uranium: يورانيوم
-  slimefunorechunks:
+  honeymodorechunks:
     iron_ore_chunk: قسم ركاز حديد
     gold_ore_chunk: قسم ركاز ذهب
     copper_ore_chunk: قسم ركاز نحاس

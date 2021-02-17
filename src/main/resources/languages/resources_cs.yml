@@ -5,7 +5,7 @@ resources:
     salt: Sůl
     uranium: Uran
     nether_ice: Nether led
-  slimefunorechunks:
+  honeymodorechunks:
     aluminum_ore_chunk: Kus hliníkové rudy
     cobalt_ore_chunk: Kus kobaltové rudy
     copper_ore_chunk: Kus měděné rudy

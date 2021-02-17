@@ -11,7 +11,7 @@ resources:
     nether_ice: Netherowy Lód
     salt: Sól
     uranium: Uran
-  slimefunorechunks:
+  honeymodorechunks:
     iron_ore_chunk: Kawałek Rudy Żelaza
     gold_ore_chunk: Kawałek Rudy Złota
     copper_ore_chunk: Kawałek Rudy Miedzi

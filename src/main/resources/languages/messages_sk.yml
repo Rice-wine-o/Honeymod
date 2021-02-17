@@ -131,7 +131,7 @@ guide:
       machine: Recepty vytvárané týmto strojom
       miner: Materiály, ktoré môžeš získať s týmto minerom
     versions-notice: Toto je veľmi dôležité pri nahlasovaní bugov!
-    wiki: Pozri si tento item na oficiálnej wiki slimefunu
+    wiki: Pozri si tento item na oficiálnej wiki honeymodu
 inventory:
   no-access: "&4Nemáš opŕavnenie na otvorenie tohto bloku"
 languages:

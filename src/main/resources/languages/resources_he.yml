@@ -13,7 +13,7 @@ resources:
 '
     salt: מלח
     uranium: אורניום
-  slimefunorechunks:
+  honeymodorechunks:
     iron_ore_chunk: נתח עפרת ברזל
     gold_ore_chunk: נתח עפרת זהב
     copper_ore_chunk: נתח עפרת נחושת

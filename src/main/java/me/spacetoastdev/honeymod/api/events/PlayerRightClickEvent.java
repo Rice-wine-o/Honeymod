@@ -47,7 +47,7 @@ public class PlayerRightClickEvent extends PlayerEvent {
     private final BlockFace face;
 
     private TriStateOptional<SlimefunItem> slimefunItem = TriStateOptional.createNew();
-    private TriStateOptional<SlimefunItem> slimefunBlock = TriStateOptional.createNew();
+    private TriStateOptional<SlimefunItem> honeymodBlock = TriStateOptional.createNew();
 
     private Result itemResult;
     private Result blockResult;
@@ -135,16 +135,16 @@ public class PlayerRightClickEvent extends PlayerEvent {
     }
 
     @Nonnull
-    public Optional<SlimefunItem> getSlimefunBlock() {
-        if (!slimefunBlock.isComputed()) {
+    public Optional<SlimefunItem> getHoneymodBlock() {
+        if (!honeymodBlock.isComputed()) {
             if (clickedBlock.isPresent()) {
-                slimefunBlock.compute(BlockStorage.check(clickedBlock.get()));
+            	honeymodBlock.compute(BlockStorage.check(clickedBlock.get()));
             } else {
-                slimefunBlock = TriStateOptional.empty();
+            	honeymodBlock = TriStateOptional.empty();
             }
         }
 
-        return slimefunBlock.getAsOptional();
+        return honeymodBlock.getAsOptional();
     }
 
     /**

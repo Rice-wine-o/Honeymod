@@ -54,7 +54,7 @@ public class MetricsService {
      * The URL pointing towards the download location for a
      * GitHub release of our Metrics repository
      */
-    private static final String DOWNLOAD_URL = "https://github.com/Slimefun/" + REPO_NAME + "/releases/download";
+    private static final String DOWNLOAD_URL = "https://github.com/Honeymod/" + REPO_NAME + "/releases/download";
 
     private final HoneymodPlugin plugin;
     private final File parentFolder;

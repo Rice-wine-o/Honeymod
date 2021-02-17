@@ -83,7 +83,7 @@ public class ErrorReport<T extends Throwable> {
                 stream.println();
             }
 
-            stream.println("Slimefun Data:");
+            stream.println("Honeymod Data:");
             stream.println("  ID: " + item.getId());
             stream.println("  Inventory: " + BlockStorage.getStorage(l.getWorld()).hasInventory(l));
             stream.println("  Data: " + BlockStorage.getBlockInfoAsJson(l));
@@ -148,8 +148,8 @@ public class ErrorReport<T extends Throwable> {
             stream.println("  Minecraft v" + Bukkit.getBukkitVersion());
             stream.println();
 
-            stream.println("Slimefun Environment:");
-            stream.println("  Slimefun v" + HoneymodPlugin.getVersion());
+            stream.println("Honeymod Environment:");
+            stream.println("  Honeymod v" + HoneymodPlugin.getVersion());
             stream.println("  Caused by: " + addon.getName() + " v" + addon.getPluginVersion());
             stream.println();
 
@@ -176,7 +176,7 @@ public class ErrorReport<T extends Throwable> {
 
             addon.getLogger().log(Level.WARNING, "");
             addon.getLogger().log(Level.WARNING, "An Error occurred! It has been saved as: ");
-            addon.getLogger().log(Level.WARNING, "/plugins/Slimefun/error-reports/{0}", file.getName());
+            addon.getLogger().log(Level.WARNING, "/plugins/Honeymod/error-reports/{0}", file.getName());
             addon.getLogger().log(Level.WARNING, "Please put this file on https://pastebin.com/ and report this to the developer(s).");
 
             if (addon.getBugTrackerURL() != null) {
@@ -185,12 +185,12 @@ public class ErrorReport<T extends Throwable> {
 
             addon.getLogger().log(Level.WARNING, "");
         } catch (Exception x) {
-            addon.getLogger().log(Level.SEVERE, x, () -> "An Error occurred while saving an Error-Report for Slimefun " + HoneymodPlugin.getVersion());
+            addon.getLogger().log(Level.SEVERE, x, () -> "An Error occurred while saving an Error-Report for Honeymod " + HoneymodPlugin.getVersion());
         }
     }
 
     private static void scanPlugins(@Nonnull List<String> plugins, @Nonnull List<String> addons) {
-        String dependency = "Slimefun";
+        String dependency = "Honeymod";
 
         for (Plugin plugin : Bukkit.getPluginManager().getPlugins()) {
             if (Bukkit.getPluginManager().isPluginEnabled(plugin)) {
@@ -211,7 +211,7 @@ public class ErrorReport<T extends Throwable> {
 
     @Nonnull
     private static File getNewFile() {
-        String path = "plugins/Slimefun/error-reports/" + dateFormat.format(LocalDateTime.now());
+        String path = "plugins/Honeymod/error-reports/" + dateFormat.format(LocalDateTime.now());
         File newFile = new File(path + ".err");
 
         if (newFile.exists()) {

@@ -38,7 +38,7 @@ public class FireworksListener implements Listener {
              * 
              * Entity display names do not work either as Firework cannot be named.
              */
-            if (meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.GREEN + "Slimefun Research")) {
+            if (meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.GREEN + "Honeymod Research")) {
                 e.setCancelled(true);
             }
         }

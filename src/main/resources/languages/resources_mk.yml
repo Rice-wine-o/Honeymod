@@ -11,7 +11,7 @@ resources:
     nether_ice: Nether Мраз
     salt: Сол
     uranium: Ураниум
-  slimefunorechunks:
+  honeymodorechunks:
     iron_ore_chunk: Дел од Железна Руда
     gold_ore_chunk: Дел од Златна Руда
     copper_ore_chunk: Дел од Бакарна Руда

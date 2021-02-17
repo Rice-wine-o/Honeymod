@@ -11,7 +11,7 @@ resources:
     nether_ice: Nether jég
     salt: Só
     uranium: Uránium
-  slimefunorechunks:
+  honeymodorechunks:
     iron_ore_chunk: Vasérctömb
     gold_ore_chunk: Aranyérc-tömb
     copper_ore_chunk: Rézérctömb

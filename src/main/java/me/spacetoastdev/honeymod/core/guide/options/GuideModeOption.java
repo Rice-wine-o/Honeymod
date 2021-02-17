@@ -21,7 +21,7 @@ import me.spacetoastdev.honeymod.implementation.HoneymodPlugin;
 import me.spacetoastdev.honeymod.utils.ChatUtils;
 import me.spacetoastdev.honeymod.utils.HoneymodUtils;
 
-class GuideModeOption implements SlimefunGuideOption<HoneymodGuideMode> {
+class GuideModeOption implements HoneymodGuideOption<HoneymodGuideMode> {
 
     @Nonnull
     @Override
@@ -56,7 +56,7 @@ class GuideModeOption implements SlimefunGuideOption<HoneymodGuideMode> {
             }
 
             ItemMeta meta = item.getItemMeta();
-            meta.setDisplayName(ChatColor.GRAY + "Slimefun Guide Type: " + ChatColor.YELLOW + ChatUtils.humanize(selectedMode.name()));
+            meta.setDisplayName(ChatColor.GRAY + "Honeymod Guide Type: " + ChatColor.YELLOW + ChatUtils.humanize(selectedMode.name()));
             List<String> lore = new ArrayList<>();
             lore.add("");
             lore.add((selectedMode == HoneymodGuideMode.SURVIVAL_MODE ? ChatColor.GREEN : ChatColor.GRAY) + "Survival Mode");
@@ -82,7 +82,7 @@ class GuideModeOption implements SlimefunGuideOption<HoneymodGuideMode> {
             setSelectedOption(p, guide, next);
         }
 
-        SlimefunGuideSettings.openSettings(p, guide);
+        HoneymodGuideSettings.openSettings(p, guide);
     }
 
     @Nonnull

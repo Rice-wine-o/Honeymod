@@ -11,7 +11,7 @@ resources:
     nether_ice: 下界冰
     salt: 盐
     uranium: 铀
-  slimefunorechunks:
+  honeymodorechunks:
     iron_ore_chunk: 铁矿区块
     gold_ore_chunk: 金矿区块
     copper_ore_chunk: 铜矿区块

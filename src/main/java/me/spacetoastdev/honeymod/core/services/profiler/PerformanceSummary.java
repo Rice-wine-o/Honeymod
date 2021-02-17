@@ -28,7 +28,7 @@ class PerformanceSummary {
     private static final int MIN_ITEMS = 6;
     private static final int MAX_ITEMS = 20;
 
-    private final SlimefunProfiler profiler;
+    private final HoneymodProfiler profiler;
     private final PerformanceRating rating;
     private final long totalElapsedTime;
     private final int totalTickedBlocks;
@@ -39,7 +39,7 @@ class PerformanceSummary {
     private final Map<String, Long> plugins;
     private final Map<String, Long> items;
 
-    PerformanceSummary(@Nonnull SlimefunProfiler profiler, long totalElapsedTime, int totalTickedBlocks) {
+    PerformanceSummary(@Nonnull HoneymodProfiler profiler, long totalElapsedTime, int totalTickedBlocks) {
         this.profiler = profiler;
         this.rating = profiler.getPerformance();
         this.percentage = profiler.getPercentageOfTick();
@@ -54,7 +54,7 @@ class PerformanceSummary {
 
     public void send(@Nonnull PerformanceInspector sender) {
         sender.sendMessage("");
-        sender.sendMessage(ChatColor.GREEN + "===== Slimefun Lag Profiler =====");
+        sender.sendMessage(ChatColor.GREEN + "===== Honeymod Lag Profiler =====");
         sender.sendMessage(ChatColor.GOLD + "Total time: " + ChatColor.YELLOW + NumberUtils.getAsMillis(totalElapsedTime));
         sender.sendMessage(ChatColor.GOLD + "Running every: " + ChatColor.YELLOW + NumberUtils.roundDecimalNumber(tickRate / 20.0) + "s (" + tickRate + " ticks)");
         sender.sendMessage(ChatColor.GOLD + "Performance: " + getPerformanceRating());

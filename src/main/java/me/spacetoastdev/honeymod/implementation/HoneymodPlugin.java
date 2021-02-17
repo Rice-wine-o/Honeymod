@@ -57,7 +57,7 @@ import me.spacetoastdev.honeymod.core.services.PermissionsService;
 import me.spacetoastdev.honeymod.core.services.UpdaterService;
 import me.spacetoastdev.honeymod.core.services.github.GitHubService;
 import me.spacetoastdev.honeymod.core.services.holograms.HologramsService;
-import me.spacetoastdev.honeymod.core.services.profiler.SlimefunProfiler;
+import me.spacetoastdev.honeymod.core.services.profiler.HoneymodProfiler;
 import me.spacetoastdev.honeymod.implementation.items.altar.AncientAltar;
 import me.spacetoastdev.honeymod.implementation.items.altar.AncientPedestal;
 import me.spacetoastdev.honeymod.implementation.items.backpacks.Cooler;
@@ -153,8 +153,8 @@ public final class HoneymodPlugin extends JavaPlugin implements HoneymodAddon {
     private final TickerTask ticker = new TickerTask();
 
     // Services - Systems that fulfill certain tasks, treat them as a black box
-    private final CustomItemDataService itemDataService = new CustomItemDataService(this, "slimefun_item");
-    private final BlockDataService blockDataService = new BlockDataService(this, "slimefun_block");
+    private final CustomItemDataService itemDataService = new CustomItemDataService(this, "honeymod_item");
+    private final BlockDataService blockDataService = new BlockDataService(this, "honeymod_block");
     private final CustomTextureService textureService = new CustomTextureService(new Config(this, "item-models.yml"));
     private final GitHubService gitHubService = new GitHubService("Slimefun/Slimefun4");
     private final UpdaterService updaterService = new UpdaterService(this, getDescription().getVersion(), getFile());
@@ -168,7 +168,7 @@ public final class HoneymodPlugin extends JavaPlugin implements HoneymodAddon {
 
     // Some other things we need
     private final IntegrationsManager integrations = new IntegrationsManager(this);
-    private final SlimefunProfiler profiler = new SlimefunProfiler();
+    private final HoneymodProfiler profiler = new HoneymodProfiler();
     private final GPSNetwork gpsNetwork = new GPSNetwork(this);
 
     // Even more things we need
@@ -256,7 +256,7 @@ public final class HoneymodPlugin extends JavaPlugin implements HoneymodAddon {
         }
 
         // Disabling backwards-compatibility for fresh Slimefun installs
-        if (!new File("data-storage/Slimefun").exists()) {
+        if (!new File("data-storage/Honeymod").exists()) {
             config.setValue("options.backwards-compatibility", false);
             config.save();
 
@@ -283,7 +283,7 @@ public final class HoneymodPlugin extends JavaPlugin implements HoneymodAddon {
         networkManager = new NetworkManager(networkSize, config.getBoolean("networks.enable-visualizer"), config.getBoolean("networks.delete-excess-items"));
 
         // Setting up bStats
-        new Thread(metricsService::start, "Slimefun Metrics").start();
+        new Thread(metricsService::start, "Honeymod Metrics").start();
 
         // Starting the Auto-Updater
         if (config.getBoolean("options.auto-update")) {
@@ -321,7 +321,7 @@ public final class HoneymodPlugin extends JavaPlugin implements HoneymodAddon {
             try {
                 recipeService.refresh();
             } catch (Exception | LinkageError x) {
-                getLogger().log(Level.SEVERE, x, () -> "An Exception occurred while iterating through the Recipe list on Minecraft Version " + minecraftVersion.getName() + " (Slimefun v" + getVersion() + ")");
+                getLogger().log(Level.SEVERE, x, () -> "An Exception occurred while iterating through the Recipe list on Minecraft Version " + minecraftVersion.getName() + " (Honeymod v" + getVersion() + ")");
             }
 
         }), 0);
@@ -330,7 +330,7 @@ public final class HoneymodPlugin extends JavaPlugin implements HoneymodAddon {
         try {
             command.register();
         } catch (Exception | LinkageError x) {
-            getLogger().log(Level.SEVERE, "An Exception occurred while registering the /slimefun command", x);
+            getLogger().log(Level.SEVERE, "An Exception occurred while registering the /honeymod command", x);
         }
 
         // Armor Update Task
@@ -350,7 +350,7 @@ public final class HoneymodPlugin extends JavaPlugin implements HoneymodAddon {
         gitHubService.start(this);
 
         // Hooray!
-        getLogger().log(Level.INFO, "Slimefun has finished loading in {0}", getStartupTime(timestamp));
+        getLogger().log(Level.INFO, "Honeymod has finished loading in {0}", getStartupTime(timestamp));
     }
 
     @Override
@@ -382,7 +382,7 @@ public final class HoneymodPlugin extends JavaPlugin implements HoneymodAddon {
             ticker.halt();
             ticker.run();
         } catch (Exception x) {
-            getLogger().log(Level.SEVERE, x, () -> "Something went wrong while disabling the ticker task for Slimefun v" + getDescription().getVersion());
+            getLogger().log(Level.SEVERE, x, () -> "Something went wrong while disabling the ticker task for Honeymod v" + getDescription().getVersion());
         }
 
         // Kill our Profiler Threads
@@ -400,7 +400,7 @@ public final class HoneymodPlugin extends JavaPlugin implements HoneymodAddon {
             try {
                 entry.getValue().saveAndRemove();
             } catch (Exception x) {
-                getLogger().log(Level.SEVERE, x, () -> "An Error occurred while saving Slimefun-Blocks in World '" + entry.getKey() + "' for Slimefun " + getVersion());
+                getLogger().log(Level.SEVERE, x, () -> "An Error occurred while saving Honeymod-Blocks in World '" + entry.getKey() + "' for Honeymod " + getVersion());
             }
         }
 
@@ -500,10 +500,10 @@ public final class HoneymodPlugin extends JavaPlugin implements HoneymodAddon {
             // First check if they still use the unsupported CraftBukkit software.
             if (!PaperLib.isSpigot() && Bukkit.getName().equals("CraftBukkit")) {
                 getLogger().log(Level.SEVERE, "###############################################");
-                getLogger().log(Level.SEVERE, "### Slimefun was not installed correctly!");
+                getLogger().log(Level.SEVERE, "### Honeymod was not installed correctly!");
                 getLogger().log(Level.SEVERE, "### CraftBukkit is no longer supported!");
                 getLogger().log(Level.SEVERE, "###");
-                getLogger().log(Level.SEVERE, "### Slimefun requires you to use Spigot, Paper or");
+                getLogger().log(Level.SEVERE, "### Honeymod requires you to use Spigot, Paper or");
                 getLogger().log(Level.SEVERE, "### any supported fork of Spigot or Paper.");
                 getLogger().log(Level.SEVERE, "### (We recommend Paper)");
                 getLogger().log(Level.SEVERE, "###############################################");
@@ -525,11 +525,11 @@ public final class HoneymodPlugin extends JavaPlugin implements HoneymodAddon {
 
                 // Looks like you are using an unsupported Minecraft Version
                 getLogger().log(Level.SEVERE, "#############################################");
-                getLogger().log(Level.SEVERE, "### Slimefun was not installed correctly!");
+                getLogger().log(Level.SEVERE, "### Honeymod was not installed correctly!");
                 getLogger().log(Level.SEVERE, "### You are using the wrong version of Minecraft!");
                 getLogger().log(Level.SEVERE, "###");
                 getLogger().log(Level.SEVERE, "### You are using Minecraft 1.{0}.x", version);
-                getLogger().log(Level.SEVERE, "### but Slimefun {0} requires you to be using", getDescription().getVersion());
+                getLogger().log(Level.SEVERE, "### but Honeymod {0} requires you to be using", getDescription().getVersion());
                 getLogger().log(Level.SEVERE, "### Minecraft {0}", String.join(" / ", getSupportedVersions()));
                 getLogger().log(Level.SEVERE, "#############################################");
                 return true;
@@ -545,7 +545,7 @@ public final class HoneymodPlugin extends JavaPlugin implements HoneymodAddon {
                 return false;
             }
         } catch (Exception | LinkageError x) {
-            getLogger().log(Level.SEVERE, x, () -> "Error: Could not determine Environment or version of Minecraft for Slimefun v" + getDescription().getVersion());
+            getLogger().log(Level.SEVERE, x, () -> "Error: Could not determine Environment or version of Minecraft for Honeymod v" + getDescription().getVersion());
 
             // We assume "unsupported" if something went wrong.
             return true;
@@ -585,7 +585,7 @@ public final class HoneymodPlugin extends JavaPlugin implements HoneymodAddon {
         String[] pluginFolders = { "scripts", "error-reports", "cache/github", "world-settings" };
 
         for (String folder : storageFolders) {
-            File file = new File("data-storage/Slimefun", folder);
+            File file = new File("data-storage/Honeymod", folder);
 
             if (!file.exists()) {
                 file.mkdirs();
@@ -593,7 +593,7 @@ public final class HoneymodPlugin extends JavaPlugin implements HoneymodAddon {
         }
 
         for (String folder : pluginFolders) {
-            File file = new File("plugins/Slimefun", folder);
+            File file = new File("plugins/Honeymod", folder);
 
             if (!file.exists()) {
                 file.mkdirs();
@@ -695,7 +695,7 @@ public final class HoneymodPlugin extends JavaPlugin implements HoneymodAddon {
         try {
             HoneymodItemSetup.setup(this);
         } catch (Exception | LinkageError x) {
-            getLogger().log(Level.SEVERE, x, () -> "An Error occurred while initializing HoneymodItems for Slimefun " + getVersion());
+            getLogger().log(Level.SEVERE, x, () -> "An Error occurred while initializing HoneymodItems for Honeymod " + getVersion());
         }
     }
 
@@ -706,7 +706,7 @@ public final class HoneymodPlugin extends JavaPlugin implements HoneymodAddon {
         try {
             ResearchSetup.setupResearches();
         } catch (Exception | LinkageError x) {
-            getLogger().log(Level.SEVERE, x, () -> "An Error occurred while initializing Slimefun Researches for Slimefun " + getVersion());
+            getLogger().log(Level.SEVERE, x, () -> "An Error occurred while initializing Honeymod Researches for Honeymod " + getVersion());
         }
     }
 
@@ -719,7 +719,7 @@ public final class HoneymodPlugin extends JavaPlugin implements HoneymodAddon {
      */
     private static void validateInstance() {
         if (instance == null) {
-            throw new IllegalStateException("Cannot invoke static method, Slimefun instance is null.");
+            throw new IllegalStateException("Cannot invoke static method, Honeymod instance is null.");
         }
     }
 
@@ -955,13 +955,13 @@ public final class HoneymodPlugin extends JavaPlugin implements HoneymodAddon {
     }
 
     /**
-     * This returns our instance of the {@link SlimefunProfiler}, a tool that is used
+     * This returns our instance of the {@link HoneymodProfiler}, a tool that is used
      * to analyse performance and lag.
      *
-     * @return The {@link SlimefunProfiler}
+     * @return The {@link HoneymodProfiler}
      */
     @Nonnull
-    public static SlimefunProfiler getProfiler() {
+    public static HoneymodProfiler getProfiler() {
         validateInstance();
         return instance.profiler;
     }

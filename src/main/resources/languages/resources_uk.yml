@@ -11,7 +11,7 @@ resources:
     nether_ice: Пекельний лід
     salt: Сіль
     uranium: Уран
-  slimefunorechunks:
+  honeymodorechunks:
     iron_ore_chunk: Кусочок залізної руди
     gold_ore_chunk: Кусочок золотої руди
     copper_ore_chunk: Кусочок мідної руди

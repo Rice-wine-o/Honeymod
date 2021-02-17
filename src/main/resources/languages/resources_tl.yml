@@ -11,7 +11,7 @@ resources:
     nether_ice: Nether Ice
     salt: Asin
     uranium: Uranium
-  slimefunorechunks:
+  honeymodorechunks:
     iron_ore_chunk: Iron Ore Chunk
     gold_ore_chunk: Gold Ore Chunk
     copper_ore_chunk: Copper Ore Chunk

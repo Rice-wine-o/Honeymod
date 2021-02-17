@@ -24,7 +24,7 @@ import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 
 import me.spacetoastdev.honeymod.core.services.localization.Language;
-import me.spacetoastdev.honeymod.core.services.localization.SlimefunLocalization;
+import me.spacetoastdev.honeymod.core.services.localization.HoneymodLocalization;
 import me.spacetoastdev.honeymod.implementation.HoneymodPlugin;
 import me.spacetoastdev.honeymod.utils.NumberUtils;
 
@@ -37,7 +37,7 @@ import me.spacetoastdev.honeymod.utils.NumberUtils;
  * @see Language
  *
  */
-public class LocalizationService extends SlimefunLocalization {
+public class LocalizationService extends HoneymodLocalization {
 
     private static final String LANGUAGE_PATH = "language";
 

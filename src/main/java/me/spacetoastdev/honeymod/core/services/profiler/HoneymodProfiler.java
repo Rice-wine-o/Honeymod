@@ -27,7 +27,7 @@ import me.spacetoastdev.honeymod.implementation.tasks.TickerTask;
 import me.spacetoastdev.honeymod.utils.NumberUtils;
 
 /**
- * The {@link SlimefunProfiler} works closely to the {@link TickerTask} and is
+ * The {@link HoneymodProfiler} works closely to the {@link TickerTask} and is
  * responsible for monitoring that task.
  * It collects timings data for any ticked {@link Block} and the corresponding {@link SlimefunItem}.
  * This allows developers to identify laggy {@link SlimefunItem HoneymodItems} or {@link HoneymodAddon SlimefunAddons}.
@@ -38,7 +38,7 @@ import me.spacetoastdev.honeymod.utils.NumberUtils;
  * @see TickerTask
  *
  */
-public class SlimefunProfiler {
+public class HoneymodProfiler {
 
     /**
      * A minecraft server tick is 50ms and Slimefun ticks are stretched
@@ -47,10 +47,10 @@ public class SlimefunProfiler {
     private static final int MAX_TICK_DURATION = 100;
 
     /**
-     * Our internal instance of {@link SlimefunThreadFactory}, it provides the naming
+     * Our internal instance of {@link HoneymodThreadFactory}, it provides the naming
      * convention for our {@link Thread} pool and also the count of this pool.
      */
-    private final SlimefunThreadFactory threadFactory = new SlimefunThreadFactory(2);
+    private final HoneymodThreadFactory threadFactory = new HoneymodThreadFactory(2);
 
     /**
      * This is our {@link Thread} pool to evaluate timings data.
@@ -84,7 +84,7 @@ public class SlimefunProfiler {
     private final Queue<PerformanceInspector> requests = new ConcurrentLinkedQueue<>();
 
     /**
-     * This method terminates the {@link SlimefunProfiler}.
+     * This method terminates the {@link HoneymodProfiler}.
      * We need to call this method when the {@link Server} shuts down to prevent any
      * of our {@link Thread Threads} from being kept alive.
      */
@@ -357,7 +357,7 @@ public class SlimefunProfiler {
     }
 
     /**
-     * This method checks whether the {@link SlimefunProfiler} has collected timings on
+     * This method checks whether the {@link HoneymodProfiler} has collected timings on
      * the given {@link Block}
      * 
      * @param b

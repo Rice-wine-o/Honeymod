@@ -41,7 +41,7 @@ final class ContributorsMenu {
 
         menu.addItem(1, new CustomItem(ChestMenuUtils.getBackButton(p, "", "&7" + HoneymodPlugin.getLocalization().getMessage(p, "guide.back.settings"))));
         menu.addMenuClickHandler(1, (pl, slot, item, action) -> {
-            SlimefunGuideSettings.openSettings(pl, p.getInventory().getItemInMainHand());
+            HoneymodGuideSettings.openSettings(pl, p.getInventory().getItemInMainHand());
             return false;
         });
 

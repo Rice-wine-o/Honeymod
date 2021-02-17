@@ -14,7 +14,7 @@ import org.bukkit.ChatColor;
  * 
  * @author TheBusyBiscuit
  * 
- * @see SlimefunProfiler
+ * @see HoneymodProfiler
  *
  */
 public enum PerformanceRating implements Predicate<Float> {

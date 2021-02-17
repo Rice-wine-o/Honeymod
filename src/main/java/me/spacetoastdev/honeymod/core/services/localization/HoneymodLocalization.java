@@ -39,9 +39,9 @@ import net.md_5.bungee.api.chat.TextComponent;
  * @see LocalizationService
  *
  */
-public abstract class SlimefunLocalization extends Localization implements Keyed {
+public abstract class HoneymodLocalization extends Localization implements Keyed {
 
-    protected SlimefunLocalization(@Nonnull HoneymodPlugin plugin) {
+    protected HoneymodLocalization(@Nonnull HoneymodPlugin plugin) {
         super(plugin);
     }
 

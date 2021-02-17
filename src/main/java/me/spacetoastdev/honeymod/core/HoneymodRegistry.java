@@ -100,7 +100,7 @@ public final class HoneymodRegistry {
 
         soulboundKey = new NamespacedKey(plugin, "soulbound");
         itemChargeKey = new NamespacedKey(plugin, "item_charge");
-        guideKey = new NamespacedKey(plugin, "slimefun_guide_mode");
+        guideKey = new NamespacedKey(plugin, "honeymod_guide_mode");
 
         boolean showVanillaRecipes = cfg.getBoolean("guide.show-vanilla-recipes");
         guides.put(HoneymodGuideMode.SURVIVAL_MODE, new SurvivalHoneymodGuide(showVanillaRecipes));
@@ -270,7 +270,7 @@ public final class HoneymodRegistry {
         HoneymodGuideImplementation guide = guides.get(mode);
 
         if (guide == null) {
-            throw new IllegalStateException("Slimefun Guide '" + mode + "' has no registered implementation.");
+            throw new IllegalStateException("Honeymod Guide '" + mode + "' has no registered implementation.");
         }
 
         return guide;

@@ -11,7 +11,7 @@ resources:
     nether_ice: Netherijs
     salt: Zout
     uranium: Uranium
-  slimefunorechunks:
+  honeymodorechunks:
     iron_ore_chunk: Ijzer erts brok
     gold_ore_chunk: Gouden erts brok
     copper_ore_chunk: Koper erts brok

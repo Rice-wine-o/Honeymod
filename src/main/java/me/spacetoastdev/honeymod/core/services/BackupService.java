@@ -42,7 +42,7 @@ public class BackupService implements Runnable {
     /**
      * The directory in which to create the backups
      */
-    private final File directory = new File("data-storage/Slimefun/block-backups");
+    private final File directory = new File("data-storage/Honeymod/block-backups");
 
     @Override
     public void run() {
@@ -67,12 +67,12 @@ public class BackupService implements Runnable {
                             createBackup(output);
                         }
 
-                        HoneymodPlugin.logger().log(Level.INFO, "Backed up Slimefun data to: {0}", file.getName());
+                        HoneymodPlugin.logger().log(Level.INFO, "Backed up Honeymod data to: {0}", file.getName());
                     } else {
                         HoneymodPlugin.logger().log(Level.WARNING, "Could not create backup-file: {0}", file.getName());
                     }
                 } catch (IOException x) {
-                    HoneymodPlugin.logger().log(Level.SEVERE, x, () -> "An Exception occurred while creating a backup for Slimefun " + HoneymodPlugin.getVersion());
+                    HoneymodPlugin.logger().log(Level.SEVERE, x, () -> "An Exception occurred while creating a backup for Honeymod " + HoneymodPlugin.getVersion());
                 }
             }
         }
@@ -81,14 +81,14 @@ public class BackupService implements Runnable {
     private void createBackup(@Nonnull ZipOutputStream output) throws IOException {
         Validate.notNull(output, "The Output Stream cannot be null!");
 
-        for (File folder : new File("data-storage/Slimefun/stored-blocks/").listFiles()) {
+        for (File folder : new File("data-storage/Honeymod/stored-blocks/").listFiles()) {
             addDirectory(output, folder, "stored-blocks/" + folder.getName());
         }
 
-        addDirectory(output, new File("data-storage/Slimefun/universal-inventories/"), "universal-inventories");
-        addDirectory(output, new File("data-storage/Slimefun/stored-inventories/"), "stored-inventories");
+        addDirectory(output, new File("data-storage/Honeymod/universal-inventories/"), "universal-inventories");
+        addDirectory(output, new File("data-storage/Honeymod/stored-inventories/"), "stored-inventories");
 
-        File chunks = new File("data-storage/Slimefun/stored-chunks/chunks.sfc");
+        File chunks = new File("data-storage/Honeymod/stored-chunks/chunks.sfc");
 
         if (chunks.exists()) {
             byte[] buffer = new byte[1024];

@@ -168,7 +168,7 @@ public class TagParser implements Keyed {
             if (tag != null) {
                 tags.add(tag);
             } else if (throwException) {
-                throw new TagMisconfigurationException(key, "There is no '" + value + "' tag in Slimefun");
+                throw new TagMisconfigurationException(key, "There is no '" + value + "' tag in Honeymod");
             }
         } else if (throwException) {
             // If no RegEx pattern matched, it's malformed.
