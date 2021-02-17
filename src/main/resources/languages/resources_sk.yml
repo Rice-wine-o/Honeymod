@@ -6,7 +6,7 @@ tooltips:
   unit: Jednotka
   units: Jednotky
 resources:
-  slimefun:
+  honeymod:
     oil: Olej
     nether_ice: Ľad z netheru
     salt: Soľ

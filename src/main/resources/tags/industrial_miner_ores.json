@@ -1,6 +1,6 @@
 {
 	"values" : [
-		"#slimefun:ores",
+		"#honeymod:ores",
 		{
 			"id" : "minecraft:gilded_blackstone",
 			"required" : false

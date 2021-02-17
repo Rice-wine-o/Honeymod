@@ -2,13 +2,13 @@
 commands:
   help: Menampilkan layar bantuan ini
   cheat: Mengijinkan kamu untuk mendapatkan item instan
-  give: Berikan seseorang Item Slimefun
-  guide: Berikan diri kamu Panduan Slimefun
+  give: Berikan seseorang Item Honeymod
+  guide: Berikan diri kamu Panduan Honeymod
   timings: Informasi Lag tentang Servermu
   teleporter: Lihat Waypoint Pemain lain
   versions: Daftar Addons Yang Terpasang
   search: Cari panduan anda untuk istilah yang diberikan
-  open_guide: Membuka Panduan Slimefun Tanpa Buku
+  open_guide: Membuka Panduan Honeymod Tanpa Buku
   stats: Lihat Statistik Seorang Pemain
   research:
     description: Membuka/Atur Ulang Penelitian Seorang Pemain
@@ -37,12 +37,12 @@ guide:
     select-default: Klik untuk menggunakan bahasa standar server
     selected-language: 'Yang sedang dipilih:'
   title:
-    main: Panduan Slimefun
+    main: Panduan Honeymod
     settings: Pengaturan & Informasi
     languages: Pilih Bahasa Yang Anda Inginkan
-    credits: Para Kontributor Slimefun4
-    wiki: Slimefun4 Wiki
-    addons: Addons untuk Slimefun4
+    credits: Para Kontributor Honeymod4
+    wiki: Honeymod4 Wiki
+    addons: Addons untuk Honeymod4
     bugs: Laporkan masalah
     source: Kode sumber
   credits:
@@ -59,7 +59,7 @@ guide:
   tooltips:
     open-category: Klik untuk membuka
     versions-notice: Melaporkan kesalahan program sangatlah penting!
-    wiki: Lihat benda ini di wiki resmi Slimefun
+    wiki: Lihat benda ini di wiki resmi Honeymod
     recipes:
       machine: Resep yang di buat dalam mesin ini
       miner: Sumber daya yang dapat diambil dengan penambang ini
@@ -67,7 +67,7 @@ guide:
       gold-pan: Sumber daya yang dapat anda ambil
   back:
     title: Kembali
-    guide: Kembali ke panduan Slimefun
+    guide: Kembali ke panduan Honeymod
     settings: Kemabali ke panel pengaturan
   locked: TERKUNCI
   locked-category:
@@ -201,12 +201,12 @@ machines:
     finished: "&e Penambang Industri Anda telah selesai! Itu memperoleh total% bijih%
       bijih!"
 anvil:
-  not-working: "&4Anda bisa menggunakan barang Slimefun di landasan!"
+  not-working: "&4Anda bisa menggunakan barang Honeymod di landasan!"
 backpack:
   already-open: "&cMaaf, tas ini dibuka di tempat lain!"
   no-stack: "&cAnda tidak bisa menumpuk tas"
 workbench:
-  not-enhanced: "&4Anda tidak dapat menggunakan barang Slimefun di meja kerajinan
+  not-enhanced: "&4Anda tidak dapat menggunakan barang Honeymod di meja kerajinan
     biasa"
 gps:
   deathpoint: "&4Lokasi Kematian &7%date%"

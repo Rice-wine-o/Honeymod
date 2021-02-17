@@ -6,7 +6,7 @@ tooltips:
   unit: Stuk
   units: Stukken
 resources:
-  slimefun:
+  honeymod:
     oil: Olie
     nether_ice: Netherijs
     salt: Zout

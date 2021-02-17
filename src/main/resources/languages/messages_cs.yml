@@ -2,12 +2,12 @@
 commands:
   help: Zobrazí tuto  nápovědu
   cheat: Umožní našvindlovat si věci
-  give: Dá hráči vybrané Slimefun předměty
-  guide: Dá Slimefun příručku
+  give: Dá hráči vybrané Honeymod předměty
+  guide: Dá Honeymod příručku
   teleporter: Zobrazí záchytné body ostatních hráčů
   versions: Zobrazí všechny nainstalované doplňky
   search: Vyhledá v příručce daný předmět
-  open_guide: Otevře Slimefun příručku bez použití knihy
+  open_guide: Otevře Honeymod příručku bez použití knihy
   stats: Ukáže statistiky hráče
   research:
     description: Odemkne či resetuje výzkum daného hráče
@@ -47,15 +47,15 @@ guide:
     description:
       '0': "&7Nyní máš možnost změnit"
       '1': "&7jazyk, ve kterém ti bude"
-      '2': "&7Slimefun prezentován. Předměty"
+      '2': "&7Honeymod prezentován. Předměty"
       '3': "&7nelze prozatím přeložit."
   title:
-    main: Slimefun příručka
+    main: Honeymod příručka
     settings: Nastavení a informace
     languages: Zvol svůj preferovaný jazyk
-    credits: Slimefun4 pomocníci
-    wiki: Slimefun4 Wiki
-    addons: Doplňky pro Slimefun4
+    credits: Honeymod4 pomocníci
+    wiki: Honeymod4 Wiki
+    addons: Doplňky pro Honeymod4
     bugs: Nahlášení chyb
     source: Zdrojový kód
     versions: Nainstalovaná verze
@@ -70,9 +70,9 @@ guide:
     profile-link: Klikni pro navštívení jeho profilu na GitHubu
     open: Klikni pro zobrazení našich pomocníků
     description:
-      '0': "&7Slimefun je open-source projekt"
+      '0': "&7Honeymod je open-source projekt"
       '1': "&7udržován velkou komunitou lidí."
-      '2': "&7Na Slimefunu za všechny ty roky pracovalo"
+      '2': "&7Na Honeymodu za všechny ty roky pracovalo"
       '3': "&7přes &e%contributors% &7lidí."
   pages:
     previous: Předchozí strana
@@ -80,7 +80,7 @@ guide:
   tooltips:
     open-category: Klikni pro otevření
     versions-notice: To jsou velmi důležité při hlášení chyb!
-    wiki: Zobrazit tento předmět na oficiální Slimefun Wiki
+    wiki: Zobrazit tento předmět na oficiální Honeymod Wiki
     recipes:
       machine: Recepty vytvářené tímto strojem
       miner: Materiály, které můžeš získat tímto těžebním robotem
@@ -89,7 +89,7 @@ guide:
       climbing-pick: Povrchy, na které můžeš lézt
   back:
     title: Zpět
-    guide: Zpět do Slimefun příručky
+    guide: Zpět do Honeymod příručky
     settings: Zpět do panelu nastavení
   locked: ZAMČENO
   locked-category:
@@ -168,7 +168,7 @@ messages:
     '11': "&7Vždy se podívej na světlou stránku života!"
     '12': "&7Tohle byl vlastně Biscuit, a ne Cookie"
     '13': "&7Neonové cedule jsou LIT!"
-  piglin-barter: "&4S pigliny nemůžeš vyměňovat Slimefun předměty"
+  piglin-barter: "&4S pigliny nemůžeš vyměňovat Honeymod předměty"
   enchantment-rune:
     fail: "&cNemůžeš očarovat tento předmět."
     no-enchantment: "&cPro tento předmět nelze najít žádné vhodné očarování."
@@ -183,7 +183,7 @@ messages:
     not-shears: "&cMulti Tool nemůže být použit jako nůžky!"
   climbing-pick:
     dual-wielding: "&4Musíš držet Climbing Picks v obou rukou pro jeho použití!"
-    wrong-material: "&cNa tento povrch nemůžeš vylézt. Zkontroluj Slimefun Guide,
+    wrong-material: "&cNa tento povrch nemůžeš vylézt. Zkontroluj Honeymod Guide,
       kde najdeš další informace!"
   invalid-item: "&4%item% &cnení platný předmět!"
   invalid-amount: "&4%amount% &cnení platné číslo. Musí být větší než 0!"
@@ -242,13 +242,13 @@ machines:
     no-permission: "&4Zdá se, že zde nemáš oprávnění používat průmyslového horníka!"
     finished: "&eTvůj průmysloví horník dokončil práci! Získal %ores% rud!"
 anvil:
-  not-working: "&4Předměty ze Slimefunu nelze použít v kovadlině!"
-  mcmmo-salvaging: "&4Nemůžeš zachránit Slimefun předměty!"
+  not-working: "&4Předměty ze Honeymodu nelze použít v kovadlině!"
+  mcmmo-salvaging: "&4Nemůžeš zachránit Honeymod předměty!"
 backpack:
   already-open: "&cBohužel, tento batoh je již otevřený někde jinde!"
   no-stack: "&cNemůžeš shromažďovat batohy"
 workbench:
-  not-enhanced: "&4Nemůžeš použít předměty ze Slimefunu v normální pracovním stole"
+  not-enhanced: "&4Nemůžeš použít předměty ze Honeymodu v normální pracovním stole"
 gps:
   deathpoint: "&4Bod úmrtí &7%date%"
   waypoint:
@@ -349,13 +349,13 @@ languages:
   be: Běloruština
   tl: 'Tagalština '
 brewing_stand:
-  not-working: "&4Nemůžeš používat Slimefun předměty ve varném stojanu!"
+  not-working: "&4Nemůžeš používat Honeymod předměty ve varném stojanu!"
 villagers:
-  no-trading: "&4Nemůžeš vyměňovat Slimefun předměty s vesničany!"
+  no-trading: "&4Nemůžeš vyměňovat Honeymod předměty s vesničany!"
 cartography_table:
-  not-working: "&4Nemůžeš použít Slimefun předměty v kartografickém stole!"
+  not-working: "&4Nemůžeš použít Honeymod předměty v kartografickém stole!"
 cauldron:
-  no-discoloring: "&4Nemůžeš odebrat barvu ze Slimefun brnění"
+  no-discoloring: "&4Nemůžeš odebrat barvu ze Honeymod brnění"
 placeholderapi:
   profile-loading: Načítání...
 miner:

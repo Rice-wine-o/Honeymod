@@ -3,9 +3,9 @@ package me.mrCookieSlime.Slimefun.api;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunPlugin;
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
+import me.spacetoastdev.honeymod.implementation.HoneymodPlugin;
+import me.spacetoastdev.honeymod.utils.HoneymodUtils;
 
 /**
  * Provides a few static convenience methods.
@@ -30,7 +30,7 @@ public final class Slimefun {
      *            whether a message should be sent to the player or not
      * 
      * @deprecated Moved to
-     *             {@link SlimefunUtils#canPlayerUseItem(Player, ItemStack, boolean)}
+     *             {@link HoneymodUtils#canPlayerUseItem(Player, ItemStack, boolean)}
      *
      * @return <code>true</code> if the item is a SlimefunItem, enabled, researched and if the player has the permission
      *         to use it,
@@ -38,7 +38,7 @@ public final class Slimefun {
      */
     @Deprecated
     public static boolean hasUnlocked(Player p, ItemStack item, boolean message) {
-        return SlimefunUtils.canPlayerUseItem(p, item, message);
+        return HoneymodUtils.canPlayerUseItem(p, item, message);
     }
 
     /**
@@ -77,11 +77,11 @@ public final class Slimefun {
     public static boolean hasPermission(Player p, SlimefunItem item, boolean message) {
         if (item == null) {
             return true;
-        } else if (SlimefunPlugin.getPermissionsService().hasPermission(p, item)) {
+        } else if (HoneymodPlugin.getPermissionsService().hasPermission(p, item)) {
             return true;
         } else {
             if (message) {
-                SlimefunPlugin.getLocalization().sendMessage(p, "messages.no-permission", true);
+                HoneymodPlugin.getLocalization().sendMessage(p, "messages.no-permission", true);
             }
 
             return false;
@@ -126,13 +126,13 @@ public final class Slimefun {
     public static boolean isEnabled(Player p, SlimefunItem sfItem, boolean message) {
         if (sfItem.isDisabled()) {
             if (message) {
-                SlimefunPlugin.getLocalization().sendMessage(p, "messages.disabled-item", true);
+                HoneymodPlugin.getLocalization().sendMessage(p, "messages.disabled-item", true);
             }
 
             return false;
-        } else if (!SlimefunPlugin.getWorldSettingsService().isEnabled(p.getWorld(), sfItem)) {
+        } else if (!HoneymodPlugin.getWorldSettingsService().isEnabled(p.getWorld(), sfItem)) {
             if (message) {
-                SlimefunPlugin.getLocalization().sendMessage(p, "messages.disabled-in-world", true);
+                HoneymodPlugin.getLocalization().sendMessage(p, "messages.disabled-in-world", true);
             }
 
             return false;

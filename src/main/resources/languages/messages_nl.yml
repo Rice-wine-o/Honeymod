@@ -2,18 +2,18 @@
 commands:
   help: Laat het hulpmenu zien
   cheat: Geeft je toestemming om gratis spullen in het spel te brengen
-  give: Geef iemand een aantal Slimefun spullen
-  guide: Geef jezelf een Slimefun Handboek
+  give: Geef iemand een aantal Honeymod spullen
+  guide: Geef jezelf een Honeymod Handboek
   teleporter: Bekijk de opgeslagen locaties van andere spelers
   versions: Laat een lijst met alle geïnstalleerde uitbreidingen zien
-  search: Doorzoek de Slimefun handleiding voor een bepaald trefwoord
-  open_guide: Open de Slimefun handleiding zonder gebruik te maken van het Slimefun
+  search: Doorzoek de Honeymod handleiding voor een bepaald trefwoord
+  open_guide: Open de Honeymod handleiding zonder gebruik te maken van het Honeymod
     boek
   stats: Laat een aantal statistieken van een speler zien
   research:
-    description: Ontgrendel of herstart Slimefun kennissen van een speler
-    reset: "&cJe hebt %player%'s Slimefun kennis herstart"
-    reset-target: "&cJe Slimefun kennis is herstart"
+    description: Ontgrendel of herstart Honeymod kennissen van een speler
+    reset: "&cJe hebt %player%'s Honeymod kennis herstart"
+    reset-target: "&cJe Honeymod kennis is herstart"
   backpack:
     description: Krijg een kopie van een al bestaande rugzak
     invalid-id: "&4Het id moet een positieve nummer zijn!"
@@ -36,7 +36,7 @@ guide:
       '1': "&7Type je zoekterm in het gespreksvenster"
       '0': "&bOp welk woord zou je willen zoeken?"
   cheat:
-    no-multiblocks: "&4Je kan geen Slimefun machines in het spel brengen, je moet
+    no-multiblocks: "&4Je kan geen Honeymod machines in het spel brengen, je moet
       ze bouwen zoals aangegeven."
   languages:
     updated: "&aJe taal instelling is succesvol veranderd naar: &b%lang%"
@@ -49,16 +49,16 @@ guide:
     change: Klik om een nieuwe taal te kiezen
     description:
       '0': "&7Je hebt nu de mogelijkheid om de taal"
-      '1': "&7van Slimefun te veranderen"
+      '1': "&7van Honeymod te veranderen"
       '2': "&7aan jou wordt vertoond. Items"
       '3': "&7kunnen momenteel niet vertaald worden."
   title:
-    main: Slimefun Handboek
+    main: Honeymod Handboek
     settings: Instellingen & Informatie
     languages: Kies een taal bij voorkeur
-    credits: Slimefun4 Bijdragers
-    wiki: Slimefun4 Wiki
-    addons: Uitbreidingen voor Slimefun4
+    credits: Honeymod4 Bijdragers
+    wiki: Honeymod4 Wiki
+    addons: Uitbreidingen voor Honeymod4
     bugs: Fouten rapporteren
     source: Source Code
     versions: Geïnstalleerde versies
@@ -73,7 +73,7 @@ guide:
     profile-link: Klik om hun profielen op Github te bezoeken
     open: Klik om onze bijdragers te zien
     description:
-      '0': "&7Slimefun is een open-source project"
+      '0': "&7Honeymod is een open-source project"
       '1': "&7en wordt in stand gehouden door een grote gemeenschap van mensen."
       '2': "&7Meer dan &e%contributors% &7mensen hebben hieraan"
       '3': "&7al deze jaren gewerkt."
@@ -83,7 +83,7 @@ guide:
   tooltips:
     open-category: Klik om te openen
     versions-notice: Deze zijn erg belangrijk voor het rapporteren van fouten!
-    wiki: Bekijk dit voorwerp op de officiële Slimefun Wiki
+    wiki: Bekijk dit voorwerp op de officiële Honeymod Wiki
     recipes:
       machine: Recepten gemaakt in deze Machine
       miner: Grondstoffen die je met deze Miner kunt verkrijgen
@@ -92,7 +92,7 @@ guide:
       climbing-pick: Oppervlakken die je kunt beklimmen
   back:
     title: Terug
-    guide: Ga terug naar de Slimefun Handleiding
+    guide: Ga terug naar de Honeymod Handleiding
     settings: Ga terug naar Instellingen
   locked: VERGRENDELD
   locked-category:
@@ -101,7 +101,7 @@ guide:
     '2': volgende categorieën
   work-in-progress: Dit is nog niet helemaal klaar!
 messages:
-  not-researched: "&4Je hebt niet genoeg Slimefun kennis om dit te begrijpen"
+  not-researched: "&4Je hebt niet genoeg Honeymod kennis om dit te begrijpen"
   not-enough-xp: "&4Je hebt niet genoeg XP om dit te ontgrendelen"
   unlocked: '&bJe hebt &7"%research%" ontgrendeld'
   only-players: "&4Dit commando is alleen voor spelers"
@@ -170,7 +170,7 @@ messages:
     '11': "&7Kijk altijd naar de blije kant van je leven!"
     '12': "&7Deze was eigenlijk een biscuitje en geen koekje"
     '13': "&7Neon borden zijn LIT!"
-  piglin-barter: "&4Je kunt geen Slimefun spullen met piglins ruilen"
+  piglin-barter: "&4Je kunt geen Honeymod spullen met piglins ruilen"
   enchantment-rune:
     fail: "&cJe kunt dit item niet betoveren."
     no-enchantment: "&cKon geen mogelijke betoveringen vinden voor dit item."
@@ -185,12 +185,12 @@ messages:
     not-shears: "&cEen Mutli Tool kan niet gebruikt worden als een schaar!"
   climbing-pick:
     dual-wielding: "&4Je moet een klim-pickaxe in bijde handen hebben om hem te gebruiken!"
-    wrong-material: "&cJe kunt dit oppervlak niet beklimmen. Check je Slimefun Guide
+    wrong-material: "&cJe kunt dit oppervlak niet beklimmen. Check je Honeymod Guide
       voor meer info!"
   invalid-item: "&4%item% &cis geen geldig voorwerp!"
   invalid-amount: "&4%amount% &cis geen geldige hoeveelheid: het moet meer zijn dan
     0!"
-  invalid-research: "&4%research% &cis geen geldig Slimefun onderzoek"
+  invalid-research: "&4%research% &cis geen geldig Honeymod onderzoek"
   bee-suit-slow-fall: "&eJe Bee Wings zullen je helpen om weer veilig op de grond
     te komen"
   mode-change: "&b%device% mode is veranderd naar: &9%mode%"
@@ -250,13 +250,13 @@ machines:
       Miner hier te laten werken!"
     finished: "&eJe Industrial Miner is klaar! Het heeft in totaal %ores% grondstof(fen)! "
 anvil:
-  not-working: "&4Je kan geen Slimefun voorwerpen gebruiken in een aambeeld!"
-  mcmmo-salvaging: "&4Je kunt geen Slimefun items afbreken!"
+  not-working: "&4Je kan geen Honeymod voorwerpen gebruiken in een aambeeld!"
+  mcmmo-salvaging: "&4Je kunt geen Honeymod items afbreken!"
 backpack:
   already-open: "&cSorry, deze rugzak is al ergens anders geopend!"
   no-stack: "&cJe kan geen rugzakken stapelen"
 workbench:
-  not-enhanced: "&4Je kan geen Slimefun voorwerpen in een normale werkbank gebruiken"
+  not-enhanced: "&4Je kan geen Honeymod voorwerpen in een normale werkbank gebruiken"
 gps:
   deathpoint: "&4Dode locatie &7%date%"
   waypoint:
@@ -359,13 +359,13 @@ languages:
   be: Wit-Russisch/Russisch
   tl: Tagalog
 brewing_stand:
-  not-working: "&4Je kunt geen Slimefun spullen in een brouwstandaard doen!"
+  not-working: "&4Je kunt geen Honeymod spullen in een brouwstandaard doen!"
 villagers:
-  no-trading: "&4Je kunt geen Slimefun spullen met villagers ruilen!"
+  no-trading: "&4Je kunt geen Honeymod spullen met villagers ruilen!"
 cartography_table:
-  not-working: "&4Je kunt Slimefun items niet in een cartografie tafel gebruiken!"
+  not-working: "&4Je kunt Honeymod items niet in een cartografie tafel gebruiken!"
 cauldron:
-  no-discoloring: "&4Je kunt de kleur van Slimefun Bescherming niet er af halen"
+  no-discoloring: "&4Je kunt de kleur van Honeymod Bescherming niet er af halen"
 placeholderapi:
   profile-loading: Aan het laden...
 miner:

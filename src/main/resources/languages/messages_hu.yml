@@ -2,12 +2,12 @@
 commands:
   help: Megjeleníti ezt a súgóképernyőt
   cheat: Ezzel lekérhetsz tárgyakat
-  give: Slimefun tárgyak lekérése egy játékosnak
-  guide: Slimefun Útmutató lekérése
+  give: Honeymod tárgyak lekérése egy játékosnak
+  guide: Honeymod Útmutató lekérése
   teleporter: Játékosok útpontjainak megtekintése
   versions: A kiegészítők listázása
   search: Keresés egy kifejezésre az Útmutatóban
-  open_guide: A könyv használata nélkül megnyitja a Slimefun útmutatóját
+  open_guide: A könyv használata nélkül megnyitja a Honeymod útmutatóját
   stats: Néhány statisztikát mutat egy játékosról
   research:
     description: A játékosok kutatásainak feloldása/visszaállítása
@@ -24,7 +24,7 @@ commands:
     charge-success: Tárgy feltöltve!
     not-rechargeable: Ez a tárgy nem tölthető fel!
   timings:
-    description: Teljesítményinformáció a Slimefunról és a kiegészítőiről
+    description: Teljesítményinformáció a Honeymodról és a kiegészítőiről
     please-wait: "&eKérjük várj... Érkeznek az eredmények!"
     verbose-player: "&4A részletes megjelenítés flag nem használható játékosként!"
     unknown-flag: "&4Ismeretlen flag: &c%flag%"
@@ -50,16 +50,16 @@ guide:
     change: Kattints a nyelv kiválasztásához
     description:
     - "&7Már lehetőséged van kiválasztani,"
-    - "&7hogy a Slimefun milyen nyelven"
+    - "&7hogy a Honeymod milyen nyelven"
     - "&7jelenjen meg számodra. A tárgyakat"
     - "&7jelenleg nem lehet lefordítani."
   title:
-    main: Slimefun Útmutató
+    main: Honeymod Útmutató
     settings: Beállítások és Információk
     languages: Válaszd ki a kívánt nyelvet
-    credits: Slimefun4 közreműködők
-    wiki: Slimefun4 Wiki
-    addons: A Slimefun4 kiegészítői
+    credits: Honeymod4 közreműködők
+    wiki: Honeymod4 Wiki
+    addons: A Honeymod4 kiegészítői
     bugs: Hibajelentések
     source: Forráskód
     versions: Telepített verziók
@@ -74,7 +74,7 @@ guide:
     profile-link: Kattints ide, hogy meglátogasd a profilját a GitHub-on
     open: Kattints a közreműködők megtekintéséhez
     description:
-    - "&7A Slimefun egy nyílt forráskódú projekt,"
+    - "&7A Honeymod egy nyílt forráskódú projekt,"
     - "&7amit egy hatalmas közösség tart fenn."
     - "&7Több mint &e%contributors% &7közreműködő"
     - "&7dolgozott rajta az évek során."
@@ -84,7 +84,7 @@ guide:
   tooltips:
     open-category: Kattints a megnyitáshoz
     versions-notice: Ezek nagyon fontosak a hibák jelentésekor!
-    wiki: Tekintsd meg ezt a tárgyat a hivatalos Slimefun Wikin
+    wiki: Tekintsd meg ezt a tárgyat a hivatalos Honeymod Wikin
     recipes:
       machine: Ebben a gépben készíthető receptek
       miner: Erőforrások, amelyeket ezzel a bányásszal szerezhetsz be
@@ -93,7 +93,7 @@ guide:
       climbing-pick: Megmászható felületek
   back:
     title: Vissza
-    guide: Visszalépés a Slimefun Útmutatóba
+    guide: Visszalépés a Honeymod Útmutatóba
     settings: Visszalépés a Beállítások panelre
   locked: LEZÁRVA
   locked-category:
@@ -169,7 +169,7 @@ messages:
   - "&7Mindig nézd az élet jó oldalát!"
   - "&7Ez valójában keksz volt, és nem süti"
   - "&7A neon táblák VILÁGÍTANAK!"
-  piglin-barter: "&4Slimefun tárgyakat nem cserélhetsz el a piglinekkel."
+  piglin-barter: "&4Honeymod tárgyakat nem cserélhetsz el a piglinekkel."
   enchantment-rune:
     fail: "&cNem varázsolhatod el ezt a tárgyat."
     no-enchantment: "&cNem található megfelelő varázslat ehhez az tárgyhoz."
@@ -185,7 +185,7 @@ messages:
   climbing-pick:
     dual-wielding: "&4Mindkét kezedben Climbing Pick-et kell tartanod, hogy használhasd
       őket!"
-    wrong-material: "&cEzt a felületet nem mászhatod meg. Nyisd meg a Slimefun Útmutatót
+    wrong-material: "&cEzt a felületet nem mászhatod meg. Nyisd meg a Honeymod Útmutatót
       további információért!"
   invalid-item: "&4%item% &cnem megfelelő tárgy!"
   invalid-amount: "&4%amount% &cnem megfelelő mennyiség: 0-nál nagyobbnak kell lennie!"
@@ -249,13 +249,13 @@ machines:
       itt!"
     finished: Az Industrial Miner-ed kész! Összesen %ores% ércet szerzett!
 anvil:
-  not-working: "&4Nem használhatsz Slimefun tárgyakat az üllőben!"
-  mcmmo-salvaging: "&4Nem hasznosíthatsz újra Slimefun tárgyakat!"
+  not-working: "&4Nem használhatsz Honeymod tárgyakat az üllőben!"
+  mcmmo-salvaging: "&4Nem hasznosíthatsz újra Honeymod tárgyakat!"
 backpack:
   already-open: "&cSajnáljuk, ez a hátizsák valahol máshol már nyitva van!"
   no-stack: "&cNem halmozhatsz hátizsákokat"
 workbench:
-  not-enhanced: "&4Nem használhatsz Slimefun tárgyakat barkácsasztalban"
+  not-enhanced: "&4Nem használhatsz Honeymod tárgyakat barkácsasztalban"
 gps:
   deathpoint: "&4Halálpont: &7%date%"
   waypoint:
@@ -358,12 +358,12 @@ languages:
   be: Belarusz
   tl: Tagalog
 brewing_stand:
-  not-working: "&4Nem használhatsz Slimefun tárgyakat főzőállványban!"
+  not-working: "&4Nem használhatsz Honeymod tárgyakat főzőállványban!"
 villagers:
-  no-trading: "&4Nem cserélhetsz Slimefun tárgyakat falusiakkal!"
+  no-trading: "&4Nem cserélhetsz Honeymod tárgyakat falusiakkal!"
 cartography_table:
-  not-working: "&4Nem használhatsz Slimefun tárgyakat térképasztalban."
+  not-working: "&4Nem használhatsz Honeymod tárgyakat térképasztalban."
 cauldron:
-  no-discoloring: "&4Nem színteleníthetsz Slimefun páncélt!"
+  no-discoloring: "&4Nem színteleníthetsz Honeymod páncélt!"
 miner:
   no-ores: "&eSajnálom, nem találtam semmilyen ércet a közelben!"

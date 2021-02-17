@@ -1,12 +1,12 @@
 commands:
   help: Displays this help screen
   cheat: Allows you to cheat Items
-  give: Give somebody some Slimefun Items
-  guide: Gives yourself a Slimefun Guide
+  give: Give somebody some Honeymod Items
+  guide: Gives yourself a Honeymod Guide
   teleporter: See other Player's Waypoints
   versions: Lists all installed Addons
   search: Searches your Guide for the given term
-  open_guide: Opens Slimefun's guide without using the book
+  open_guide: Opens Honeymod's guide without using the book
   stats: Shows some Stats about a Player
 
   research:
@@ -27,7 +27,7 @@ commands:
     not-rechargeable: This item can not be charged!
 
   timings:
-    description: Timings for Slimefun and its addon
+    description: Timings for Honeymod and its addon
     please-wait: '&ePlease wait a second... The results are coming in!'
     verbose-player: '&4The verbose flag cannot be used by a Player!'
     unknown-flag: '&4Unknown flag: &c%flag%'
@@ -53,7 +53,7 @@ guide:
   tooltips:
     open-category: 'Click to open'
     versions-notice: 'These are very important when reporting bugs!'
-    wiki: 'View this Item on the official Slimefun Wiki'
+    wiki: 'View this Item on the official Honeymod Wiki'
 
     recipes:
       machine: 'Recipes made in this Machine'
@@ -71,7 +71,7 @@ guide:
     
   back:
     title: 'Back'
-    guide: 'Go back to the Slimefun Guide'
+    guide: 'Go back to the Honeymod Guide'
     settings: 'Go back to the Settings Panel'
 
   languages:
@@ -83,7 +83,7 @@ guide:
 
     description:
     - '&7You now have the option to change'
-    - '&7the language in which Slimefun'
+    - '&7the language in which Honeymod'
     - '&7will be presented to you. Items'
     - '&7cannot be translated for now.'
     
@@ -92,12 +92,12 @@ guide:
       lore: 'Click to add your own translation'
   
   title:
-    main: 'Slimefun Guide'
+    main: 'Honeymod Guide'
     settings: 'Settings & Info'
     languages: 'Select your preferred language'
-    credits: 'Slimefun4 Contributors'
-    wiki: 'Slimefun4 Wiki'
-    addons: 'Addons for Slimefun4'
+    credits: 'Honeymod4 Contributors'
+    wiki: 'Honeymod4 Wiki'
+    addons: 'Addons for Honeymod4'
     bugs: 'Bug Reports'
     source: 'Source Code'
     versions: 'Installed versions'
@@ -108,10 +108,10 @@ guide:
     profile-link: 'Click to visit their profile on GitHub'
     open: 'Click to see our contributors'
     description:
-    - '&7Slimefun is an open-source project'
+    - '&7Honeymod is an open-source project'
     - '&7and maintained by a large community of people.'
     - '&7Over &e%contributors% &7people have worked on'
-    - '&7Slimefun throughout all these years.'
+    - '&7Honeymod throughout all these years.'
 
     roles:
       developer: '&6Developer'
@@ -139,7 +139,7 @@ messages:
   disabled-item: '&4&lThis Item has been disabled! How did you even get that?'
   no-tome-yourself: '&cYou cannot use the &4Tome of Knowledge &con yourself...'
   multimeter: '&bStored Energy: &3%stored% &b/ &3%capacity%'
-  piglin-barter: '&4You cannot barter with piglins using Slimefun items'
+  piglin-barter: '&4You cannot barter with piglins using Honeymod items'
   bee-suit-slow-fall: '&eYour Bee Wings will help you to get back to the ground safe and slow'
 
   multi-tool:
@@ -184,7 +184,7 @@ messages:
     
   climbing-pick:
     dual-wielding: '&4You need to hold Climbing Picks in both hands to use them!'
-    wrong-material: '&cYou cannot climb this surface. Check your Slimefun Guide for more info!'
+    wrong-material: '&cYou cannot climb this surface. Check your Honeymod Guide for more info!'
 
   fire-extinguish: '&7You have extinguished yourself'
   cannot-place: '&cYou cannot place that block there!'
@@ -270,27 +270,27 @@ machines:
     finished: '&eYour Industrial Miner has finished! It obtained a total of %ores% ore(s)!'
     
 anvil:
-  not-working: '&4You cannot use Slimefun items in an anvil!'
-  mcmmo-salvaging: '&4You cannot salvage Slimefun items!'
+  not-working: '&4You cannot use Honeymod items in an anvil!'
+  mcmmo-salvaging: '&4You cannot salvage Honeymod items!'
 
 brewing_stand:
-  not-working: '&4You cannot use Slimefun items in a brewing stand!'
+  not-working: '&4You cannot use Honeymod items in a brewing stand!'
 
 cartography_table:
-  not-working: '&4You cannot use Slimefun items in a cartography table!'
+  not-working: '&4You cannot use Honeymod items in a cartography table!'
 
 villagers:
-  no-trading: '&4You cannot trade Slimefun items with Villagers!'
+  no-trading: '&4You cannot trade Honeymod items with Villagers!'
 
 backpack:
   already-open: '&cSorry, this Backpack is open somewhere else!'
   no-stack: '&cYou cannot stack Backpacks'
 
 workbench:
-  not-enhanced: '&4You cannot use Slimefun items in a normal workbench'
+  not-enhanced: '&4You cannot use Honeymod items in a normal workbench'
 
 cauldron:
-  no-discoloring: '&4You cannot discolor Slimefun Armor'
+  no-discoloring: '&4You cannot discolor Honeymod Armor'
 
 gps:
   deathpoint: '&4Deathpoint &7%date%'

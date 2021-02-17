@@ -20,15 +20,15 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import io.github.thebusybiscuit.cscorelib2.item.CustomItem;
-import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
-import io.github.thebusybiscuit.slimefun4.core.categories.LockedCategory;
-import io.github.thebusybiscuit.slimefun4.core.categories.SeasonalCategory;
-import io.github.thebusybiscuit.slimefun4.core.guide.SlimefunGuide;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunPlugin;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
+import me.spacetoastdev.honeymod.api.HoneymodAddon;
+import me.spacetoastdev.honeymod.core.categories.LockedCategory;
+import me.spacetoastdev.honeymod.core.categories.SeasonalCategory;
+import me.spacetoastdev.honeymod.core.guide.HoneymodGuide;
+import me.spacetoastdev.honeymod.implementation.HoneymodPlugin;
 
 /**
- * Represents a category, which structure multiple {@link SlimefunItem} in the {@link SlimefunGuide}.
+ * Represents a category, which structure multiple {@link SlimefunItem} in the {@link HoneymodGuide}.
  * 
  * @author TheBusyBiscuit
  *
@@ -38,7 +38,7 @@ import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
  */
 public class Category implements Keyed {
 
-    private SlimefunAddon addon;
+    private HoneymodAddon addon;
 
     protected final List<SlimefunItem> items = new ArrayList<>();
     protected final NamespacedKey key;
@@ -70,7 +70,7 @@ public class Category implements Keyed {
      *            The {@link ItemStack} that is used to display this {@link Category}
      * @param tier
      *            The tier of this {@link Category}, higher tiers will make this {@link Category} appear further down in
-     *            the {@link SlimefunGuide}
+     *            the {@link HoneymodGuide}
      */
     @ParametersAreNonnullByDefault
     public Category(NamespacedKey key, ItemStack item, int tier) {
@@ -99,24 +99,24 @@ public class Category implements Keyed {
      * By default, a category is automatically registered when a {@link SlimefunItem} was added to it.
      * 
      * @param addon
-     *            The {@link SlimefunAddon} that wants to register this {@link Category}
+     *            The {@link HoneymodAddon} that wants to register this {@link Category}
      */
-    public void register(@Nonnull SlimefunAddon addon) {
+    public void register(@Nonnull HoneymodAddon addon) {
         Validate.notNull(addon, "The Addon cannot be null");
         this.addon = addon;
 
-        SlimefunPlugin.getRegistry().getCategories().add(this);
-        Collections.sort(SlimefunPlugin.getRegistry().getCategories(), Comparator.comparingInt(Category::getTier));
+        HoneymodPlugin.getRegistry().getCategories().add(this);
+        Collections.sort(HoneymodPlugin.getRegistry().getCategories(), Comparator.comparingInt(Category::getTier));
     }
 
     /**
-     * This returns the {@link SlimefunAddon} which has registered this {@link Category}.
+     * This returns the {@link HoneymodAddon} which has registered this {@link Category}.
      * Or null if it has not been registered yet.
      * 
-     * @return The {@link SlimefunAddon} or null if unregistered
+     * @return The {@link HoneymodAddon} or null if unregistered
      */
     @Nullable
-    public final SlimefunAddon getAddon() {
+    public final HoneymodAddon getAddon() {
         return addon;
     }
 
@@ -160,7 +160,7 @@ public class Category implements Keyed {
     @Nonnull
     public ItemStack getItem(@Nonnull Player p) {
         return new CustomItem(item, meta -> {
-            String name = SlimefunPlugin.getLocalization().getCategoryName(p, getKey());
+            String name = HoneymodPlugin.getLocalization().getCategoryName(p, getKey());
 
             if (name == null) {
                 name = item.getItemMeta().getDisplayName();
@@ -172,7 +172,7 @@ public class Category implements Keyed {
                 meta.setDisplayName(ChatColor.YELLOW + name);
             }
 
-            meta.setLore(Arrays.asList("", ChatColor.GRAY + "\u21E8 " + ChatColor.GREEN + SlimefunPlugin.getLocalization().getMessage(p, "guide.tooltips.open-category")));
+            meta.setLore(Arrays.asList("", ChatColor.GRAY + "\u21E8 " + ChatColor.GREEN + HoneymodPlugin.getLocalization().getMessage(p, "guide.tooltips.open-category")));
         });
     }
 
@@ -198,7 +198,7 @@ public class Category implements Keyed {
      */
     @Nonnull
     public String getDisplayName(@Nonnull Player p) {
-        String localized = SlimefunPlugin.getLocalization().getCategoryName(p, getKey());
+        String localized = HoneymodPlugin.getLocalization().getCategoryName(p, getKey());
 
         if (localized != null) {
             return localized;
@@ -210,7 +210,7 @@ public class Category implements Keyed {
     /**
      * Returns all instances of {@link SlimefunItem} bound to this {@link Category}.
      * 
-     * @return the list of SlimefunItems bound to this category
+     * @return the list of HoneymodItems bound to this category
      */
     @Nonnull
     public List<SlimefunItem> getItems() {
@@ -231,7 +231,7 @@ public class Category implements Keyed {
 
     /**
      * Returns the tier of this {@link Category}.
-     * The tier determines the position of this {@link Category} in the {@link SlimefunGuide}.
+     * The tier determines the position of this {@link Category} in the {@link HoneymodGuide}.
      * 
      * @return the tier of this {@link Category}
      */
@@ -267,12 +267,12 @@ public class Category implements Keyed {
 
     /**
      * This method returns whether this {@link Category} has been registered yet.
-     * More specifically: Whether {@link #register(SlimefunAddon)} was called or not.
+     * More specifically: Whether {@link #register(HoneymodAddon)} was called or not.
      * 
      * @return Whether this {@link Category} has been registered
      */
     public boolean isRegistered() {
-        return SlimefunPlugin.getRegistry().getCategories().contains(this);
+        return HoneymodPlugin.getRegistry().getCategories().contains(this);
     }
 
 }

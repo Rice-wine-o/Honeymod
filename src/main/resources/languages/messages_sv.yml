@@ -42,16 +42,16 @@ android:
   started: "&7Din Android fortsatte att köra sin kod"
   stopped: "&7Din Android har pausat sin kod"
 anvil:
-  not-working: "&4Du kan inte använda Slimefun Föremål i ett städ!"
+  not-working: "&4Du kan inte använda Honeymod Föremål i ett städ!"
 backpack:
   already-open: "&cDenna Ryggsäck är redan öppen på något annat ställe!"
   no-stack: "&cDu kan inte stacka Ryggsäckar"
 commands:
   cheat: Tillåter dig att fuska fram Föremål
-  give: Ge någon Slimefun-föremål
-  guide: Ger dig själv en Slimefun-handbok
+  give: Ge någon Honeymod-föremål
+  guide: Ger dig själv en Honeymod-handbok
   help: Visar denna hjälpskärm
-  open_guide: Öppnar Slimefun-handboken utan att använda bokföremålet
+  open_guide: Öppnar Honeymod-handboken utan att använda bokföremålet
   research:
     description: Låser upp/återställer en spelares forskningar
     reset: "&cDu har återställt %player%s kunskap"
@@ -75,7 +75,7 @@ gps:
     new: "&7Skriv in önskad namn till vägpunkten i chatten. &r(Färg Koder stöds!)"
 guide:
   back:
-    guide: Gå tillbaka till Slimefun Guiden
+    guide: Gå tillbaka till Honeymod Guiden
     settings: Gå tillbaka till Inställningar
     title: Gå Tillbaka
   cheat:
@@ -109,14 +109,14 @@ guide:
     tooltip: "&bKlicka här för att söka efter ett föremål"
     inventory: 'Söker efter: %item%'
   title:
-    addons: Tilläg till Slimefun4
+    addons: Tilläg till Honeymod4
     bugs: Bugg Rapporter
-    credits: Slimefun4-medhjälpare
+    credits: Honeymod4-medhjälpare
     languages: Välj ditt föredragna språk
-    main: Slimefun-handbok
+    main: Honeymod-handbok
     settings: Inställningar & Info
     source: Källkoden
-    wiki: Slimefun4 Wiki
+    wiki: Honeymod4 Wiki
   tooltips:
     open-category: Klicka här för att öppna
     recipes:
@@ -125,7 +125,7 @@ guide:
       machine: Recept gjorda i denna maskin
       miner: Resurser du kan få med denna Gruvarbetare
     versions-notice: Dessa är väldigt viktiga när det kommer till att rapportera buggar!
-    wiki: Visar detta föremål på den Officiella Slimefun Wikin
+    wiki: Visar detta föremål på den Officiella Honeymod Wikin
   locked: LÅST
   locked-category:
   - För att låsa upp denna kategori måste du
@@ -287,4 +287,4 @@ messages:
 miner:
   no-ores: "&eFörlåt, Jag kunde inte hitta någon malm eller mineraler i närhetn!"
 workbench:
-  not-enhanced: "&4Du kan inte använda Slimefun Föremål i en vanlig arbetsbänk"
+  not-enhanced: "&4Du kan inte använda Honeymod Föremål i en vanlig arbetsbänk"

@@ -6,7 +6,7 @@ tooltips:
   unit: Enhet
   units: Enheter
 resources:
-  slimefun:
+  honeymod:
     oil: Olja
     nether_ice: Nether Is
     salt: Salt

@@ -1,14 +1,14 @@
 ---
 commands:
   help: Pokazuje ten ekran pomocy
-  cheat: Daje graczowi przedmioty Slimefun.
-  give: Daj graczowi przedmioty Slimefun
-  guide: Daje ci przewodnik Slimefun
+  cheat: Daje graczowi przedmioty Honeymod.
+  give: Daj graczowi przedmioty Honeymod
+  guide: Daje ci przewodnik Honeymod
   timings: Informacje o opóźnieniu na twoim serwerze
   teleporter: Zobacz punkty lokalizacji innych graczy
   versions: Wyświetla listę wszystkich zainstalowanych dodatków
   search: Przeszukuje twój przewodnik dla podanego terminu
-  open_guide: Otwiera przewodnik Slimefun bez korzystania z książki
+  open_guide: Otwiera przewodnik Honeymod bez korzystania z książki
   stats: Pokazuje niektóre statystyki dotyczące gracza
   research:
     description: Odblokuj/Zresetuj badania dla gracza
@@ -34,12 +34,12 @@ guide:
     select-default: Kliknij, aby wybrać domyślny język
     selected-language: 'Aktualnie wybrane:'
   title:
-    main: Przewodnik Slimefun
+    main: Przewodnik Honeymod
     settings: Ustawienia i informacje
     languages: Wybierz preferowany język
-    credits: Autorzy Slimefun4
-    wiki: Wiki Slimefun4
-    addons: Dodatki dla Slimefun4
+    credits: Autorzy Honeymod4
+    wiki: Wiki Honeymod4
+    addons: Dodatki dla Honeymod4
     bugs: Zgłaszanie błędów
     source: Kod Źródłowy
   credits:
@@ -57,7 +57,7 @@ guide:
   tooltips:
     open-category: Kliknij, aby otworzyć
     versions-notice: Jest to bardzo ważne przy zgłaszaniu błędów!
-    wiki: Zobacz ten przedmiot na oficjalnej stronie Wiki Slimefun
+    wiki: Zobacz ten przedmiot na oficjalnej stronie Wiki Honeymod
     recipes:
       machine: Przepisy wykonane w tym urządzeniu
       miner: Zasoby, które możesz uzyskać za pomocą tego Górnika
@@ -65,7 +65,7 @@ guide:
       gold-pan: Zasoby, które możesz zdobyć
   back:
     title: Wstecz
-    guide: Wróć Do Przewodnika Slimefun
+    guide: Wróć Do Przewodnika Honeymod
     settings: Wróć Do Panelu Ustawień
   locked: Zablokowany
   locked-category:
@@ -184,12 +184,12 @@ machines:
     transmitters: Transmiter Przegląd
     waypoints: Waypoint Przegląd
 anvil:
-  not-working: "&4Nie możesz używać przedmiotów Slimefun w kowadle!"
+  not-working: "&4Nie możesz używać przedmiotów Honeymod w kowadle!"
 backpack:
   already-open: "&cPrzepraszamy, ten plecak jest otwarty gdzie indziej!"
   no-stack: "&cNie możesz stakować plecaków"
 workbench:
-  not-enhanced: "&4Nie można używać przedmiotów Slimefun w zwykłym stole warsztatowym"
+  not-enhanced: "&4Nie można używać przedmiotów Honeymod w zwykłym stole warsztatowym"
 gps:
   deathpoint: "&4Punkt śmierci &7%date%"
   waypoint:

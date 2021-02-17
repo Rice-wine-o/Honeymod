@@ -20,14 +20,6 @@ import org.bukkit.inventory.ItemStack;
 
 import io.github.thebusybiscuit.cscorelib2.inventory.InvUtils;
 import io.github.thebusybiscuit.cscorelib2.item.CustomItem;
-import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
-import io.github.thebusybiscuit.slimefun4.api.events.AsyncMachineProcessCompleteEvent;
-import io.github.thebusybiscuit.slimefun4.api.items.ItemState;
-import io.github.thebusybiscuit.slimefun4.core.attributes.EnergyNetComponent;
-import io.github.thebusybiscuit.slimefun4.core.networks.energy.EnergyNetComponentType;
-import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
-import io.github.thebusybiscuit.slimefun4.utils.itemstack.ItemStackWrapper;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ChestMenu.AdvancedMenuClickHandler;
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ClickAction;
@@ -40,6 +32,14 @@ import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
+import me.spacetoastdev.honeymod.api.HoneymodAddon;
+import me.spacetoastdev.honeymod.api.events.AsyncMachineProcessCompleteEvent;
+import me.spacetoastdev.honeymod.api.items.ItemState;
+import me.spacetoastdev.honeymod.core.attributes.EnergyNetComponent;
+import me.spacetoastdev.honeymod.core.networks.energy.EnergyNetComponentType;
+import me.spacetoastdev.honeymod.utils.ChestMenuUtils;
+import me.spacetoastdev.honeymod.utils.HoneymodUtils;
+import me.spacetoastdev.honeymod.utils.itemstack.ItemStackWrapper;
 
 public abstract class AContainer extends SlimefunItem implements InventoryBlock, EnergyNetComponent {
 
@@ -219,7 +219,7 @@ public abstract class AContainer extends SlimefunItem implements InventoryBlock,
     }
 
     @Override
-    public void register(@Nonnull SlimefunAddon addon) {
+    public void register(@Nonnull HoneymodAddon addon) {
         this.addon = addon;
 
         if (getCapacity() <= 0) {
@@ -415,7 +415,7 @@ public abstract class AContainer extends SlimefunItem implements InventoryBlock,
         for (MachineRecipe recipe : recipes) {
             for (ItemStack input : recipe.getInput()) {
                 for (int slot : getInputSlots()) {
-                    if (SlimefunUtils.isItemSimilar(inventory.get(slot), input, true)) {
+                    if (HoneymodUtils.isItemSimilar(inventory.get(slot), input, true)) {
                         found.put(slot, input.getAmount());
                         break;
                     }

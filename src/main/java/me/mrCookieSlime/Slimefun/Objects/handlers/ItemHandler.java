@@ -2,14 +2,14 @@ package me.mrCookieSlime.Slimefun.Objects.handlers;
 
 import java.util.Optional;
 
-import io.github.thebusybiscuit.slimefun4.api.exceptions.IncompatibleItemHandlerException;
-import io.github.thebusybiscuit.slimefun4.core.handlers.BlockUseHandler;
-import io.github.thebusybiscuit.slimefun4.core.handlers.BowShootHandler;
-import io.github.thebusybiscuit.slimefun4.core.handlers.EntityInteractHandler;
-import io.github.thebusybiscuit.slimefun4.core.handlers.EntityKillHandler;
-import io.github.thebusybiscuit.slimefun4.core.handlers.ItemConsumptionHandler;
-import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
+import me.spacetoastdev.honeymod.api.exceptions.IncompatibleItemHandlerException;
+import me.spacetoastdev.honeymod.core.handlers.BlockUseHandler;
+import me.spacetoastdev.honeymod.core.handlers.BowShootHandler;
+import me.spacetoastdev.honeymod.core.handlers.EntityInteractHandler;
+import me.spacetoastdev.honeymod.core.handlers.EntityKillHandler;
+import me.spacetoastdev.honeymod.core.handlers.ItemConsumptionHandler;
+import me.spacetoastdev.honeymod.core.handlers.ItemUseHandler;
 
 /**
  * An {@link ItemHandler} represents a certain action that a {@link SlimefunItem}

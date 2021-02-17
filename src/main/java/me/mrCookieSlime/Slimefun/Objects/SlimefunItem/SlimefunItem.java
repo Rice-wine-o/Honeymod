@@ -24,51 +24,51 @@ import org.bukkit.permissions.Permission;
 
 import io.github.thebusybiscuit.cscorelib2.collections.OptionalMap;
 import io.github.thebusybiscuit.cscorelib2.inventory.ItemUtils;
-import io.github.thebusybiscuit.slimefun4.api.MinecraftVersion;
-import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
-import io.github.thebusybiscuit.slimefun4.api.SlimefunBranch;
-import io.github.thebusybiscuit.slimefun4.api.exceptions.IdConflictException;
-import io.github.thebusybiscuit.slimefun4.api.exceptions.IncompatibleItemHandlerException;
-import io.github.thebusybiscuit.slimefun4.api.exceptions.MissingDependencyException;
-import io.github.thebusybiscuit.slimefun4.api.exceptions.UnregisteredItemException;
-import io.github.thebusybiscuit.slimefun4.api.exceptions.WrongItemStackException;
-import io.github.thebusybiscuit.slimefun4.api.items.ItemSetting;
-import io.github.thebusybiscuit.slimefun4.api.items.ItemState;
-import io.github.thebusybiscuit.slimefun4.api.player.PlayerProfile;
-import io.github.thebusybiscuit.slimefun4.core.attributes.NotConfigurable;
-import io.github.thebusybiscuit.slimefun4.core.attributes.Placeable;
-import io.github.thebusybiscuit.slimefun4.core.attributes.Radioactive;
-import io.github.thebusybiscuit.slimefun4.core.attributes.Rechargeable;
-import io.github.thebusybiscuit.slimefun4.core.guide.SlimefunGuide;
-import io.github.thebusybiscuit.slimefun4.core.researching.Research;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunPlugin;
-import io.github.thebusybiscuit.slimefun4.implementation.items.VanillaItem;
-import io.github.thebusybiscuit.slimefun4.implementation.items.backpacks.SlimefunBackpack;
-import io.github.thebusybiscuit.slimefun4.implementation.items.electric.machines.AutoDisenchanter;
-import io.github.thebusybiscuit.slimefun4.implementation.items.electric.machines.AutoEnchanter;
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
-import io.github.thebusybiscuit.slimefun4.utils.itemstack.ItemStackWrapper;
 import me.mrCookieSlime.Slimefun.Lists.RecipeType;
 import me.mrCookieSlime.Slimefun.Objects.Category;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunBlockHandler;
 import me.mrCookieSlime.Slimefun.Objects.handlers.BlockTicker;
 import me.mrCookieSlime.Slimefun.Objects.handlers.ItemHandler;
 import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
+import me.spacetoastdev.honeymod.api.MinecraftVersion;
+import me.spacetoastdev.honeymod.api.HoneymodAddon;
+import me.spacetoastdev.honeymod.api.HoneymodBranch;
+import me.spacetoastdev.honeymod.api.exceptions.IdConflictException;
+import me.spacetoastdev.honeymod.api.exceptions.IncompatibleItemHandlerException;
+import me.spacetoastdev.honeymod.api.exceptions.MissingDependencyException;
+import me.spacetoastdev.honeymod.api.exceptions.UnregisteredItemException;
+import me.spacetoastdev.honeymod.api.exceptions.WrongItemStackException;
+import me.spacetoastdev.honeymod.api.items.ItemSetting;
+import me.spacetoastdev.honeymod.api.items.ItemState;
+import me.spacetoastdev.honeymod.api.player.PlayerProfile;
+import me.spacetoastdev.honeymod.core.attributes.NotConfigurable;
+import me.spacetoastdev.honeymod.core.attributes.Placeable;
+import me.spacetoastdev.honeymod.core.attributes.Radioactive;
+import me.spacetoastdev.honeymod.core.attributes.Rechargeable;
+import me.spacetoastdev.honeymod.core.guide.HoneymodGuide;
+import me.spacetoastdev.honeymod.core.researching.Research;
+import me.spacetoastdev.honeymod.implementation.HoneymodPlugin;
+import me.spacetoastdev.honeymod.implementation.items.VanillaItem;
+import me.spacetoastdev.honeymod.implementation.items.backpacks.HoneymodBackpack;
+import me.spacetoastdev.honeymod.implementation.items.electric.machines.AutoDisenchanter;
+import me.spacetoastdev.honeymod.implementation.items.electric.machines.AutoEnchanter;
+import me.spacetoastdev.honeymod.utils.HoneymodUtils;
+import me.spacetoastdev.honeymod.utils.itemstack.ItemStackWrapper;
 
 /**
- * A {@link SlimefunItem} is a custom item registered by a {@link SlimefunAddon}.
+ * A {@link SlimefunItem} is a custom item registered by a {@link HoneymodAddon}.
  * This class defines the behaviours of the item, you can assign an {@link ItemHandler}
  * to give the item functionality.
  * In contrast to that the {@link SlimefunItemStack} defines the look and feel of the item.
  * 
- * Remember to call {@link #register(SlimefunAddon)} on your {@link SlimefunItem} for it
- * to appear in the {@link SlimefunGuide}.
+ * Remember to call {@link #register(HoneymodAddon)} on your {@link SlimefunItem} for it
+ * to appear in the {@link HoneymodGuide}.
  * 
  * @author TheBusyBiscuit
  * @author Poslovitch
  * 
  * @see SlimefunItemStack
- * @see SlimefunAddon
+ * @see HoneymodAddon
  *
  */
 public class SlimefunItem implements Placeable {
@@ -85,10 +85,10 @@ public class SlimefunItem implements Placeable {
     private final ItemStack itemStackTemplate;
 
     /**
-     * This is a reference to the {@link SlimefunAddon} that registered this
+     * This is a reference to the {@link HoneymodAddon} that registered this
      * {@link SlimefunItem}, if the item has not been registered yet, it will be null.
      */
-    protected SlimefunAddon addon;
+    protected HoneymodAddon addon;
 
     /**
      * This is the state of this {@link SlimefunItem}.
@@ -338,7 +338,7 @@ public class SlimefunItem implements Placeable {
 
     /**
      * This method returns whether this {@link SlimefunItem} was hidden from the
-     * {@link SlimefunGuide}.
+     * {@link HoneymodGuide}.
      * 
      * @return Whether this {@link SlimefunItem} is hidden.
      */
@@ -347,7 +347,7 @@ public class SlimefunItem implements Placeable {
     }
 
     /**
-     * This method will forcefully hide this {@link SlimefunItem} from the {@link SlimefunGuide}.
+     * This method will forcefully hide this {@link SlimefunItem} from the {@link HoneymodGuide}.
      * 
      * @param hidden
      *            Whether to hide this {@link SlimefunItem} or not
@@ -397,19 +397,19 @@ public class SlimefunItem implements Placeable {
         }
 
         // Check if the Item is disabled globally or in this specific world
-        return isDisabled() || !SlimefunPlugin.getWorldSettingsService().isEnabled(world, this);
+        return isDisabled() || !HoneymodPlugin.getWorldSettingsService().isEnabled(world, this);
     }
 
     /**
-     * This method returns the {@link SlimefunAddon} that registered this
+     * This method returns the {@link HoneymodAddon} that registered this
      * {@link SlimefunItem}. If this Item is from Slimefun itself, the current
-     * instance of {@link SlimefunPlugin} will be returned.
+     * instance of {@link HoneymodPlugin} will be returned.
      * Use an instanceof check to account for that.
      * 
-     * @return The {@link SlimefunAddon} that registered this {@link SlimefunItem}
+     * @return The {@link HoneymodAddon} that registered this {@link SlimefunItem}
      */
     @Nonnull
-    public final SlimefunAddon getAddon() {
+    public final HoneymodAddon getAddon() {
         if (addon == null) {
             throw new UnregisteredItemException(this);
         }
@@ -427,11 +427,11 @@ public class SlimefunItem implements Placeable {
      * Never call it more than once!
      * 
      * @param addon
-     *            The {@link SlimefunAddon} that this {@link SlimefunItem} belongs to.
+     *            The {@link HoneymodAddon} that this {@link SlimefunItem} belongs to.
      */
-    public void register(@Nonnull SlimefunAddon addon) {
-        Validate.notNull(addon, "A SlimefunAddon cannot be null!");
-        Validate.notNull(addon.getJavaPlugin(), "SlimefunAddon#getJavaPlugin() is not allowed to return null!");
+    public void register(@Nonnull HoneymodAddon addon) {
+        Validate.notNull(addon, "A HoneymodAddon cannot be null!");
+        Validate.notNull(addon.getJavaPlugin(), "HoneymodAddon#getJavaPlugin() is not allowed to return null!");
 
         this.addon = addon;
 
@@ -445,16 +445,16 @@ public class SlimefunItem implements Placeable {
                 recipe = new ItemStack[] { null, null, null, null, null, null, null, null, null };
             }
 
-            SlimefunPlugin.getRegistry().getAllSlimefunItems().add(this);
-            SlimefunPlugin.getRegistry().getSlimefunItemIds().put(id, this);
+            HoneymodPlugin.getRegistry().getAllSlimefunItems().add(this);
+            HoneymodPlugin.getRegistry().getSlimefunItemIds().put(id, this);
 
             // Items that are "not-configurable" cannot be configured.
             if (!(this instanceof NotConfigurable)) {
-                SlimefunPlugin.getItemCfg().setDefaultValue(id + ".enabled", true);
-                SlimefunPlugin.getItemCfg().setDefaultValue(id + ".can-be-used-in-workbenches", useableInWorkbench);
-                SlimefunPlugin.getItemCfg().setDefaultValue(id + ".hide-in-guide", hidden);
-                SlimefunPlugin.getItemCfg().setDefaultValue(id + ".allow-enchanting", enchantable);
-                SlimefunPlugin.getItemCfg().setDefaultValue(id + ".allow-disenchanting", disenchantable);
+                HoneymodPlugin.getItemCfg().setDefaultValue(id + ".enabled", true);
+                HoneymodPlugin.getItemCfg().setDefaultValue(id + ".can-be-used-in-workbenches", useableInWorkbench);
+                HoneymodPlugin.getItemCfg().setDefaultValue(id + ".hide-in-guide", hidden);
+                HoneymodPlugin.getItemCfg().setDefaultValue(id + ".allow-enchanting", enchantable);
+                HoneymodPlugin.getItemCfg().setDefaultValue(id + ".allow-disenchanting", disenchantable);
 
                 // Load all item settings
                 for (ItemSetting<?> setting : itemSettings) {
@@ -462,7 +462,7 @@ public class SlimefunItem implements Placeable {
                 }
             }
 
-            if (ticking && !SlimefunPlugin.getCfg().getBoolean("URID.enable-tickers")) {
+            if (ticking && !HoneymodPlugin.getCfg().getBoolean("URID.enable-tickers")) {
                 state = ItemState.DISABLED;
                 return;
             }
@@ -471,12 +471,12 @@ public class SlimefunItem implements Placeable {
                 // Not-configurable items will be enabled.
                 // Any other settings will remain as default.
                 state = ItemState.ENABLED;
-            } else if (SlimefunPlugin.getItemCfg().getBoolean(id + ".enabled")) {
+            } else if (HoneymodPlugin.getItemCfg().getBoolean(id + ".enabled")) {
                 state = ItemState.ENABLED;
-                useableInWorkbench = SlimefunPlugin.getItemCfg().getBoolean(id + ".can-be-used-in-workbenches");
-                hidden = SlimefunPlugin.getItemCfg().getBoolean(id + ".hide-in-guide");
-                enchantable = SlimefunPlugin.getItemCfg().getBoolean(id + ".allow-enchanting");
-                disenchantable = SlimefunPlugin.getItemCfg().getBoolean(id + ".allow-disenchanting");
+                useableInWorkbench = HoneymodPlugin.getItemCfg().getBoolean(id + ".can-be-used-in-workbenches");
+                hidden = HoneymodPlugin.getItemCfg().getBoolean(id + ".hide-in-guide");
+                enchantable = HoneymodPlugin.getItemCfg().getBoolean(id + ".allow-enchanting");
+                disenchantable = HoneymodPlugin.getItemCfg().getBoolean(id + ".allow-disenchanting");
             } else if (this instanceof VanillaItem) {
                 state = ItemState.VANILLA_FALLBACK;
             } else {
@@ -496,7 +496,7 @@ public class SlimefunItem implements Placeable {
             postRegister();
 
             // handle runtime-registrations / auto-loading
-            if (SlimefunPlugin.getRegistry().isAutoLoadingEnabled() && state == ItemState.ENABLED) {
+            if (HoneymodPlugin.getRegistry().isAutoLoadingEnabled() && state == ItemState.ENABLED) {
                 info("Item was registered during runtime.");
                 load();
             }
@@ -531,14 +531,14 @@ public class SlimefunItem implements Placeable {
         }
 
         // Add it to the list of enabled items
-        SlimefunPlugin.getRegistry().getEnabledSlimefunItems().add(this);
+        HoneymodPlugin.getRegistry().getEnabledSlimefunItems().add(this);
 
         // Load our Item Handlers
         loadItemHandlers();
 
         // Properly mark this Item as radioactive
         if (this instanceof Radioactive) {
-            SlimefunPlugin.getRegistry().getRadioactiveItems().add(this);
+            HoneymodPlugin.getRegistry().getRadioactiveItems().add(this);
         }
     }
 
@@ -585,9 +585,9 @@ public class SlimefunItem implements Placeable {
      * This method checks if the dependencies have been set up correctly.
      * 
      * @param addon
-     *            The {@link SlimefunAddon} trying to register this {@link SlimefunItem}
+     *            The {@link HoneymodAddon} trying to register this {@link SlimefunItem}
      */
-    private void checkDependencies(@Nonnull SlimefunAddon addon) {
+    private void checkDependencies(@Nonnull HoneymodAddon addon) {
         if (!addon.hasDependency("Slimefun")) {
             throw new MissingDependencyException(addon, "Slimefun");
         }
@@ -614,7 +614,7 @@ public class SlimefunItem implements Placeable {
      *            The {@link Class} from which to start this operation.
      */
     private void checkForDeprecations(@Nullable Class<?> c) {
-        if (SlimefunPlugin.getUpdater().getBranch() == SlimefunBranch.DEVELOPMENT) {
+        if (HoneymodPlugin.getUpdater().getBranch() == HoneymodBranch.DEVELOPMENT) {
             /*
              * This method is currently way too spammy with all the restructuring going on...
              * Since DEV builds are anyway under "development", things may be relocated.
@@ -755,7 +755,7 @@ public class SlimefunItem implements Placeable {
         }
 
         if (item.hasItemMeta()) {
-            Optional<String> itemId = SlimefunPlugin.getItemDataService().getItemData(item);
+            Optional<String> itemId = HoneymodPlugin.getItemDataService().getItemData(item);
 
             if (itemId.isPresent()) {
                 return getId().equals(itemId.get());
@@ -763,9 +763,9 @@ public class SlimefunItem implements Placeable {
         }
 
         // Backwards compatibility
-        if (SlimefunPlugin.getRegistry().isBackwardsCompatible()) {
-            boolean loreInsensitive = this instanceof Rechargeable || this instanceof SlimefunBackpack || id.equals("BROKEN_SPAWNER") || id.equals("REINFORCED_SPAWNER");
-            return SlimefunUtils.isItemSimilar(item, this.itemStackTemplate, !loreInsensitive);
+        if (HoneymodPlugin.getRegistry().isBackwardsCompatible()) {
+            boolean loreInsensitive = this instanceof Rechargeable || this instanceof HoneymodBackpack || id.equals("BROKEN_SPAWNER") || id.equals("REINFORCED_SPAWNER");
+            return HoneymodUtils.isItemSimilar(item, this.itemStackTemplate, !loreInsensitive);
         } else {
             return false;
         }
@@ -803,7 +803,7 @@ public class SlimefunItem implements Placeable {
             // Tickers are a special case (at the moment at least)
             if (handler instanceof BlockTicker) {
                 ticking = true;
-                SlimefunPlugin.getRegistry().getTickerBlocks().add(getId());
+                HoneymodPlugin.getRegistry().getTickerBlocks().add(getId());
                 blockTicker = (BlockTicker) handler;
             }
         }
@@ -843,7 +843,7 @@ public class SlimefunItem implements Placeable {
     }
 
     /**
-     * This method is called before {@link #register(SlimefunAddon)}.
+     * This method is called before {@link #register(HoneymodAddon)}.
      * Override this method to add any additional setup, adding an {@link ItemHandler} for example.
      */
     public void preRegister() {
@@ -852,7 +852,7 @@ public class SlimefunItem implements Placeable {
     }
 
     /**
-     * This method is called after {@link #register(SlimefunAddon)}.
+     * This method is called after {@link #register(HoneymodAddon)}.
      * Override this method to add any additional setup that needs to happen after
      * the original registration of this {@link SlimefunItem}.
      */
@@ -976,7 +976,7 @@ public class SlimefunItem implements Placeable {
     /**
      * This will send an info message to the console and signal that this message came
      * from this {@link SlimefunItem}, the message will be sent using the {@link Logger}
-     * of the {@link SlimefunAddon} which registered this {@link SlimefunItem}.
+     * of the {@link HoneymodAddon} which registered this {@link SlimefunItem}.
      * 
      * @param message
      *            The message to send
@@ -991,7 +991,7 @@ public class SlimefunItem implements Placeable {
     /**
      * This will send a warning to the console and signal that this warning came from
      * this {@link SlimefunItem}, the warning will be sent using the {@link Logger}
-     * of the {@link SlimefunAddon} which registered this {@link SlimefunItem}.
+     * of the {@link HoneymodAddon} which registered this {@link SlimefunItem}.
      * 
      * @param message
      *            The message to send
@@ -1029,7 +1029,7 @@ public class SlimefunItem implements Placeable {
         addon.getLogger().log(Level.SEVERE, message, throwable);
 
         // We definitely want to re-throw them during Unit Tests
-        if (throwable instanceof RuntimeException && SlimefunPlugin.getMinecraftVersion() == MinecraftVersion.UNIT_TEST) {
+        if (throwable instanceof RuntimeException && HoneymodPlugin.getMinecraftVersion() == MinecraftVersion.UNIT_TEST) {
             throw (RuntimeException) throwable;
         }
     }
@@ -1066,21 +1066,21 @@ public class SlimefunItem implements Placeable {
         } else if (isDisabled()) {
             // The Item has been disabled in the config
             if (sendMessage) {
-                SlimefunPlugin.getLocalization().sendMessage(p, "messages.disabled-item", true);
+                HoneymodPlugin.getLocalization().sendMessage(p, "messages.disabled-item", true);
             }
 
             return false;
-        } else if (!SlimefunPlugin.getWorldSettingsService().isEnabled(p.getWorld(), this)) {
+        } else if (!HoneymodPlugin.getWorldSettingsService().isEnabled(p.getWorld(), this)) {
             // The Item was disabled in the current World
             if (sendMessage) {
-                SlimefunPlugin.getLocalization().sendMessage(p, "messages.disabled-in-world", true);
+                HoneymodPlugin.getLocalization().sendMessage(p, "messages.disabled-in-world", true);
             }
 
             return false;
-        } else if (!SlimefunPlugin.getPermissionsService().hasPermission(p, this)) {
+        } else if (!HoneymodPlugin.getPermissionsService().hasPermission(p, this)) {
             // The Player does not have the required permission node
             if (sendMessage) {
-                SlimefunPlugin.getLocalization().sendMessage(p, "messages.no-permission", true);
+                HoneymodPlugin.getLocalization().sendMessage(p, "messages.no-permission", true);
             }
 
             return false;
@@ -1101,7 +1101,7 @@ public class SlimefunItem implements Placeable {
                  * required Research to use this SlimefunItem.
                  */
                 if (sendMessage && !(this instanceof VanillaItem)) {
-                    SlimefunPlugin.getLocalization().sendMessage(p, "messages.not-researched", true);
+                    HoneymodPlugin.getLocalization().sendMessage(p, "messages.not-researched", true);
                 }
 
                 return false;
@@ -1134,7 +1134,7 @@ public class SlimefunItem implements Placeable {
 
     @Nullable
     public static SlimefunItem getByID(@Nonnull String id) {
-        return SlimefunPlugin.getRegistry().getSlimefunItemIds().get(id);
+        return HoneymodPlugin.getRegistry().getSlimefunItemIds().get(id);
     }
 
     @Nullable
@@ -1147,24 +1147,24 @@ public class SlimefunItem implements Placeable {
             return getByID(((SlimefunItemStack) item).getItemId());
         }
 
-        Optional<String> itemID = SlimefunPlugin.getItemDataService().getItemData(item);
+        Optional<String> itemID = HoneymodPlugin.getItemDataService().getItemData(item);
 
         if (itemID.isPresent()) {
             return getByID(itemID.get());
         }
 
         // Backwards compatibility
-        if (SlimefunPlugin.getRegistry().isBackwardsCompatible()) {
+        if (HoneymodPlugin.getRegistry().isBackwardsCompatible()) {
             // This wrapper improves the heavy ItemStack#getItemMeta() call by caching it.
             ItemStackWrapper wrapper = new ItemStackWrapper(item);
 
             // Quite expensive performance-wise
             // But necessary for supporting legacy items
-            for (SlimefunItem sfi : SlimefunPlugin.getRegistry().getAllSlimefunItems()) {
+            for (SlimefunItem sfi : HoneymodPlugin.getRegistry().getAllSlimefunItems()) {
                 if (sfi.isItem(wrapper)) {
                     // If we have to loop all items for the given item, then at least
                     // set the id via PersistentDataAPI for future performance boosts
-                    SlimefunPlugin.getItemDataService().setItemData(item, sfi.getId());
+                    HoneymodPlugin.getItemDataService().setItemData(item, sfi.getId());
 
                     return sfi;
                 }
@@ -1175,11 +1175,11 @@ public class SlimefunItem implements Placeable {
     }
 
     public static Set<ItemHandler> getPublicItemHandlers(Class<? extends ItemHandler> identifier) {
-        return SlimefunPlugin.getRegistry().getPublicItemHandlers().computeIfAbsent(identifier, c -> new HashSet<>());
+        return HoneymodPlugin.getRegistry().getPublicItemHandlers().computeIfAbsent(identifier, c -> new HashSet<>());
     }
 
     public static void registerBlockHandler(String id, SlimefunBlockHandler handler) {
-        SlimefunPlugin.getRegistry().getBlockHandlers().put(id, handler);
+        HoneymodPlugin.getRegistry().getBlockHandlers().put(id, handler);
     }
 
 }

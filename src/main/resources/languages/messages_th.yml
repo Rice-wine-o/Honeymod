@@ -1,10 +1,10 @@
 ---
 commands:
   help: แสดงหน้าต่างช่วยเหลือ
-  give: มอบไอเท็ม Slimefun ให้ใครบางคน
-  guide: ให้คู่มือ Slimefun ให้ตัวคุณเอง
+  give: มอบไอเท็ม Honeymod ให้ใครบางคน
+  guide: ให้คู่มือ Honeymod ให้ตัวคุณเอง
   versions: แสดง Addons ที่ติดตั้งทั้งหมด
-  open_guide: เปิดคู่มือของ Slimefun โดยไม่ใช้หนังสือ
+  open_guide: เปิดคู่มือของ Honeymod โดยไม่ใช้หนังสือ
   stats: แสดงสถิติบางอย่างเกี่ยวกับผู้เล่น
   research:
     reset-target: "&cความรู้ของคุณได้รับการรีเซ็ตแล้ว"
@@ -21,13 +21,13 @@ guide:
     tooltip: "&bคลิกเพื่อค้นหาไอเทม"
     inventory: 'ค้นหา: %item%'
   title:
-    main: คู่มือ Slimefun
+    main: คู่มือ Honeymod
     settings: ตั้งค่า & แสดงค่าต่างๆ
-    credits: ผู้มีส่วนร่วมใน Slimefun4
-    addons: Addons สำหรับ Slimefun4
+    credits: ผู้มีส่วนร่วมใน Honeymod4
+    addons: Addons สำหรับ Honeymod4
     bugs: รายงานบัค
     languages: เลือกภาษาที่คุณต้องการ
-    wiki: Slimefun4 Wiki
+    wiki: Honeymod4 Wiki
     source: Source Code
   credits:
     roles:
@@ -57,10 +57,10 @@ guide:
       machine: คู่มือ ทำในเครื่องนี้
       miner: คุณสามารถเก็บทรัพยากรด้วย Miner
     versions-notice: มันสำคัญมาก ที่จะรายงานบัค!
-    wiki: ตรวจสอบไอเท็มนี้บน Slimefun Wiki
+    wiki: ตรวจสอบไอเท็มนี้บน Honeymod Wiki
   back:
     title: กลับ
-    guide: กลับไปยังคู่มือ Slimefun
+    guide: กลับไปยังคู่มือ Honeymod
     settings: กลับไปยังหน้าตั้งค่า
   locked: ล็อค
   cheat:
@@ -211,14 +211,14 @@ android:
   started: "&7Android ของคุณกลับมาทำงานของมันต่อ"
   stopped: "&7Android ของคุณหยุดการทำงานหลัก"
 anvil:
-  not-working: "&4คุณไม่สามารถใช้ไอเท็ม Slimefun กับ anvil ได้!"
+  not-working: "&4คุณไม่สามารถใช้ไอเท็ม Honeymod กับ anvil ได้!"
 backpack:
   already-open: "&cขอโทษ, กระเป๋านี้กำลังถูกเปิดจากที่อื่น!"
   no-stack: "&cคุณไม่สามารถรวมกระเป๋าไว้ด้วยกันได้"
 miner:
   no-ores: "&eขอโทษด้วย, ฉันไม่เจอแร่อยู่ใกล้ๆเลย!"
 workbench:
-  not-enhanced: "&4คุณไม่สามารถใช้ไอเท็ม Slimefun กับ workbench ทั่วไปได้"
+  not-enhanced: "&4คุณไม่สามารถใช้ไอเท็ม Honeymod กับ workbench ทั่วไปได้"
 gps:
   deathpoint: "&4จุดตาย &7%date%"
   waypoint:

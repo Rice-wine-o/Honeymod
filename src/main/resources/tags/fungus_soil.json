@@ -1,6 +1,6 @@
 {
     "values" : [
-        "#slimefun:dirt_variants",
+        "#honeymod:dirt_variants",
         {
             "id" : "minecraft:soul_soil",
             "required" : false

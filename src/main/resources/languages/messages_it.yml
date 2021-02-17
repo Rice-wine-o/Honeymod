@@ -46,10 +46,10 @@ backpack:
   no-stack: "&cNon puoi impilare zaini"
 commands:
   cheat: Ti permette di cheattare items
-  give: Dai a qualcuno alcuni oggetti Slimefun
-  guide: Ti dà una guida della Slimefun
+  give: Dai a qualcuno alcuni oggetti Honeymod
+  guide: Ti dà una guida della Honeymod
   help: Visualizza questa schermata di aiuto
-  open_guide: Apre la guida della Slimefun senza usare il libro guida
+  open_guide: Apre la guida della Honeymod senza usare il libro guida
   research:
     description: Sblocca o Resetta le ricerche per un player
     reset: "&cHai resettato la conoscenza di %player%"
@@ -75,7 +75,7 @@ gps:
       colore supportati!)"
 guide:
   back:
-    guide: Torna alla Guida di Slimefun
+    guide: Torna alla Guida di Honeymod
     settings: Torna al Pannello delle Impostazioni
     title: Indietro
   credits:
@@ -112,14 +112,14 @@ guide:
     name: "&7Ricerca..."
     tooltip: "&bClicca per cercare un elemento"
   title:
-    addons: Addons per Slimefun4
+    addons: Addons per Honeymod4
     bugs: Bug Reports
-    credits: Collaboratori di Slimefun4
+    credits: Collaboratori di Honeymod4
     languages: Seleziona la tua lingua preferita
-    main: Guida della Slimefun
+    main: Guida della Honeymod
     settings: Impostazioni e informazioni
     source: Codice Sorgente
-    wiki: Slimefun4 Wiki
+    wiki: Honeymod4 Wiki
   tooltips:
     open-category: Clicca per aprire
     recipes:
@@ -128,7 +128,7 @@ guide:
       machine: Ricette fatte in questa Machine
       miner: Risorse che puoi ottenere con questo Miner
     versions-notice: Questi sono molto importanti quando stai reportando dei bugs!
-    wiki: Visualizza questo elemento sulla Wiki ufficiale di Slimefun
+    wiki: Visualizza questo elemento sulla Wiki ufficiale di Honeymod
   cheat:
     no-multiblocks: "&4Non puoi cheattare i Multiblocchi, devi costruirli nel mondo!"
 inventory:
@@ -291,7 +291,7 @@ messages:
 miner:
   no-ores: "&eScusa, non sono riuscito a trovare nessun minerale nelle vicinanze!"
 anvil:
-  not-working: "&4Non puoi usare gli oggetti della Slimefun in un'incudine!"
+  not-working: "&4Non puoi usare gli oggetti della Honeymod in un'incudine!"
 workbench:
-  not-enhanced: "&4Non puoi usare gli oggetti della Slimefun in un normale banco da
+  not-enhanced: "&4Non puoi usare gli oggetti della Honeymod in un normale banco da
     lavoro!"

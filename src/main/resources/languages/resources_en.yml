@@ -6,7 +6,7 @@ tooltips:
   units: 'Units'
 
 resources:
-  slimefun:
+  honeymod:
     oil: 'Oil'
     nether_ice: 'Nether Ice'
     salt: 'Salt'

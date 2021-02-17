@@ -44,7 +44,7 @@ assignees: ''
 ## :compass: Environment (REQUIRED)
 <!-- Any issue without the exact version numbers will be closed! -->
 <!-- "latest" IS NOT A VERSION NUMBER. -->
-<!-- We recommend running "/sf versions" and showing us a screenshot of that. -->
+<!-- We recommend running "/hm versions" and showing us a screenshot of that. -->
 <!-- Make sure that the screenshot covers the entire output of that command. -->
 <!-- If your issue is related to other plugins, make sure to include the versions of these plugins too! -->
 

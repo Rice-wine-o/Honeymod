@@ -37,7 +37,7 @@ minecraft:
     - Fabriquez l'objet comme indiqué
     - en utilisant un tailleur de pierre
     name: Recette de tailleur de pierre
-slimefun:
+honeymod:
   ancient_altar:
     lore:
     - Fabriquez cet objet comme indiqué

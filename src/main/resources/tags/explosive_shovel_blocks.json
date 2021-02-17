@@ -1,8 +1,8 @@
 {
 	"values" : [
 		"#minecraft:sand",
-		"#slimefun:concrete_powders",
-		"#slimefun:dirt_variants",
+		"#honeymod:concrete_powders",
+		"#honeymod:dirt_variants",
 		"minecraft:snow",
 		"minecraft:snow_block",
 		"minecraft:gravel",

@@ -25,13 +25,13 @@ import org.bukkit.potion.PotionEffectType;
 import io.github.thebusybiscuit.cscorelib2.item.CustomItem;
 import io.github.thebusybiscuit.cscorelib2.item.ImmutableItemMeta;
 import io.github.thebusybiscuit.cscorelib2.skull.SkullItem;
-import io.github.thebusybiscuit.slimefun4.api.MinecraftVersion;
-import io.github.thebusybiscuit.slimefun4.api.exceptions.PrematureCodeException;
-import io.github.thebusybiscuit.slimefun4.api.exceptions.WrongItemStackException;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunPlugin;
-import io.github.thebusybiscuit.slimefun4.utils.HeadTexture;
-import io.github.thebusybiscuit.slimefun4.utils.PatternUtils;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
+import me.spacetoastdev.honeymod.api.MinecraftVersion;
+import me.spacetoastdev.honeymod.api.exceptions.PrematureCodeException;
+import me.spacetoastdev.honeymod.api.exceptions.WrongItemStackException;
+import me.spacetoastdev.honeymod.implementation.HoneymodPlugin;
+import me.spacetoastdev.honeymod.utils.HeadTexture;
+import me.spacetoastdev.honeymod.utils.PatternUtils;
 
 public class SlimefunItemStack extends CustomItem {
 
@@ -153,7 +153,7 @@ public class SlimefunItemStack extends CustomItem {
         Validate.notNull(id, "The Item id must never be null!");
         Validate.isTrue(id.equals(id.toUpperCase(Locale.ROOT)), "Slimefun Item Ids must be uppercase! (e.g. 'MY_ITEM_ID')");
 
-        if (SlimefunPlugin.instance() == null) {
+        if (HoneymodPlugin.instance() == null) {
             throw new PrematureCodeException("A SlimefunItemStack must never be be created before your Plugin was enabled.");
         }
 
@@ -161,8 +161,8 @@ public class SlimefunItemStack extends CustomItem {
 
         ItemMeta meta = getItemMeta();
 
-        SlimefunPlugin.getItemDataService().setItemData(meta, id);
-        SlimefunPlugin.getItemTextureService().setTexture(meta, id);
+        HoneymodPlugin.getItemDataService().setItemData(meta, id);
+        HoneymodPlugin.getItemTextureService().setTexture(meta, id);
 
         setItemMeta(meta);
     }
@@ -260,7 +260,7 @@ public class SlimefunItemStack extends CustomItem {
 
     @Nonnull
     private static ItemStack getSkull(@Nonnull String id, @Nonnull String texture) {
-        if (SlimefunPlugin.getMinecraftVersion() == MinecraftVersion.UNIT_TEST) {
+        if (HoneymodPlugin.getMinecraftVersion() == MinecraftVersion.UNIT_TEST) {
             return new ItemStack(Material.PLAYER_HEAD);
         }
 

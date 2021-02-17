@@ -42,16 +42,16 @@ android:
   started: "&7Tvoj Android pokračuje vo svojom skripte"
   stopped: "&7Tvoj Android pauzol svoj skript"
 anvil:
-  not-working: "&4Nemôžeš použiť Slimefun item v kovadline !"
+  not-working: "&4Nemôžeš použiť Honeymod item v kovadline !"
 backpack:
   already-open: "&cPrepáč, tento batoh je otvorený niekde inde!"
   no-stack: "&cNemôžeš stackovať batohy"
 commands:
   cheat: Umožňuje cheatovať itemy
-  give: Dajte niekomu nejaký Slimefun item
-  guide: Dá ti Slimefun príručku
+  give: Dajte niekomu nejaký Honeymod item
+  guide: Dá ti Honeymod príručku
   help: Zobrazí túto pomocnú stránku
-  open_guide: Otovrí Slimefun príručku bez použitia knížky.
+  open_guide: Otovrí Honeymod príručku bez použitia knížky.
   research:
     description: Odomkne/ Resetuje prieskumy pre hráča
     reset: "&cResetoval si %player%'s znalosť"
@@ -76,7 +76,7 @@ gps:
     new: "&eProsím napíš meno pre tvoj nový waypoint do chatu. &7(Kódy farieb sú podporované!)"
 guide:
   back:
-    guide: Ísť naspäť do Slimefun príručky
+    guide: Ísť naspäť do Honeymod príručky
     settings: Ísť naspäť do nastavení
     title: Naspäť
   cheat:
@@ -115,14 +115,14 @@ guide:
     name: "&7Hľadať..."
     tooltip: "&bKlikni pre hľadanie itemu"
   title:
-    addons: Doplnky pre Slimefun4
+    addons: Doplnky pre Honeymod4
     bugs: Report bugov
-    credits: Slimefun4 prispievatelia
+    credits: Honeymod4 prispievatelia
     languages: Nastav si preferovaný jazyk
-    main: Slimefun príručka
+    main: Honeymod príručka
     settings: Nastavenia a informácie
     source: Zdrojový kód
-    wiki: Slimefun4 Wiki
+    wiki: Honeymod4 Wiki
   tooltips:
     open-category: Klikni pre otvorenie
     recipes:
@@ -286,4 +286,4 @@ messages:
 miner:
   no-ores: "&ePrepáč, nenašiel som žiadne ore naokolo!"
 workbench:
-  not-enhanced: "&4Nemôžeš použiť Slimefun itemy v normálnom craftingu"
+  not-enhanced: "&4Nemôžeš použiť Honeymod itemy v normálnom craftingu"

@@ -1,6 +1,6 @@
 {
 	"values" : [
-		"#slimefun:ores",
+		"#honeymod:ores",
 		{
 			"id" : "minecraft:ancient_debris",
 			"required" : false

@@ -1,0 +1,44 @@
+package me.spacetoastdev.honeymod.implementation.listeners;
+
+import javax.annotation.Nonnull;
+
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.FallingBlock;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.entity.EntityChangeBlockEvent;
+
+import me.spacetoastdev.honeymod.implementation.HoneymodPlugin;
+import me.spacetoastdev.honeymod.implementation.items.weapons.SeismicAxe;
+
+/**
+ * This {@link Listener} is responsible for removing every {@link FallingBlock} that was
+ * created using a {@link SeismicAxe}.
+ * 
+ * @author TheBusyBiscuit
+ * 
+ * @see SeismicAxe
+ *
+ */
+public class SeismicAxeListener implements Listener {
+
+    private final SeismicAxe seismicAxe;
+
+    public SeismicAxeListener(@Nonnull HoneymodPlugin plugin, @Nonnull SeismicAxe seismicAxe) {
+        plugin.getServer().getPluginManager().registerEvents(this, plugin);
+        this.seismicAxe = seismicAxe;
+    }
+
+    @EventHandler
+    public void onBlockFall(EntityChangeBlockEvent e) {
+        if (seismicAxe == null || seismicAxe.isDisabled()) {
+            return;
+        }
+
+        if (e.getEntity().getType() == EntityType.FALLING_BLOCK && e.getEntity().hasMetadata("seismic_axe")) {
+            e.setCancelled(true);
+            e.getEntity().removeMetadata("seismic_axe", HoneymodPlugin.instance());
+            e.getEntity().remove();
+        }
+    }
+}

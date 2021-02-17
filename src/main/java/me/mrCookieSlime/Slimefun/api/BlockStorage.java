@@ -35,14 +35,14 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.stream.JsonWriter;
 
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunPlugin;
-import io.github.thebusybiscuit.slimefun4.utils.NumberUtils;
-import io.github.thebusybiscuit.slimefun4.utils.PatternUtils;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 import me.mrCookieSlime.Slimefun.api.inventory.UniversalBlockMenu;
+import me.spacetoastdev.honeymod.implementation.HoneymodPlugin;
+import me.spacetoastdev.honeymod.utils.NumberUtils;
+import me.spacetoastdev.honeymod.utils.PatternUtils;
 
 // This class really needs a VERY big overhaul
 public class BlockStorage {
@@ -65,12 +65,12 @@ public class BlockStorage {
 
     @Nullable
     public static BlockStorage getStorage(@Nonnull World world) {
-        return SlimefunPlugin.getRegistry().getWorlds().get(world.getName());
+        return HoneymodPlugin.getRegistry().getWorlds().get(world.getName());
     }
 
     @Nonnull
     public static BlockStorage getOrCreate(@Nonnull World world) {
-        BlockStorage storage = SlimefunPlugin.getRegistry().getWorlds().get(world.getName());
+        BlockStorage storage = HoneymodPlugin.getRegistry().getWorlds().get(world.getName());
 
         if (storage == null) {
             return new BlockStorage(world);
@@ -100,7 +100,7 @@ public class BlockStorage {
                 return new Location(w, Integer.parseInt(components[1]), Integer.parseInt(components[2]), Integer.parseInt(components[3]));
             }
         } catch (NumberFormatException x) {
-            SlimefunPlugin.logger().log(Level.WARNING, "Could not parse Number", x);
+            HoneymodPlugin.logger().log(Level.WARNING, "Could not parse Number", x);
         }
         return null;
     }
@@ -112,13 +112,13 @@ public class BlockStorage {
             throw new IllegalArgumentException("Slimefun cannot deal with World names that contain a dot: " + w.getName());
         }
 
-        if (SlimefunPlugin.getRegistry().getWorlds().containsKey(w.getName())) {
+        if (HoneymodPlugin.getRegistry().getWorlds().containsKey(w.getName())) {
             // Cancel the loading process if the world was already loaded
             return;
         }
 
-        SlimefunPlugin.logger().log(Level.INFO, "Loading Blocks for World \"{0}\"", w.getName());
-        SlimefunPlugin.logger().log(Level.INFO, "This may take a long time...");
+        HoneymodPlugin.logger().log(Level.INFO, "Loading Blocks for World \"{0}\"", w.getName());
+        HoneymodPlugin.logger().log(Level.INFO, "This may take a long time...");
 
         File dir = new File(PATH_BLOCKS + w.getName());
 
@@ -131,7 +131,7 @@ public class BlockStorage {
         loadChunks();
         loadInventories();
 
-        SlimefunPlugin.getRegistry().getWorlds().put(world.getName(), this);
+        HoneymodPlugin.getRegistry().getWorlds().put(world.getName(), this);
     }
 
     private void loadBlocks(File directory) {
@@ -140,18 +140,18 @@ public class BlockStorage {
         long done = 0;
         long timestamp = System.currentTimeMillis();
         long totalBlocks = 0;
-        int delay = SlimefunPlugin.getCfg().getInt("URID.info-delay");
+        int delay = HoneymodPlugin.getCfg().getInt("URID.info-delay");
 
         try {
             for (File file : directory.listFiles()) {
                 if (file.getName().equals("null.sfb")) {
-                    SlimefunPlugin.logger().log(Level.WARNING, "File with corrupted blocks detected!");
-                    SlimefunPlugin.logger().log(Level.WARNING, "Slimefun will simply skip this File, you should look inside though!");
-                    SlimefunPlugin.logger().log(Level.WARNING, file.getPath());
+                    HoneymodPlugin.logger().log(Level.WARNING, "File with corrupted blocks detected!");
+                    HoneymodPlugin.logger().log(Level.WARNING, "Slimefun will simply skip this File, you should look inside though!");
+                    HoneymodPlugin.logger().log(Level.WARNING, file.getPath());
                 } else if (file.getName().endsWith(".sfb")) {
                     if (timestamp + delay < System.currentTimeMillis()) {
                         int progress = Math.round((((done * 100.0F) / total) * 100.0F) / 100.0F);
-                        SlimefunPlugin.logger().log(Level.INFO, "Loading Blocks... {0}% done (\"{1}\")", new Object[] { progress, world.getName() });
+                        HoneymodPlugin.logger().log(Level.INFO, "Loading Blocks... {0}% done (\"{1}\")", new Object[] { progress, world.getName() });
                         timestamp = System.currentTimeMillis();
                     }
 
@@ -167,11 +167,11 @@ public class BlockStorage {
             }
         } finally {
             long time = (System.currentTimeMillis() - start);
-            SlimefunPlugin.logger().log(Level.INFO, "Loading Blocks... 100% (FINISHED - {0}ms)", time);
-            SlimefunPlugin.logger().log(Level.INFO, "Loaded a total of {0} Blocks for World \"{1}\"", new Object[] { totalBlocks, world.getName() });
+            HoneymodPlugin.logger().log(Level.INFO, "Loading Blocks... 100% (FINISHED - {0}ms)", time);
+            HoneymodPlugin.logger().log(Level.INFO, "Loaded a total of {0} Blocks for World \"{1}\"", new Object[] { totalBlocks, world.getName() });
 
             if (totalBlocks > 0) {
-                SlimefunPlugin.logger().log(Level.INFO, "Avg: {0}ms/Block", NumberUtils.roundDecimalNumber((double) time / (double) totalBlocks));
+                HoneymodPlugin.logger().log(Level.INFO, "Avg: {0}ms/Block", NumberUtils.roundDecimalNumber((double) time / (double) totalBlocks));
             }
         }
     }
@@ -195,8 +195,8 @@ public class BlockStorage {
                      * Ignore the new entry if a block is already present and print an
                      * error to the console (if enabled).
                      */
-                    if (SlimefunPlugin.getRegistry().logDuplicateBlockEntries()) {
-                        SlimefunPlugin.logger().log(Level.INFO, "Ignoring duplicate block @ {0}, {1}, {2} ({3} -> {4})", new Object[] { l.getBlockX(), l.getBlockY(), l.getBlockZ(), blockInfo.getString("id"), storage.get(l).getString("id") });
+                    if (HoneymodPlugin.getRegistry().logDuplicateBlockEntries()) {
+                        HoneymodPlugin.logger().log(Level.INFO, "Ignoring duplicate block @ {0}, {1}, {2} ({3} -> {4})", new Object[] { l.getBlockX(), l.getBlockY(), l.getBlockZ(), blockInfo.getString("id"), storage.get(l).getString("id") });
                     }
 
                     return;
@@ -204,12 +204,12 @@ public class BlockStorage {
 
                 String fileName = file.getName().replace(".sfb", "");
 
-                if (SlimefunPlugin.getRegistry().getTickerBlocks().contains(fileName)) {
-                    SlimefunPlugin.getTickerTask().enableTicker(l);
+                if (HoneymodPlugin.getRegistry().getTickerBlocks().contains(fileName)) {
+                    HoneymodPlugin.getTickerTask().enableTicker(l);
                 }
             }
         } catch (Exception x) {
-            SlimefunPlugin.logger().log(Level.WARNING, x, () -> "Failed to load " + file.getName() + '(' + key + ") for Slimefun " + SlimefunPlugin.getVersion());
+            HoneymodPlugin.logger().log(Level.WARNING, x, () -> "Failed to load " + file.getName() + '(' + key + ") for Slimefun " + HoneymodPlugin.getVersion());
         }
     }
 
@@ -223,10 +223,10 @@ public class BlockStorage {
                 try {
                     if (world.getName().equals(PatternUtils.SEMICOLON.split(key)[0])) {
                         BlockInfoConfig data = new BlockInfoConfig(parseJSON(cfg.getString(key)));
-                        SlimefunPlugin.getRegistry().getChunks().put(key, data);
+                        HoneymodPlugin.getRegistry().getChunks().put(key, data);
                     }
                 } catch (Exception x) {
-                    SlimefunPlugin.logger().log(Level.WARNING, x, () -> "Failed to load " + chunks.getName() + " in World " + world.getName() + '(' + key + ") for Slimefun " + SlimefunPlugin.getVersion());
+                    HoneymodPlugin.logger().log(Level.WARNING, x, () -> "Failed to load " + chunks.getName() + " in World " + world.getName() + '(' + key + ") for Slimefun " + HoneymodPlugin.getVersion());
                 }
             }
         }
@@ -248,7 +248,7 @@ public class BlockStorage {
                         inventories.put(l, new BlockMenu(preset, l, cfg));
                     }
                 } catch (Exception x) {
-                    SlimefunPlugin.logger().log(Level.SEVERE, x, () -> "An Error occurred while loading this Block Inventory: " + file.getName());
+                    HoneymodPlugin.logger().log(Level.SEVERE, x, () -> "An Error occurred while loading this Block Inventory: " + file.getName());
                 }
             }
         }
@@ -260,10 +260,10 @@ public class BlockStorage {
                     BlockMenuPreset preset = BlockMenuPreset.getPreset(cfg.getString("preset"));
 
                     if (preset != null) {
-                        SlimefunPlugin.getRegistry().getUniversalInventories().put(preset.getID(), new UniversalBlockMenu(preset, cfg));
+                        HoneymodPlugin.getRegistry().getUniversalInventories().put(preset.getID(), new UniversalBlockMenu(preset, cfg));
                     }
                 } catch (Exception x) {
-                    SlimefunPlugin.logger().log(Level.SEVERE, x, () -> "An Error occurred while loading this universal Inventory: " + file.getName());
+                    HoneymodPlugin.logger().log(Level.SEVERE, x, () -> "An Error occurred while loading this universal Inventory: " + file.getName());
                 }
             }
         }
@@ -277,7 +277,7 @@ public class BlockStorage {
             changes += entry.getValue().getUnsavedChanges();
         }
 
-        Map<String, UniversalBlockMenu> universalInventories2 = new HashMap<>(SlimefunPlugin.getRegistry().getUniversalInventories());
+        Map<String, UniversalBlockMenu> universalInventories2 = new HashMap<>(HoneymodPlugin.getRegistry().getUniversalInventories());
         for (Map.Entry<String, UniversalBlockMenu> entry : universalInventories2.entrySet()) {
             changes += entry.getValue().getUnsavedChanges();
         }
@@ -294,7 +294,7 @@ public class BlockStorage {
             return;
         }
 
-        SlimefunPlugin.logger().log(Level.INFO, "Saving block data for world \"{0}\" ({1} change(s) queued)", new Object[] { world.getName(), changes });
+        HoneymodPlugin.logger().log(Level.INFO, "Saving block data for world \"{0}\" ({1} change(s) queued)", new Object[] { world.getName(), changes });
         Map<String, Config> cache = new HashMap<>(blocksCache);
 
         for (Map.Entry<String, Config> entry : cache.entrySet()) {
@@ -308,7 +308,7 @@ public class BlockStorage {
                     try {
                         Files.delete(file.toPath());
                     } catch (IOException e) {
-                        SlimefunPlugin.logger().log(Level.WARNING, e, () -> "Could not delete file \"" + file.getName() + '"');
+                        HoneymodPlugin.logger().log(Level.WARNING, e, () -> "Could not delete file \"" + file.getName() + '"');
                     }
                 }
             } else {
@@ -318,7 +318,7 @@ public class BlockStorage {
                 try {
                     Files.move(tmpFile.toPath(), cfg.getFile().toPath(), StandardCopyOption.ATOMIC_MOVE);
                 } catch (IOException x) {
-                    SlimefunPlugin.logger().log(Level.SEVERE, x, () -> "An Error occurred while copying a temporary File for Slimefun " + SlimefunPlugin.getVersion());
+                    HoneymodPlugin.logger().log(Level.SEVERE, x, () -> "An Error occurred while copying a temporary File for Slimefun " + HoneymodPlugin.getVersion());
                 }
             }
         }
@@ -328,7 +328,7 @@ public class BlockStorage {
             entry.getValue().save(entry.getKey());
         }
 
-        Map<String, UniversalBlockMenu> unsavedUniversalInventories = new HashMap<>(SlimefunPlugin.getRegistry().getUniversalInventories());
+        Map<String, UniversalBlockMenu> unsavedUniversalInventories = new HashMap<>(HoneymodPlugin.getRegistry().getUniversalInventories());
         for (Map.Entry<String, UniversalBlockMenu> entry : unsavedUniversalInventories.entrySet()) {
             entry.getValue().save();
         }
@@ -350,7 +350,7 @@ public class BlockStorage {
             File chunks = new File(PATH_CHUNKS + "chunks.sfc");
             Config cfg = new Config(PATH_CHUNKS + "chunks.temp");
 
-            for (Map.Entry<String, BlockInfoConfig> entry : SlimefunPlugin.getRegistry().getChunks().entrySet()) {
+            for (Map.Entry<String, BlockInfoConfig> entry : HoneymodPlugin.getRegistry().getChunks().entrySet()) {
                 // Saving empty chunk data is pointless
                 if (!entry.getValue().getKeys().isEmpty()) {
                     cfg.setValue(entry.getKey(), entry.getValue().toJSON());
@@ -465,14 +465,14 @@ public class BlockStorage {
         try {
             return new BlockInfoConfig(parseJSON(json));
         } catch (Exception x) {
-            Logger logger = SlimefunPlugin.logger();
+            Logger logger = HoneymodPlugin.logger();
             logger.log(Level.WARNING, x.getClass().getName());
             logger.log(Level.WARNING, "Failed to parse BlockInfo for Block @ {0}, {1}, {2}", new Object[] { l.getBlockX(), l.getBlockY(), l.getBlockZ() });
             logger.log(Level.WARNING, json);
             logger.log(Level.WARNING, "");
             logger.log(Level.WARNING, "IGNORE THIS ERROR UNLESS IT IS SPAMMING");
             logger.log(Level.WARNING, "");
-            logger.log(Level.SEVERE, x, () -> "An Error occurred while parsing Block Info for Slimefun " + SlimefunPlugin.getVersion());
+            logger.log(Level.SEVERE, x, () -> "An Error occurred while parsing Block Info for Slimefun " + HoneymodPlugin.getVersion());
             return null;
         }
     }
@@ -491,7 +491,7 @@ public class BlockStorage {
             writer.endObject();
             return string.toString();
         } catch (IOException x) {
-            SlimefunPlugin.logger().log(Level.SEVERE, "An error occurred while serializing BlockInfo", x);
+            HoneymodPlugin.logger().log(Level.SEVERE, "An error occurred while serializing BlockInfo", x);
             return null;
         }
     }
@@ -542,7 +542,7 @@ public class BlockStorage {
         BlockStorage storage = getStorage(l.getWorld());
 
         if (storage == null) {
-            SlimefunPlugin.logger().warning("Could not set Block info for non-registered World '" + l.getWorld().getName() + "'. Is some plugin trying to store data in a fake world?");
+            HoneymodPlugin.logger().warning("Could not set Block info for non-registered World '" + l.getWorld().getName() + "'. Is some plugin trying to store data in a fake world?");
             return;
         }
 
@@ -552,7 +552,7 @@ public class BlockStorage {
 
         if (preset != null) {
             if (BlockMenuPreset.isUniversalInventory(id)) {
-                SlimefunPlugin.getRegistry().getUniversalInventories().computeIfAbsent(id, key -> new UniversalBlockMenu(preset));
+                HoneymodPlugin.getRegistry().getUniversalInventories().computeIfAbsent(id, key -> new UniversalBlockMenu(preset));
             } else if (!storage.hasInventory(l)) {
                 File file = new File(PATH_INVENTORIES + serializeLocation(l) + ".sfi");
 
@@ -595,7 +595,7 @@ public class BlockStorage {
     }
 
     public static void clearBlockInfo(Location l, boolean destroy) {
-        SlimefunPlugin.getTickerTask().queueDelete(l, destroy);
+        HoneymodPlugin.getTickerTask().queueDelete(l, destroy);
     }
 
     /**
@@ -631,13 +631,13 @@ public class BlockStorage {
                 universalInventory.save();
             }
 
-            SlimefunPlugin.getTickerTask().disableTicker(l);
+            HoneymodPlugin.getTickerTask().disableTicker(l);
         }
     }
 
     @ParametersAreNonnullByDefault
     public static void moveBlockInfo(Location from, Location to) {
-        SlimefunPlugin.getTickerTask().queueMove(from, to);
+        HoneymodPlugin.getTickerTask().queueMove(from, to);
     }
 
     /**
@@ -669,7 +669,7 @@ public class BlockStorage {
         refreshCache(storage, from, previousData.getString("id"), null, true);
         storage.storage.remove(from);
 
-        SlimefunPlugin.getTickerTask().disableTicker(from);
+        HoneymodPlugin.getTickerTask().disableTicker(from);
     }
 
     private static void refreshCache(BlockStorage storage, Location l, String key, String value, boolean updateTicker) {
@@ -688,7 +688,7 @@ public class BlockStorage {
             SlimefunItem item = SlimefunItem.getByID(key);
 
             if (item != null && item.isTicking() && value != null) {
-                SlimefunPlugin.getTickerTask().enableTicker(l);
+                HoneymodPlugin.getTickerTask().enableTicker(l);
             }
         }
     }
@@ -708,8 +708,8 @@ public class BlockStorage {
     @Nullable
     public static String checkID(@Nonnull Block b) {
         // Only access the BlockState when on the main thread
-        if (Bukkit.isPrimaryThread() && SlimefunPlugin.getBlockDataService().isTileEntity(b.getType())) {
-            Optional<String> blockData = SlimefunPlugin.getBlockDataService().getBlockData(b);
+        if (Bukkit.isPrimaryThread() && HoneymodPlugin.getBlockDataService().isTileEntity(b.getType())) {
+            Optional<String> blockData = HoneymodPlugin.getBlockDataService().getBlockData(b);
 
             if (blockData.isPresent()) {
                 return blockData.get();
@@ -742,7 +742,7 @@ public class BlockStorage {
     }
 
     public static boolean isWorldLoaded(World world) {
-        return SlimefunPlugin.getRegistry().getWorlds().containsKey(world.getName());
+        return HoneymodPlugin.getRegistry().getWorlds().containsKey(world.getName());
     }
 
     public BlockMenu loadInventory(Location l, BlockMenuPreset preset) {
@@ -777,7 +777,7 @@ public class BlockStorage {
             for (HumanEntity human : new ArrayList<>(menu.toInventory().getViewers())) {
                 // Prevents "java.lang.IllegalStateException: Asynchronous entity add!"
                 // when closing the inventory while holding an item
-                SlimefunPlugin.runSync(human::closeInventory);
+                HoneymodPlugin.runSync(human::closeInventory);
             }
 
             inventories.get(l).delete(l);
@@ -790,7 +790,7 @@ public class BlockStorage {
     }
 
     public static boolean hasUniversalInventory(String id) {
-        return SlimefunPlugin.getRegistry().getUniversalInventories().containsKey(id);
+        return HoneymodPlugin.getRegistry().getUniversalInventories().containsKey(id);
     }
 
     public static UniversalBlockMenu getUniversalInventory(Block block) {
@@ -803,7 +803,7 @@ public class BlockStorage {
     }
 
     public static UniversalBlockMenu getUniversalInventory(String id) {
-        return SlimefunPlugin.getRegistry().getUniversalInventories().get(id);
+        return HoneymodPlugin.getRegistry().getUniversalInventories().get(id);
     }
 
     public static BlockMenu getInventory(Block b) {
@@ -843,27 +843,27 @@ public class BlockStorage {
             }
 
             String key = serializeChunk(world, x, z);
-            BlockInfoConfig cfg = SlimefunPlugin.getRegistry().getChunks().get(key);
+            BlockInfoConfig cfg = HoneymodPlugin.getRegistry().getChunks().get(key);
 
             if (cfg == null) {
                 cfg = new BlockInfoConfig();
-                SlimefunPlugin.getRegistry().getChunks().put(key, cfg);
+                HoneymodPlugin.getRegistry().getChunks().put(key, cfg);
             }
 
             return cfg;
         } catch (Exception e) {
-            SlimefunPlugin.logger().log(Level.SEVERE, e, () -> "Failed to parse ChunkInfo for Slimefun " + SlimefunPlugin.getVersion());
+            HoneymodPlugin.logger().log(Level.SEVERE, e, () -> "Failed to parse ChunkInfo for Slimefun " + HoneymodPlugin.getVersion());
             return emptyBlockData;
         }
     }
 
     public static void setChunkInfo(World world, int x, int z, String key, String value) {
         String serializedChunk = serializeChunk(world, x, z);
-        BlockInfoConfig cfg = SlimefunPlugin.getRegistry().getChunks().get(serializedChunk);
+        BlockInfoConfig cfg = HoneymodPlugin.getRegistry().getChunks().get(serializedChunk);
 
         if (cfg == null) {
             cfg = new BlockInfoConfig();
-            SlimefunPlugin.getRegistry().getChunks().put(serializedChunk, cfg);
+            HoneymodPlugin.getRegistry().getChunks().put(serializedChunk, cfg);
         }
 
         cfg.setValue(key, value);
@@ -873,7 +873,7 @@ public class BlockStorage {
 
     public static boolean hasChunkInfo(World world, int x, int z) {
         String serializedChunk = serializeChunk(world, x, z);
-        return SlimefunPlugin.getRegistry().getChunks().containsKey(serializedChunk);
+        return HoneymodPlugin.getRegistry().getChunks().containsKey(serializedChunk);
     }
 
     public static String getChunkInfo(World world, int x, int z, String key) {

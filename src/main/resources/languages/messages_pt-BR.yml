@@ -2,13 +2,13 @@
 commands:
   help: Exibe esta tela de ajuda
   cheat: Permite que você "trapaceie" itens
-  give: Dá a alguém algum item do Slimefun
-  guide: Dá a si mesmo um Guia do Slimefun
+  give: Dá a alguém algum item do Honeymod
+  guide: Dá a si mesmo um Guia do Honeymod
   timings: Lag-Info sobre o seu servidor
   teleporter: Vê os Waypoints de outros jogadores
   versions: Exibe todos os Add-ons instalados
   search: Pesquisa no seu Guia o termo especificado
-  open_guide: Abre o guia do Slimefun sem usar o livro
+  open_guide: Abre o guia do Honeymod sem usar o livro
   stats: Mostra algumas estatísticas sobre um jogador
   research:
     description: Desbloqueia/Redefine pesquisas para um jogador
@@ -47,16 +47,16 @@ guide:
     change: Clique para selecionar um novo idioma
     description:
     - "&7Agora você tem a opção de alterar"
-    - "&7o idioma no qual Slimefun"
+    - "&7o idioma no qual Honeymod"
     - "&7será apresentado a você. Itens"
     - "&7não podem ser traduzido por enquanto."
   title:
-    main: Guia do Slimefun
+    main: Guia do Honeymod
     settings: Config & Info
     languages: Selecione seu idioma preferido
-    credits: Contribuidores do Slimefun4
-    wiki: Wiki do Slimefun4
-    addons: Add-ons do Slimefun4
+    credits: Contribuidores do Honeymod4
+    wiki: Wiki do Honeymod4
+    addons: Add-ons do Honeymod4
     bugs: Relatório de Erros
     source: Código Fonte
     versions: Versões instaladas
@@ -70,10 +70,10 @@ guide:
       translator: "&9Tradutor(a)"
     profile-link: Clique aqui para visitar o perfil deles no GitHub
     description:
-    - "&7Slimefun é um projeto de código aberto"
+    - "&7Honeymod é um projeto de código aberto"
     - "&7e mantido por uma grande comunidade de pessoas."
     - "&7Mais de &e%contributors% &7pessoas trabalharam"
-    - "&7no Slimefun ao longo de todos esses anos."
+    - "&7no Honeymod ao longo de todos esses anos."
     open: Clique para ver nossos colaboradores
   pages:
     previous: Página Anterior
@@ -81,7 +81,7 @@ guide:
   tooltips:
     open-category: Clique aqui para abrir
     versions-notice: Isso é muito importante ao relatar erros!
-    wiki: Veja mais sobre esse item na Wiki oficial do Slimefun
+    wiki: Veja mais sobre esse item na Wiki oficial do Honeymod
     recipes:
       machine: Receitas utilizadas nessa maquina
       miner: Recursos que você pode obter com essa Mineradora
@@ -90,7 +90,7 @@ guide:
       climbing-pick: Superfícies que você pode escalar
   back:
     title: Voltar
-    guide: Voltar Para o Guia do Slimefun
+    guide: Voltar Para o Guia do Honeymod
     settings: Voltar Para o Painel de Configurações
   locked: BLOQUEADO
   locked-category:
@@ -176,7 +176,7 @@ messages:
     wrong-world: "&cSua âncora parece estar em um mundo diferente!"
     distance: "&7Medição realizada. \n&eDistância: %distance%"
     anchor-set: "&aConfigurou a âncora com sucesso: &e%anchor%"
-  piglin-barter: "&4Você não pode negociar com piglins usando itens do Slimefun"
+  piglin-barter: "&4Você não pode negociar com piglins usando itens do Honeymod"
   enchantment-rune:
     fail: "&cVocê não pode encantar este item."
     no-enchantment: "&cNão foi possível encontrar nenhum encantamento aplicável para
@@ -190,7 +190,7 @@ messages:
     dual-wielding: "&4Você precisa segurar as Escolhas de Escalada com as duas mãos
       para usá-las!"
     wrong-material: "&cVocê não pode escalar esta superfície. Verifique o seu Guia
-      do Slimefun para mais informações!"
+      do Honeymod para mais informações!"
   bee-suit-slow-fall: "&eSuas Assas de Abelhas irão te ajudar a retornar ao chão em
     segurança e lentamente"
 machines:
@@ -249,13 +249,13 @@ machines:
     no-permission: "&4Você não parece ter permissão para operar uma Mineradora industrial
       aqui!"
 anvil:
-  not-working: "&4Você não pode usar os itens do Slimefun em uma bigorna!"
-  mcmmo-salvaging: "&4Você não pode reciclar itens do Slimefun!"
+  not-working: "&4Você não pode usar os itens do Honeymod em uma bigorna!"
+  mcmmo-salvaging: "&4Você não pode reciclar itens do Honeymod!"
 backpack:
   already-open: "&cEsta mochila já está aberta em outro lugar!"
   no-stack: "&cVocê não pode empilhar mochilas!"
 workbench:
-  not-enhanced: "&4Você não pode usar itens do Slimefun em uma bancada de trabalho
+  not-enhanced: "&4Você não pode usar itens do Honeymod em uma bancada de trabalho
     normal."
 gps:
   deathpoint: "&4Ponto de Morte &7%date%"
@@ -360,10 +360,10 @@ languages:
 miner:
   no-ores: "&eDesculpe, não encontrei nenhum minério por perto!"
 cauldron:
-  no-discoloring: "&4Você não pode descolorir uma Armadura do Slimefun"
+  no-discoloring: "&4Você não pode descolorir uma Armadura do Honeymod"
 cartography_table:
-  not-working: "&4Você não pode usar itens Slimefun em uma tabela de cartografia!"
+  not-working: "&4Você não pode usar itens Honeymod em uma tabela de cartografia!"
 brewing_stand:
-  not-working: "&4Você não pode usar itens Slimefun em um Suporte de poções!"
+  not-working: "&4Você não pode usar itens Honeymod em um Suporte de poções!"
 villagers:
-  no-trading: "&4Você não pode trocar itens Slimefun com os aldeões!"
+  no-trading: "&4Você não pode trocar itens Honeymod com os aldeões!"

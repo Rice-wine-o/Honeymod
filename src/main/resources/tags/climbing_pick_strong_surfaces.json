@@ -1,8 +1,8 @@
 {
 	"values" : [
-		"#slimefun:ice_variants",
-		"#slimefun:terracotta",
-		"#slimefun:stone_variants",
+		"#honeymod:ice_variants",
+		"#honeymod:terracotta",
+		"#honeymod:stone_variants",
 		"minecraft:netherrack",
 		{
 			"id" : "minecraft:blackstone",

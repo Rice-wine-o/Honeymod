@@ -1,8 +1,8 @@
 {
 	"values" : [
-		"#slimefun:sensitive_materials",
-		"#slimefun:tall_flowers",
-		"#slimefun:mushrooms",
+		"#honeymod:sensitive_materials",
+		"#honeymod:tall_flowers",
+		"#honeymod:mushrooms",
 		"#minecraft:beds",
 		"#minecraft:buttons",
 		"#minecraft:signs",

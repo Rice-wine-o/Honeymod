@@ -5,8 +5,8 @@ import java.util.function.Predicate;
 import org.apache.commons.lang.Validate;
 import org.bukkit.inventory.ItemStack;
 
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
-import io.github.thebusybiscuit.slimefun4.utils.itemstack.ItemStackWrapper;
+import me.spacetoastdev.honeymod.utils.HoneymodUtils;
+import me.spacetoastdev.honeymod.utils.itemstack.ItemStackWrapper;
 
 public class MachineFuel implements Predicate<ItemStack> {
 
@@ -51,7 +51,7 @@ public class MachineFuel implements Predicate<ItemStack> {
 
     @Override
     public boolean test(ItemStack item) {
-        return SlimefunUtils.isItemSimilar(item, wrapper, true);
+        return HoneymodUtils.isItemSimilar(item, wrapper, true);
     }
 
 }

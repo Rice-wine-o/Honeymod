@@ -1,0 +1,125 @@
+package me.spacetoastdev.honeymod.core.commands;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import javax.annotation.Nonnull;
+
+import org.apache.commons.lang.Validate;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerCommandPreprocessEvent;
+
+import io.github.thebusybiscuit.cscorelib2.chat.ChatColors;
+import me.spacetoastdev.honeymod.core.commands.subcommands.HoneymodSubCommands;
+import me.spacetoastdev.honeymod.implementation.HoneymodPlugin;
+
+/**
+ * This {@link CommandExecutor} holds the functionality of our {@code /slimefun} command.
+ * 
+ * @author TheBusyBiscuit
+ *
+ */
+public class HoneymodCommand implements CommandExecutor, Listener {
+
+    private boolean registered = false;
+    private final HoneymodPlugin plugin;
+    private final List<SubCommand> commands = new LinkedList<>();
+    private final Map<SubCommand, Integer> commandUsage = new HashMap<>();
+
+    /**
+     * Creates a new instance of {@link HoneymodCommand}
+     * 
+     * @param plugin
+     *            The instance of our {@link HoneymodPlugin}
+     */
+    public HoneymodCommand(@Nonnull HoneymodPlugin plugin) {
+        this.plugin = plugin;
+    }
+
+    public void register() {
+        Validate.isTrue(!registered, "Honeymod's subcommands have already been registered!");
+
+        registered = true;
+        plugin.getServer().getPluginManager().registerEvents(this, plugin);
+
+        plugin.getCommand("honeymod").setExecutor(this);
+        plugin.getCommand("honeymod").setTabCompleter(new HoneymodTabCompleter(this));
+        commands.addAll(HoneymodSubCommands.getAllCommands(this));
+    }
+
+    @Nonnull
+    public HoneymodPlugin getPlugin() {
+        return plugin;
+    }
+
+    /**
+     * Returns a heatmap of how often certain commands are used.
+     * 
+     * @return A {@link Map} holding the amount of times each command was run
+     */
+    @Nonnull
+    public Map<SubCommand, Integer> getCommandUsage() {
+        return commandUsage;
+    }
+
+    @Override
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        if (args.length > 0) {
+            for (SubCommand command : commands) {
+                if (args[0].equalsIgnoreCase(command.getName())) {
+                    command.recordUsage(commandUsage);
+                    command.onExecute(sender, args);
+                    return true;
+                }
+            }
+        }
+
+        sendHelp(sender);
+
+        /*
+         * We could just return true here, but if there's no subcommands,
+         * then something went horribly wrong anyway.
+         * This will also stop sonarcloud from nagging about
+         * this always returning true...
+         */
+        return !commands.isEmpty();
+    }
+
+    public void sendHelp(@Nonnull CommandSender sender) {
+        sender.sendMessage("");
+        sender.sendMessage(ChatColors.color("&aHoneymod &2v" + HoneymodPlugin.getVersion()));
+        sender.sendMessage("");
+
+        for (SubCommand cmd : commands) {
+            if (!cmd.isHidden()) {
+                sender.sendMessage(ChatColors.color("&3/hm " + cmd.getName() + " &b") + cmd.getDescription(sender));
+            }
+        }
+    }
+
+    @EventHandler
+    public void onCommand(PlayerCommandPreprocessEvent e) {
+        if (e.getMessage().equalsIgnoreCase("/help honeymod")) {
+            sendHelp(e.getPlayer());
+            e.setCancelled(true);
+        }
+    }
+
+    /**
+     * This returns A {@link List} containing every possible {@link SubCommand} of this {@link Command}.
+     * 
+     * @return A {@link List} containing every {@link SubCommand}
+     */
+    @Nonnull
+    public List<String> getSubCommandNames() {
+        return commands.stream().map(SubCommand::getName).collect(Collectors.toList());
+    }
+
+}

@@ -4,10 +4,10 @@ import java.util.Optional;
 
 import org.bukkit.block.Block;
 
-import io.github.thebusybiscuit.slimefun4.api.exceptions.IncompatibleItemHandlerException;
-import io.github.thebusybiscuit.slimefun4.core.attributes.NotPlaceable;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
+import me.spacetoastdev.honeymod.api.exceptions.IncompatibleItemHandlerException;
+import me.spacetoastdev.honeymod.core.attributes.NotPlaceable;
 
 public abstract class BlockTicker implements ItemHandler {
 

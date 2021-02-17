@@ -1,13 +1,13 @@
 ---
 commands:
   help: 显示此帮助
-  cheat: 直接拿取 Slimefun 物品
-  give: 给予玩家 Slimefun 物品
-  guide: 获取一本 Slimefun 指南书
+  cheat: 直接拿取 Honeymod 物品
+  give: 给予玩家 Honeymod 物品
+  guide: 获取一本 Honeymod 指南书
   teleporter: 查看其他玩家的公共传送点
-  versions: 显示 Slimefun 运行环境
-  search: 搜索 Slimefun 物品
-  open_guide: 使用命令打开 Slimefun 指南
+  versions: 显示 Honeymod 运行环境
+  search: 搜索 Honeymod 物品
+  open_guide: 使用命令打开 Honeymod 指南
   stats: 查看玩家的统计数据
   research:
     description: 解锁/重置玩家的研究
@@ -24,7 +24,7 @@ commands:
     charge-success: 充电完成!
     not-rechargeable: 这个物品不能充电!
   timings:
-    description: Slimefun 及其附属插件的性能报告
+    description: Honeymod 及其附属插件的性能报告
     please-wait: "&e请稍等一会...结果马上就来!"
     verbose-player: "&4该标记不能对玩家使用!"
     unknown-flag: "&4未知标记: &c%flag%"
@@ -49,17 +49,17 @@ guide:
     selected-language: '目前使用的语言:'
     change: 单击选择要更改的语言
     description:
-    - "&7现在你可以修改 Slimefun"
+    - "&7现在你可以修改 Honeymod"
     - "&7展示的文本消息的语言了."
     - "&7注意: 物品中的文本"
     - "&7暂时无法修改."
   title:
-    main: Slimefun 指南
+    main: Honeymod 指南
     settings: 设置 & 详情
     languages: 选择你想要更改的语言
-    credits: Slimefun4 贡献者
-    wiki: Slimefun4 维基
-    addons: Slimefun4 附属插件
+    credits: Honeymod4 贡献者
+    wiki: Honeymod4 维基
+    addons: Honeymod4 附属插件
     bugs: 问题反馈
     source: 源代码
     versions: 安装的版本
@@ -74,17 +74,17 @@ guide:
     profile-link: 单击访问他们的 Github 个人主页
     open: 单击查看贡献者名单
     description:
-    - "&7Slimefun 是一个开源的项目"
+    - "&7Honeymod 是一个开源的项目"
     - "&7并且由玩家社区维护."
     - "&7在这几年中, 一共有 &e%contributors% &7人"
-    - "&7为 Slimefun 做出了贡献."
+    - "&7为 Honeymod 做出了贡献."
   pages:
     previous: 上一页
     next: 下一页
   tooltips:
     open-category: 单击打开
     versions-notice: 在反馈问题时这些很重要!
-    wiki: 在官方 Slimefun 维基上查看此物品
+    wiki: 在官方 Honeymod 维基上查看此物品
     recipes:
       machine: 此机器可用的合成配方
       miner: 此采矿机可以获得的资源
@@ -93,7 +93,7 @@ guide:
       climbing-pick: 你可以攀爬的平面
   back:
     title: 返回
-    guide: 返回 Slimefun 指南
+    guide: 返回 Honeymod 指南
     settings: 返回设置面板
   locked: 已锁定
   locked-category:
@@ -164,7 +164,7 @@ messages:
   - "&7要总是看着生活中光明的一面!"
   - "&7这一块其实是饼干而不是曲奇"
   - "&7霓虹灯亮起来了!"
-  piglin-barter: "&4你不能使用 Slimefun 的物品和猪灵易物"
+  piglin-barter: "&4你不能使用 Honeymod 的物品和猪灵易物"
   enchantment-rune:
     fail: "&c你不能附魔这个物品."
     no-enchantment: "&c无法找到此物品可用的附魔属性."
@@ -233,13 +233,13 @@ machines:
     no-permission: "&4你没有权限操作这台工业矿机!"
     finished: "&e你的工业矿机采矿已完成! 总共开采了 %ores% 个矿石!"
 anvil:
-  not-working: "&4你不能在铁砧里使用 Slimefun 的物品"
-  mcmmo-salvaging: "&4你不能分解 Slimefun 物品!"
+  not-working: "&4你不能在铁砧里使用 Honeymod 的物品"
+  mcmmo-salvaging: "&4你不能分解 Honeymod 物品!"
 backpack:
   already-open: "&c抱歉, 这个背包已在别处打开了!"
   no-stack: "&c你不能同时手持两个背包"
 workbench:
-  not-enhanced: "&4你不能在普通的工作台上使用 Slimefun 物品"
+  not-enhanced: "&4你不能在普通的工作台上使用 Honeymod 物品"
 gps:
   deathpoint: "&4死亡点 &7%date%"
   waypoint:
@@ -341,13 +341,13 @@ languages:
   be: 白俄罗斯语
   tl: 他加禄语
 brewing_stand:
-  not-working: "&4你不能在酿造台中使用 Slimefun 物品!"
+  not-working: "&4你不能在酿造台中使用 Honeymod 物品!"
 villagers:
-  no-trading: "&4你不能用 Slimefun 的物品和村民交易!"
+  no-trading: "&4你不能用 Honeymod 的物品和村民交易!"
 cartography_table:
-  not-working: "&4你不能在制图台中使用 Slimefun 物品!"
+  not-working: "&4你不能在制图台中使用 Honeymod 物品!"
 cauldron:
-  no-discoloring: "&4你不能用炼药锅洗去 Slimefun 物品的颜色"
+  no-discoloring: "&4你不能用炼药锅洗去 Honeymod 物品的颜色"
 miner:
   no-ores: "&e抱歉, 周围找不到矿石了!"
 placeholderapi:

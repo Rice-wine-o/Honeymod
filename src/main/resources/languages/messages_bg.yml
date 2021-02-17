@@ -2,12 +2,12 @@
 commands:
   help: Показва този помощен екран
   cheat: Позволява Ви да чийтвате Предмети
-  give: Позволява Ви да давате на някого Slimefun Предмети
-  guide: Дава ви Slimefun Ръководство
+  give: Позволява Ви да давате на някого Honeymod Предмети
+  guide: Дава ви Honeymod Ръководство
   teleporter: Вижте пътни точки на други играчи
   versions: Лист с всички инсталирани Добавки
   search: Претърсва вашето Ръководство за даден термин / предмет
-  open_guide: Отваря Ви Slimefun Ръководството без да използвате книгата
+  open_guide: Отваря Ви Honeymod Ръководството без да използвате книгата
   stats: Показва Статистики относно даден Играч
   research:
     description: Отключва/Рестартира проучванията на даден играч
@@ -26,7 +26,7 @@ commands:
     charge-success: Предмета е зареден!
     not-rechargeable: Този предмет не може да бъде зареждан
   timings:
-    description: Timings относно Slimefun и неговите добавки
+    description: Timings относно Honeymod и неговите добавки
     please-wait: "&eМоля изчакайте няколко секунди... Резултатите се обработват!"
     verbose-player: "&4Verbose флага не може да бъде използван от Играч!"
     unknown-flag: "&4Непознат флаг: &c%flag%"
@@ -49,16 +49,16 @@ guide:
     change: Натисни, за да избереш нов език
     description:
       '0': "&7Сега имаш опцията да промениш"
-      '1': "&7езика, на който е Slimefun"
+      '1': "&7езика, на който е Honeymod"
       '2': "&7той ще се промени само за теб. Предметите"
       '3': "&7не могат да бъдат преведени за момента."
   title:
-    main: Slimefun Ръководство
+    main: Honeymod Ръководство
     settings: Настройки & Информация
     languages: Изберете вашия предпочитан език
-    credits: Slimefun4 Контрибутори
-    wiki: Slimefun4 Уики
-    addons: Добавки за Slimefun4
+    credits: Honeymod4 Контрибутори
+    wiki: Honeymod4 Уики
+    addons: Добавки за Honeymod4
     bugs: Бъг Доклади
     source: Програмен Код
     versions: Инсталирани версии
@@ -73,17 +73,17 @@ guide:
     profile-link: Натиснете, за да видите техния профил в GitHub
     open: Натисни, за да видиш нашите контрибутори
     description:
-      '0': "&7Slimefun е проект с отворен код"
+      '0': "&7Honeymod е проект с отворен код"
       '1': "&7и е поддържан от голямо общество от хора."
       '2': "&7Над &e%contributors% &7хора са работили върху"
-      '3': "&7Slimefun през всички тези години."
+      '3': "&7Honeymod през всички тези години."
   pages:
     previous: Предишна страница
     next: Следваща страница
   tooltips:
     open-category: Натиснете, за да отворите
     versions-notice: Тези са много важни, когато докладвате бъгове!
-    wiki: Вижте този Предмет в официалното Уики на Slimefun
+    wiki: Вижте този Предмет в официалното Уики на Honeymod
     recipes:
       machine: Рецепти направени в тази Машина
       miner: Ресурси, които може да получите с този Копач
@@ -92,7 +92,7 @@ guide:
       climbing-pick: Повърхности, по които можете да се изкачвате
   back:
     title: Обратно
-    guide: Върнете се обратно в Slimefun Ръководството
+    guide: Върнете се обратно в Honeymod Ръководството
     settings: Върнете се обратно в Панела с Настройки(Settings Panel)
   locked: ЗАКЛЮЧЕНО
   locked-category:
@@ -171,7 +171,7 @@ messages:
     '12': "&7Това беше Бисквитка, а не Курабийка"
     '13': "&7Неоновите табели светят!"
   piglin-barter: "&4Не може да разменяте предмети с Пиглините използвайки предмети
-    от Slimefun"
+    от Honeymod"
   enchantment-rune:
     fail: "&cНе може да enchant-нете този предмет."
     no-enchantment: "&cНе може да бъде намерен Enchantment за този предмет."
@@ -188,7 +188,7 @@ messages:
     dual-wielding: "&4Трябва да държите Climbing Picks и в двете си ръце, за да ги
       използвате!"
     wrong-material: "&cНе може да се изкачвате по тази повърхност. Проверете вашето
-      Slimefun Ръководство за повече информация!"
+      Honeymod Ръководство за повече информация!"
   invalid-item: "&4%item% &cне е валиден Предмет!"
   invalid-amount: "&4%amount% &cне е валидна бройка : трябва да бъде по-голяма от
     0!"
@@ -253,13 +253,13 @@ machines:
     finished: "&eВашия Индустриален Копач прикючи своята работа! Той е събрал общо
       %ores% руда(и)!"
 anvil:
-  not-working: "&4Не може да използвате Slimefun предмети в обикновенна наковалния!"
-  mcmmo-salvaging: "&4Не може да разглобявате Slimefun предмети на mcMMO наковалнията!"
+  not-working: "&4Не може да използвате Honeymod предмети в обикновенна наковалния!"
+  mcmmo-salvaging: "&4Не може да разглобявате Honeymod предмети на mcMMO наковалнията!"
 backpack:
   already-open: "&cСъжалявам, но тази Раница е отворена някъде другаде!"
   no-stack: "&cНе може да стаквате Раници"
 workbench:
-  not-enhanced: "&4Не може да използвате Slimefun предмети в нормална работна маса"
+  not-enhanced: "&4Не може да използвате Honeymod предмети в нормална работна маса"
 gps:
   deathpoint: "&4Локация на Умиране &7%date%"
   waypoint:
@@ -362,12 +362,12 @@ languages:
   be: Беларуски
   tl: Тагалог
 brewing_stand:
-  not-working: "&4Не може да използвате Slimefun предмети в brewing stand!"
+  not-working: "&4Не може да използвате Honeymod предмети в brewing stand!"
 villagers:
-  no-trading: "&4Не може да търгувате Slimefun предмети със Селяните!"
+  no-trading: "&4Не може да търгувате Honeymod предмети със Селяните!"
 cartography_table:
-  not-working: "&4Не може да използвате Slimefun предмети в картографска маса!"
+  not-working: "&4Не може да използвате Honeymod предмети в картографска маса!"
 cauldron:
-  no-discoloring: "&4Не можете да обезцветявате Slimefun брони"
+  no-discoloring: "&4Не можете да обезцветявате Honeymod брони"
 placeholderapi:
   profile-loading: Зареждане...

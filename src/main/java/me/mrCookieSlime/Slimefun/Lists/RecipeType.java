@@ -19,47 +19,47 @@ import org.bukkit.inventory.ItemStack;
 
 import io.github.thebusybiscuit.cscorelib2.item.CustomItem;
 import io.github.thebusybiscuit.cscorelib2.recipes.MinecraftRecipe;
-import io.github.thebusybiscuit.slimefun4.api.MinecraftVersion;
-import io.github.thebusybiscuit.slimefun4.core.multiblocks.MultiBlockMachine;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunPlugin;
-import io.github.thebusybiscuit.slimefun4.implementation.items.altar.AltarRecipe;
-import io.github.thebusybiscuit.slimefun4.implementation.items.altar.AncientAltar;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
 import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
+import me.spacetoastdev.honeymod.api.MinecraftVersion;
+import me.spacetoastdev.honeymod.core.multiblocks.MultiBlockMachine;
+import me.spacetoastdev.honeymod.implementation.HoneymodItems;
+import me.spacetoastdev.honeymod.implementation.HoneymodPlugin;
+import me.spacetoastdev.honeymod.implementation.items.altar.AltarRecipe;
+import me.spacetoastdev.honeymod.implementation.items.altar.AncientAltar;
 
 public class RecipeType implements Keyed {
 
-    public static final RecipeType MULTIBLOCK = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "multiblock"), new CustomItem(Material.BRICKS, "&bMultiBlock", "", "&a&oBuild it in the World"));
-    public static final RecipeType ARMOR_FORGE = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "armor_forge"), SlimefunItems.ARMOR_FORGE, "", "&a&oCraft it in an Armor Forge");
-    public static final RecipeType GRIND_STONE = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "grind_stone"), SlimefunItems.GRIND_STONE, "", "&a&oGrind it using the Grind Stone");
-    public static final RecipeType SMELTERY = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "smeltery"), SlimefunItems.SMELTERY, "", "&a&oSmelt it using a Smeltery");
-    public static final RecipeType ORE_CRUSHER = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "ore_crusher"), SlimefunItems.ORE_CRUSHER, "", "&a&oCrush it using the Ore Crusher");
-    public static final RecipeType GOLD_PAN = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "gold_pan"), SlimefunItems.GOLD_PAN, "", "&a&oUse a Gold Pan on Gravel to obtain this Item");
-    public static final RecipeType COMPRESSOR = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "compressor"), SlimefunItems.COMPRESSOR, "", "&a&oCompress it using the Compressor");
-    public static final RecipeType PRESSURE_CHAMBER = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "pressure_chamber"), SlimefunItems.PRESSURE_CHAMBER, "", "&a&oCompress it using the Pressure Chamber");
-    public static final RecipeType MAGIC_WORKBENCH = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "magic_workbench"), SlimefunItems.MAGIC_WORKBENCH, "", "&a&oCraft it in a Magic Workbench");
-    public static final RecipeType ORE_WASHER = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "ore_washer"), SlimefunItems.ORE_WASHER, "", "&a&oWash it in an Ore Washer");
-    public static final RecipeType ENHANCED_CRAFTING_TABLE = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "enhanced_crafting_table"), SlimefunItems.ENHANCED_CRAFTING_TABLE, "", "&a&oA regular Crafting Table cannot", "&a&ohold this massive Amount of Power...");
-    public static final RecipeType JUICER = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "juicer"), SlimefunItems.JUICER, "", "&a&oUsed for Juice Creation");
+    public static final RecipeType MULTIBLOCK = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "multiblock"), new CustomItem(Material.BRICKS, "&bMultiBlock", "", "&a&oBuild it in the World"));
+    public static final RecipeType ARMOR_FORGE = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "armor_forge"), HoneymodItems.ARMOR_FORGE, "", "&a&oCraft it in an Armor Forge");
+    public static final RecipeType GRIND_STONE = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "grind_stone"), HoneymodItems.GRIND_STONE, "", "&a&oGrind it using the Grind Stone");
+    public static final RecipeType SMELTERY = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "smeltery"), HoneymodItems.SMELTERY, "", "&a&oSmelt it using a Smeltery");
+    public static final RecipeType ORE_CRUSHER = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "ore_crusher"), HoneymodItems.ORE_CRUSHER, "", "&a&oCrush it using the Ore Crusher");
+    public static final RecipeType GOLD_PAN = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "gold_pan"), HoneymodItems.GOLD_PAN, "", "&a&oUse a Gold Pan on Gravel to obtain this Item");
+    public static final RecipeType COMPRESSOR = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "compressor"), HoneymodItems.COMPRESSOR, "", "&a&oCompress it using the Compressor");
+    public static final RecipeType PRESSURE_CHAMBER = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "pressure_chamber"), HoneymodItems.PRESSURE_CHAMBER, "", "&a&oCompress it using the Pressure Chamber");
+    public static final RecipeType MAGIC_WORKBENCH = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "magic_workbench"), HoneymodItems.MAGIC_WORKBENCH, "", "&a&oCraft it in a Magic Workbench");
+    public static final RecipeType ORE_WASHER = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "ore_washer"), HoneymodItems.ORE_WASHER, "", "&a&oWash it in an Ore Washer");
+    public static final RecipeType ENHANCED_CRAFTING_TABLE = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "enhanced_crafting_table"), HoneymodItems.ENHANCED_CRAFTING_TABLE, "", "&a&oA regular Crafting Table cannot", "&a&ohold this massive Amount of Power...");
+    public static final RecipeType JUICER = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "juicer"), HoneymodItems.JUICER, "", "&a&oUsed for Juice Creation");
 
-    public static final RecipeType ANCIENT_ALTAR = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "ancient_altar"), SlimefunItems.ANCIENT_ALTAR, (recipe, output) -> {
+    public static final RecipeType ANCIENT_ALTAR = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "ancient_altar"), HoneymodItems.ANCIENT_ALTAR, (recipe, output) -> {
         AltarRecipe altarRecipe = new AltarRecipe(Arrays.asList(recipe), output);
-        AncientAltar altar = ((AncientAltar) SlimefunItems.ANCIENT_ALTAR.getItem());
+        AncientAltar altar = ((AncientAltar) HoneymodItems.ANCIENT_ALTAR.getItem());
         altar.getRecipes().add(altarRecipe);
     });
 
-    public static final RecipeType MOB_DROP = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "mob_drop"), new CustomItem(Material.IRON_SWORD, "&bMob Drop"), RecipeType::registerMobDrop, "", "&rKill the specified Mob to obtain this Item");
-    public static final RecipeType BARTER_DROP = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "barter_drop"), new CustomItem(Material.GOLD_INGOT, "&bBarter Drop"), RecipeType::registerBarterDrop, "&aBarter with piglins for a chance", "&ato obtain this item");
+    public static final RecipeType MOB_DROP = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "mob_drop"), new CustomItem(Material.IRON_SWORD, "&bMob Drop"), RecipeType::registerMobDrop, "", "&rKill the specified Mob to obtain this Item");
+    public static final RecipeType BARTER_DROP = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "barter_drop"), new CustomItem(Material.GOLD_INGOT, "&bBarter Drop"), RecipeType::registerBarterDrop, "&aBarter with piglins for a chance", "&ato obtain this item");
 
-    public static final RecipeType HEATED_PRESSURE_CHAMBER = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "heated_pressure_chamber"), SlimefunItems.HEATED_PRESSURE_CHAMBER);
-    public static final RecipeType FOOD_FABRICATOR = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "food_fabricator"), SlimefunItems.FOOD_FABRICATOR);
-    public static final RecipeType FOOD_COMPOSTER = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "food_composter"), SlimefunItems.FOOD_COMPOSTER);
-    public static final RecipeType FREEZER = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "freezer"), SlimefunItems.FREEZER);
-    public static final RecipeType REFINERY = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "refinery"), SlimefunItems.REFINERY);
+    public static final RecipeType HEATED_PRESSURE_CHAMBER = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "heated_pressure_chamber"), HoneymodItems.HEATED_PRESSURE_CHAMBER);
+    public static final RecipeType FOOD_FABRICATOR = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "food_fabricator"), HoneymodItems.FOOD_FABRICATOR);
+    public static final RecipeType FOOD_COMPOSTER = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "food_composter"), HoneymodItems.FOOD_COMPOSTER);
+    public static final RecipeType FREEZER = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "freezer"), HoneymodItems.FREEZER);
+    public static final RecipeType REFINERY = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "refinery"), HoneymodItems.REFINERY);
 
-    public static final RecipeType GEO_MINER = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "geo_miner"), SlimefunItems.GEO_MINER);
-    public static final RecipeType NUCLEAR_REACTOR = new RecipeType(new NamespacedKey(SlimefunPlugin.instance(), "nuclear_reactor"), SlimefunItems.NUCLEAR_REACTOR);
+    public static final RecipeType GEO_MINER = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "geo_miner"), HoneymodItems.GEO_MINER);
+    public static final RecipeType NUCLEAR_REACTOR = new RecipeType(new NamespacedKey(HoneymodPlugin.instance(), "nuclear_reactor"), HoneymodItems.NUCLEAR_REACTOR);
 
     public static final RecipeType NULL = new RecipeType();
 
@@ -71,7 +71,7 @@ public class RecipeType implements Keyed {
     private RecipeType() {
         this.item = null;
         this.machine = "";
-        this.key = new NamespacedKey(SlimefunPlugin.instance(), "null");
+        this.key = new NamespacedKey(HoneymodPlugin.instance(), "null");
     }
 
     public RecipeType(ItemStack item, String machine) {
@@ -79,9 +79,9 @@ public class RecipeType implements Keyed {
         this.machine = machine;
 
         if (machine.length() > 0) {
-            this.key = new NamespacedKey(SlimefunPlugin.instance(), machine.toLowerCase(Locale.ROOT));
+            this.key = new NamespacedKey(HoneymodPlugin.instance(), machine.toLowerCase(Locale.ROOT));
         } else {
-            this.key = new NamespacedKey(SlimefunPlugin.instance(), "unknown");
+            this.key = new NamespacedKey(HoneymodPlugin.instance(), "unknown");
         }
     }
 
@@ -130,7 +130,7 @@ public class RecipeType implements Keyed {
     }
 
     public ItemStack getItem(Player p) {
-        return SlimefunPlugin.getLocalization().getRecipeTypeItem(p, this);
+        return HoneymodPlugin.getLocalization().getRecipeTypeItem(p, this);
     }
 
     public SlimefunItem getMachine() {
@@ -143,17 +143,17 @@ public class RecipeType implements Keyed {
     }
 
     private static void registerBarterDrop(ItemStack[] recipe, ItemStack output) {
-        if (SlimefunPlugin.getMinecraftVersion().isAtLeast(MinecraftVersion.MINECRAFT_1_16)) {
-            SlimefunPlugin.getRegistry().getBarteringDrops().add(output);
+        if (HoneymodPlugin.getMinecraftVersion().isAtLeast(MinecraftVersion.MINECRAFT_1_16)) {
+            HoneymodPlugin.getRegistry().getBarteringDrops().add(output);
         }
     }
 
     private static void registerMobDrop(ItemStack[] recipe, ItemStack output) {
         String mob = ChatColor.stripColor(recipe[4].getItemMeta().getDisplayName()).toUpperCase(Locale.ROOT).replace(' ', '_');
         EntityType entity = EntityType.valueOf(mob);
-        Set<ItemStack> dropping = SlimefunPlugin.getRegistry().getMobDrops().getOrDefault(entity, new HashSet<>());
+        Set<ItemStack> dropping = HoneymodPlugin.getRegistry().getMobDrops().getOrDefault(entity, new HashSet<>());
         dropping.add(output);
-        SlimefunPlugin.getRegistry().getMobDrops().put(entity, dropping);
+        HoneymodPlugin.getRegistry().getMobDrops().put(entity, dropping);
     }
 
     public static List<ItemStack> getRecipeInputs(MultiBlockMachine machine) {

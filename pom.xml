@@ -4,20 +4,22 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.github.slimefun</groupId>
-    <artifactId>Slimefun</artifactId>
+    <groupId>me.spacetoastdev</groupId>
+    <artifactId>Honeymod</artifactId>
 
     <!-- Our default version will be UNOFFICIAL, this will prevent auto updates -->
     <!-- from overriding our local test file -->
-    <version>4.9-UNOFFICIAL</version>
-    <inceptionYear>2013</inceptionYear>
+    <!-- Version number is read "HoneymodMajor.SlimefunMajor.SlimefunMinor.HoneymodMinor -->
+    <version>0.4.9.1-UNOFFICIAL</version>
+    <inceptionYear>2021</inceptionYear>
     <packaging>jar</packaging>
 
     <!-- Project Info -->
-    <description>Slimefun is a Spigot/Paper plugin that simulates a modpack-like atmosphere by adding over 500 new items and recipes to your Minecraft Server.</description>
-    <url>https://github.com/Slimefun/Slimefun4</url>
+    <description>Honeymod is a Slimefun fork.</description>
+    <url>https://mabbott.com.au</url>
 
     <properties>
+    
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -25,21 +27,8 @@
         <!-- Spigot properties -->
         <spigot.version>1.16.5</spigot.version>
         <spigot.javadocs>https://hub.spigotmc.org/javadocs/spigot/</spigot.javadocs>
-
-        <!-- Default settings for sonarcloud.io -->
-        <sonar.projectKey>Slimefun_Slimefun4</sonar.projectKey>
-        <sonar.organization>slimefun</sonar.organization>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <sonar.log.level>DEBUG</sonar.log.level>
-        <sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     </properties>
-
-    <!-- Bug Tracker -->
-    <issueManagement>
-        <system>GitHub Issues</system>
-        <url>https://github.com/Slimefun/Slimefun4/issues</url>
-    </issueManagement>
-
+    
     <!-- License -->
     <licenses>
         <license>
@@ -132,40 +121,7 @@
                     <trimStackTrace>false</trimStackTrace>
                 </configuration>
             </plugin>
-
-            <!-- Sonarcloud Scanner -->
-            <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.8.0.2131</version>
-            </plugin>
-
-            <!-- Code Coverage Reports -->
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.6</version>
-
-                <executions>
-                    <execution>
-                        <id>prepare</id>
-
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-
-                    <execution>
-                        <id>report</id>
-                        <phase>test</phase>
-
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
+            
             <!-- Dependency shading -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -220,8 +176,8 @@
                     <reportOutputDirectory>${project.basedir}</reportOutputDirectory>
                     <destDir>docs</destDir>
 
-                    <doctitle>Slimefun4 - Javadocs</doctitle>
-                    <windowtitle>Slimefun4 - Javadocs</windowtitle>
+                    <doctitle>Honeymod - Javadocs</doctitle>
+                    <windowtitle>Honeymod - Javadocs</windowtitle>
                     <detectOfflineLinks>false</detectOfflineLinks>
                     <additionalJOption>-html5</additionalJOption>
 
@@ -233,32 +189,32 @@
                     <!-- We can group packages together in our Javadocs -->
                     <groups>
                         <group>
-                            <title>Slimefun4 - API</title>
-                            <packages>io.github.thebusybiscuit.slimefun4.api*</packages>
+                            <title>Honeymod - API</title>
+                            <packages>me.spacetoastdev.honeymod.api*</packages>
                         </group>
                         <group>
-                            <title>Slimefun4 - Core packages</title>
-                            <packages>io.github.thebusybiscuit.slimefun4.core*</packages>
+                            <title>Honeymod - Core packages</title>
+                            <packages>me.spacetoastdev.honeymod.core*</packages>
                         </group>
                         <group>
-                            <title>Slimefun4 - Implementations</title>
-                            <packages>io.github.thebusybiscuit.slimefun4.implementation*</packages>
+                            <title>Honeymod - Implementations</title>
+                            <packages>me.spacetoastdev.honeymod.implementation*</packages>
                         </group>
                         <group>
-                            <title>Slimefun4 - Common utility packages</title>
-                            <packages>io.github.thebusybiscuit.slimefun4.utils*</packages>
+                            <title>Honeymod - Common utility packages</title>
+                            <packages>me.spacetoastdev.honeymod.utils*</packages>
                         </group>
                         <group>
-                            <title>Slimefun4 - Items</title>
-                            <packages>io.github.thebusybiscuit.slimefun4.implementation.items*</packages>
+                            <title>Honeymod - Items</title>
+                            <packages>me.spacetoastdev.honeymod.implementation.items*</packages>
                         </group>
                         <group>
-                            <title>Slimefun4 - Multiblocks</title>
-                            <packages>io.github.thebusybiscuit.slimefun4.implementation.items.multiblocks*</packages>
+                            <title>Honeymod - Multiblocks</title>
+                            <packages>me.spacetoastdev.honeymod.implementation.items.multiblocks*</packages>
                         </group>
                         <group>
-                            <title>Slimefun4 - Electrical Machines</title>
-                            <packages>io.github.thebusybiscuit.slimefun4.implementation.items.electric*</packages>
+                            <title>Honeymod - Electrical Machines</title>
+                            <packages>me.spacetoastdev.honeymod.implementation.items.electric*</packages>
                         </group>
                         <group>
                             <title>Slimefun4 - Old packages</title>

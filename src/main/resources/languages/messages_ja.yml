@@ -1,13 +1,13 @@
 ---
 commands:
   help: コマンドの使い方を表示
-  cheat: Slimefunガイドをチートモードで開く
-  give: 指定したプレイヤーにSlimefunアイテムを与える
-  guide: Slimefunガイドを取得
+  cheat: Honeymodガイドをチートモードで開く
+  give: 指定したプレイヤーにHoneymodアイテムを与える
+  guide: Honeymodガイドを取得
   teleporter: 指定したプレイヤーのウェイポイントを表示
   versions: バージョンについて
-  search: Slimefunガイド内を検索
-  open_guide: Slimefunガイドを開く
+  search: Honeymodガイド内を検索
+  open_guide: Honeymodガイドを開く
   stats: プレイヤー情報を表示
   research:
     description: 指定したプレイヤーのリサーチ状況を操作
@@ -24,7 +24,7 @@ commands:
     charge-success: アイテムが充電されました！
     not-rechargeable: このアイテムは充電できません！
   timings:
-    description: Slimefunに関連する負荷の計測
+    description: Honeymodに関連する負荷の計測
     please-wait: "&e数秒お待ちください… 負荷の測定中です！"
     verbose-player: "&4プレイヤーはverboseフラグを使用できません！"
     unknown-flag: "&4未知のフラグです: &c%flag%"
@@ -50,16 +50,16 @@ guide:
     change: クリックで新しく言語を指定
     description:
     - "&7このオプションでは"
-    - "&7Slimefunで表示される言語を"
+    - "&7Honeymodで表示される言語を"
     - "&7指定できます。アイテム名は"
     - "&7現時点では翻訳できません。"
   title:
-    main: Slimefunガイド
+    main: Honeymodガイド
     settings: 設定・情報
     languages: 言語の選択
-    credits: Slimefun4 開発者
-    wiki: Slimefun4 Wiki
-    addons: Slimefun4 アドオン
+    credits: Honeymod4 開発者
+    wiki: Honeymod4 Wiki
+    addons: Honeymod4 アドオン
     bugs: バグ報告
     source: ソースコード
     versions: バージョン一覧
@@ -74,10 +74,10 @@ guide:
     profile-link: クリックでGitHubのプロファイルを開く
     open: クリックでコントリビュータを表示
     description:
-    - "&7Slimefunは多くのコミュニティの人々に支えられている"
+    - "&7Honeymodは多くのコミュニティの人々に支えられている"
     - "&7オープンソースのプロジェクトです。"
     - "&7数年にわたり&e%contributors%&7人以上の人々が，"
-    - "&7Slimefunに取り組んできました。"
+    - "&7Honeymodに取り組んできました。"
   pages:
     previous: 前のページ
     next: 次のページ
@@ -93,7 +93,7 @@ guide:
       climbing-pick: クライミング可能な地表
   back:
     title: 戻る
-    guide: Slimefunガイドへ戻る
+    guide: Honeymodガイドへ戻る
     settings: 設定画面へ戻る
   locked: ロック中
   locked-category:
@@ -144,7 +144,7 @@ messages:
   cannot-place: "&cこの場所には設置できません"
   no-pvp: "&cpvpが許可されているワールドでのみ利用できます"
   radiation: "&4多量に被ばくしている！ &c放射性物質を捨てるか、 Hazmat防具一式を装備しよう！"
-  opening-guide: "&bSlimefunガイドを開いている途中です、少々お待ちください…"
+  opening-guide: "&bHoneymodガイドを開いている途中です、少々お待ちください…"
   opening-backpack: "&bバックパックを開いている途中です、少々お待ちください…"
   no-iron-golem-heal: "&c鉄インゴットではないので、アイアンゴーレムの回復には使えません！"
   link-prompt: "&eクリックで開く:"
@@ -164,7 +164,7 @@ messages:
   - "&7常に前向きに生きていこう！"
   - "&7これはビスケットなんかではなくクッキーに違いない"
   - "&7ネオンサインが眩しい！"
-  piglin-barter: "&4Slimefunアイテムはピグリンとの物々交換に使用できません"
+  piglin-barter: "&4Honeymodアイテムはピグリンとの物々交換に使用できません"
   enchantment-rune:
     fail: "&cこのアイテムにはエンチャントできません。"
     no-enchantment: "&cこのアイテムに付与できるエンチャントが見つかりません。"
@@ -179,7 +179,7 @@ messages:
     not-shears: "&cMulti Toolはハサミとして利用できません！"
   climbing-pick:
     dual-wielding: "&4Climbing Pickを両手に持って使用！"
-    wrong-material: "&cこの地表はクライミングできません。Slimefunガイドを確認してください！"
+    wrong-material: "&cこの地表はクライミングできません。Honeymodガイドを確認してください！"
   invalid-item: "&4%item% &cは正しくないアイテムです"
   invalid-amount: "&4%amount% &cの部分には、正の整数を指定してください"
   invalid-research: "&4%research%&cは正しくないリサーチです"
@@ -233,13 +233,13 @@ machines:
     no-permission: "&4Industrial Minerを使う権限がありません！"
     finished: "&eIndustrial Minerの稼働完了！合計で%ores%個の鉱石を入手しました！"
 anvil:
-  not-working: "&4Slimefunアイテムは金床を利用できません！"
-  mcmmo-salvaging: "&4Slimefunアイテムはサルベージできません！"
+  not-working: "&4Honeymodアイテムは金床を利用できません！"
+  mcmmo-salvaging: "&4Honeymodアイテムはサルベージできません！"
 backpack:
   already-open: "&cこのバックパックはどこかで使用中です！"
   no-stack: "&cバックパックはスタックされていると使用できません！"
 workbench:
-  not-enhanced: "&4Slimefunアイテムは作業台を利用できません！"
+  not-enhanced: "&4Honeymodアイテムは作業台を利用できません！"
 gps:
   deathpoint: "&4死亡地点 &7%date%"
   waypoint:
@@ -341,13 +341,13 @@ languages:
   be: ベラルーシ語
   tl: タガログ語
 brewing_stand:
-  not-working: "&4Slimefunアイテムは醸造台で使えません！"
+  not-working: "&4Honeymodアイテムは醸造台で使えません！"
 villagers:
-  no-trading: "&4Slimefunアイテムは村人との取引に使用できません！"
+  no-trading: "&4Honeymodアイテムは村人との取引に使用できません！"
 cartography_table:
-  not-working: "&4Slimefunアイテムは製図台を使用できません！"
+  not-working: "&4Honeymodアイテムは製図台を使用できません！"
 cauldron:
-  no-discoloring: "&4Slimefunアイテムの脱色はできません"
+  no-discoloring: "&4Honeymodアイテムの脱色はできません"
 miner:
   no-ores: "&e周辺には鉱石が見つかりませんでした！"
 placeholderapi:

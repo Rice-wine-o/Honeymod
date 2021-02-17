@@ -6,7 +6,7 @@ tooltips:
   unit: egység
   units: egység
 resources:
-  slimefun:
+  honeymod:
     oil: Olaj
     nether_ice: Nether jég
     salt: Só

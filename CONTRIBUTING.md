@@ -144,7 +144,7 @@ But do try to follow our code style as best as you can.*
 * Constants (`static final` fields) should be in *SCREAMING_SNAKE_CASE* (e.g. `MY_CONSTANT_FIELD`)
 * Variables, parameters and fields should be in *camelCase* (e.g. `myVariableOrField`)
 * All methods should be in *camelCase* (e.g. `myMethod`)
-* Packages must be all lowercase, consecutive words should generally be avoided. (e.g. `io.github.thebusybiscuit.slimefun4.core.something`)
+* Packages must be all lowercase, consecutive words should generally be avoided. (e.g. `me.spacetoastdev.honeymod.core.something`)
 #### 7. Style preferences
 * Use **Spaces**, not Tabs!
 * One class per file! Please don't put multiple classes into one file, this also applies to enums, make a seperate file for new classes or enums.

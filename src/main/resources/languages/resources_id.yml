@@ -6,7 +6,7 @@ tooltips:
   unit: Unit
   units: Unit - Unit
 resources:
-  slimefun:
+  honeymod:
     oil: Minyak
     nether_ice: Es Neraka
     salt: Garam

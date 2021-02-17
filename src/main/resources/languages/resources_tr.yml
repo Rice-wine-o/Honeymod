@@ -6,7 +6,7 @@ tooltips:
   units: Birimler
   chunk: Taranan Bölge
 resources:
-  slimefun:
+  honeymod:
     oil: Petrol
     nether_ice: Nether Buzu
     salt: Tuz

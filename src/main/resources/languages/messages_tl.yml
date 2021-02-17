@@ -1,14 +1,14 @@
 ---
 commands:
   help: Ipapakita itong help screen.
-  cheat: Pinapayagan kang dayain ang mga Aytem sa Slimefun.
-  give: Nagbibigay ito ng mga Aytem sa Slimefun.
+  cheat: Pinapayagan kang dayain ang mga Aytem sa Honeymod.
+  give: Nagbibigay ito ng mga Aytem sa Honeymod.
   guide: Bibigyan ka nito ng Simefun Guide.
   timings: Lag-info patungkol sa iyong server.
   teleporter: Tingnan ang mga Waypoints ng mga Players.
-  versions: Ipapakita nito ang mga na-install na mga Addon sa Slimefun.
+  versions: Ipapakita nito ang mga na-install na mga Addon sa Honeymod.
   search: Hahanapin sa Guide ang binigyan na katawagan.
-  open_guide: Bubuksan nito ang Slimefun's guide na wala ang libro.
+  open_guide: Bubuksan nito ang Honeymod's guide na wala ang libro.
   stats: Ipapakita ang hindi karamihan na estatistika ng Player.
   research:
     description: Iaunlock/Irereset ang mga Researches para sa Player.
@@ -45,16 +45,16 @@ guide:
     change: Mag-click upang pumili ng bagong wika.
     description:
     - "&7Meron ka nang pagpipilian upang pumili"
-    - "&7ng wika kung saan ang Slimefun"
+    - "&7ng wika kung saan ang Honeymod"
     - "&7ay may ipapakita sa iyo. Ang mga"
     - "&7items ay bawal pa i-translate sa ngayon."
   title:
-    main: Slimefun Guide
+    main: Honeymod Guide
     settings: Mga Settings & Impormasyon
     languages: Pumili ng gustong wika.
-    credits: Ang mga tumulong sa Slimefun4
-    wiki: Ang Slimefun4 Wiki
-    addons: Ang mga Addons para sa Slimefun4
+    credits: Ang mga tumulong sa Honeymod4
+    wiki: Ang Honeymod4 Wiki
+    addons: Ang mga Addons para sa Honeymod4
     bugs: Mga Bug Reports
     source: Ang Source Code
     versions: Mga na-install na versions
@@ -69,17 +69,17 @@ guide:
     profile-link: I-click ito upang bisitahin ang kanilang profile sa GitHub.
     open: Pindutin ito upang makita ang aming mga nag-ambag
     description:
-    - "&7Ang Slimefun ay isang proyekto na bukas na mapagkukunan"
+    - "&7Ang Honeymod ay isang proyekto na bukas na mapagkukunan"
     - "&7at pinapanatili ng isang malaking pamayanan ng mga tao."
     - "&7Mga hanggang &e%contributors% &7na mga tao ang tumutulong sa"
-    - "&7Slimefun sa buong lahat ng mga taong ito."
+    - "&7Honeymod sa buong lahat ng mga taong ito."
   pages:
     previous: Nakaraang pahina.
     next: Susunod na pahina.
   tooltips:
     open-category: I-click ito para buksan.
     versions-notice: Napakahalaga ng mga ito kapag nag-uulat ng mga bug!
-    wiki: Tingnan ang item na ito sa opisyal na Slimefun Wiki.
+    wiki: Tingnan ang item na ito sa opisyal na Honeymod Wiki.
     recipes:
       machine: Mga recipe na ginawa sa Makina na ito.
       miner: Mga mapagkukunan na maaari mong makuha sa Miner na ito.
@@ -88,7 +88,7 @@ guide:
       climbing-pick: Mga ibabaw na maaari mong akyatin
   back:
     title: Balik
-    guide: Bumalik sa Slimefun Guide
+    guide: Bumalik sa Honeymod Guide
     settings: Bumalik sa Settings Panel
   locked: NAKAKANDADO
   locked-category:
@@ -171,7 +171,7 @@ messages:
   - "&7Biskwit pala ito at hindi ito siya Kukis."
   - "&7Ang astig ng mga Neon Signs!"
   piglin-barter: "&4Hindi ka maaaring mag-barter sa mga piglins gamit ang mga item
-    ng Slimefun."
+    ng Honeymod."
   enchantment-rune:
     fail: "&cAng aytem na ito ay bawal i-enchant."
     no-enchantment: "&cHindi makahanap ng anuman na puwedeng enchantment para sa aytem
@@ -191,7 +191,7 @@ messages:
     dual-wielding: "&4Kailangan mong hawakan ang Climbing Picks ng dalawang kamay
       upang magamit ito!"
     wrong-material: "&cHindi ka maaaring umakyat sa ibabaw na ito. Suriin ang iyong
-      Slimefun Guide para sa karagdagang impormasyon!"
+      Honeymod Guide para sa karagdagang impormasyon!"
   mode-change: "&b%device% mode ay pinalitan ng: &9%mode%"
 machines:
   pattern-not-found: "&ePasensiya na, hindi ko maintindihan ang Recipe na ito. Pakilagay
@@ -255,13 +255,13 @@ machines:
     finished: "&eTapos na ang iyong Industrial Miner! Nakuha nito ang isang kabuuang
       %ores% ore(s)!"
 anvil:
-  not-working: "&4Hindi puwedeng gamitin ang mga Slimefun Aytem sa isang Anvil!"
-  mcmmo-salvaging: "&4Bawal i-salvage ang mga Slimefun items!"
+  not-working: "&4Hindi puwedeng gamitin ang mga Honeymod Aytem sa isang Anvil!"
+  mcmmo-salvaging: "&4Bawal i-salvage ang mga Honeymod items!"
 backpack:
   already-open: "&cSorry, ang backpack na ito ay nakabukas na sa ibang lugar!"
   no-stack: "&cHindi puwedeng i-stack ang mga Backpack."
 workbench:
-  not-enhanced: "&4Hindi puwedeng gamitin ang mga Slimefun Aytem sa normal na workbench."
+  not-enhanced: "&4Hindi puwedeng gamitin ang mga Honeymod Aytem sa normal na workbench."
 gps:
   deathpoint: "&4Kinamatayan &7%date%"
   waypoint:
@@ -364,10 +364,10 @@ languages:
   be: Belarusian
   tl: Tagalog/Filipino
 brewing_stand:
-  not-working: "&4Hindi ka maaaring gumamit ng mga Item ng Slimefun sa Brewing Stand!"
+  not-working: "&4Hindi ka maaaring gumamit ng mga Item ng Honeymod sa Brewing Stand!"
 villagers:
-  no-trading: "&4Hindi ka maaaring mag-trade ng mga Slimefun Items sa mga villagers!"
+  no-trading: "&4Hindi ka maaaring mag-trade ng mga Honeymod Items sa mga villagers!"
 cartography_table:
-  not-working: "&4Hindi mo puedeng gamitin ang mga Slimefun items sa cartography table!"
+  not-working: "&4Hindi mo puedeng gamitin ang mga Honeymod items sa cartography table!"
 cauldron:
-  no-discoloring: "&4Hindi mo puedeng i-discolor ang Slimefun Armor."
+  no-discoloring: "&4Hindi mo puedeng i-discolor ang Honeymod Armor."

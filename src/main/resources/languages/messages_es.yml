@@ -2,12 +2,12 @@
 commands:
   help: Muestra estos mensajes de ayuda.
   cheat: Te da objetos con trucos.
-  give: Da a alguien algún objeto de Slimefun.
-  guide: Obtén la guia de Slimefun.
+  give: Da a alguien algún objeto de Honeymod.
+  guide: Obtén la guia de Honeymod.
   teleporter: Ve los  Waypoints de otros jugadores.
   versions: Lista los Addons instalados.
   search: Busca en la guía el término dado.
-  open_guide: Abre la guía de Slimefun sin usar el libro.
+  open_guide: Abre la guía de Honeymod sin usar el libro.
   stats: Muestra algunos Stats de un Jugador.
   research:
     description: Desbloquea/Reinicia el conocimiento para un jugador.
@@ -24,7 +24,7 @@ commands:
     charge-success: El Ítem ha sido cargado!
     not-rechargeable: Este ítem no puede ser cargado!
   timings:
-    description: Timings para Slimefun y sus addon
+    description: Timings para Honeymod y sus addon
     please-wait: "&ePor favor, espere un segundo... ¡Los resultados están llegando!"
     verbose-player: "&4La flag verbose no puede ser usada por un jugador!"
     unknown-flag: "&4flag desconocida: &c%flag%"
@@ -50,16 +50,16 @@ guide:
     change: Click para seleccionar un nuevo lenguaje
     description:
     - "&7Ahora tienes la opción de cambiar"
-    - "&7el idioma en el que Slimefun"
+    - "&7el idioma en el que Honeymod"
     - "&7se le presentará. Los objetos"
     - "&7no pueden ser traducidos por ahora."
   title:
-    main: Guía de Slimefun.
+    main: Guía de Honeymod.
     settings: Configuración e Información.
     languages: Selecciona tu idioma.
-    credits: Colaboradores de Slimefun4
-    wiki: Wiki de Slimefun4
-    addons: Complementos para Slimefun4
+    credits: Colaboradores de Honeymod4
+    wiki: Wiki de Honeymod4
+    addons: Complementos para Honeymod4
     bugs: Reportes de Bugs
     source: Código base
     versions: Versiones instaladas
@@ -74,17 +74,17 @@ guide:
     profile-link: Cliquea para visitar su perfil en GitHub.
     open: Cliquea para ver nuestros contribuyentes
     description:
-    - "&7Slimefun es un proyecto open-source"
+    - "&7Honeymod es un proyecto open-source"
     - "&7mantenido por una gran comunidad."
     - "&7Mas de &e%contributors% &7personas han trabajado en"
-    - "&7Slimefun en todos estos años."
+    - "&7Honeymod en todos estos años."
   pages:
     previous: Página anterior
     next: Página siguiente
   tooltips:
     open-category: Cliquea para abrir
     versions-notice: "¡Esto es muy importante cuando se reportan bugs!"
-    wiki: Ve este objeto en la wiki oficial de Slimefun
+    wiki: Ve este objeto en la wiki oficial de Honeymod
     recipes:
       machine: Recetas hechas en esta máquina
       miner: Recursos que puedes obtener con el Miner
@@ -93,7 +93,7 @@ guide:
       climbing-pick: Superficies que puedes escalar
   back:
     title: Volver
-    guide: Volver a la guía de Slimefun
+    guide: Volver a la guía de Honeymod
     settings: Volver al panel de configuración
   locked: BLOQUEADO
   locked-category:
@@ -170,7 +170,7 @@ messages:
   - "&7¡Siempre mira el lado bueno de la vida!"
   - "&7Esta era un bizcocho y no una galleta"
   - "&7¡Los signos de neón son lo MEJOR!"
-  piglin-barter: "&4No puedes trocar con piglins usando objetos de Slimefun"
+  piglin-barter: "&4No puedes trocar con piglins usando objetos de Honeymod"
   enchantment-rune:
     fail: "&cNo puedes encantar este objeto."
     no-enchantment: "&cNo se pudo encontrar un encantamiento aplicable a este objeto."
@@ -185,7 +185,7 @@ messages:
     not-shears: "&c¡Una Multi Tool no puede ser usada como tijeras!"
   climbing-pick:
     dual-wielding: "&4Necesitas sostener Climbing Picks con las 2 manos para usarlos!"
-    wrong-material: "&cNo puedes escalar esta superficie. Mira tu guia de Slimefun
+    wrong-material: "&cNo puedes escalar esta superficie. Mira tu guia de Honeymod
       para mas info!"
   invalid-item: "&c¡&4%item% &cno es un objeto válido!"
   invalid-amount: "&c¡&4%amount% &cno es un valor válido: tiene que ser mayor a 0!"
@@ -248,13 +248,13 @@ machines:
     no-permission: "&4¡No tienes permisos para operar un Industrial Miner aquí!"
     finished: "&e?¡Tu Industrial Miner ha acabado! ¡Obtuvo un total de %ores% mineral(es)!"
 anvil:
-  not-working: "&4¡No puedes usar objetos de Slimefun en un yunque!"
-  mcmmo-salvaging: "&4No puedes salvar items de Slimefun!"
+  not-working: "&4¡No puedes usar objetos de Honeymod en un yunque!"
+  mcmmo-salvaging: "&4No puedes salvar items de Honeymod!"
 backpack:
   already-open: "&cPerdón, ¡Esta mochila esta abierta en otro lugar!"
   no-stack: "&cNo puedes juntar mochilas."
 workbench:
-  not-enhanced: "&4No puedes usar objetos de Slimefun en una mesa de crafteo normal."
+  not-enhanced: "&4No puedes usar objetos de Honeymod en una mesa de crafteo normal."
 gps:
   deathpoint: "&4Punto de Muerte &7%date%"
   waypoint:
@@ -359,12 +359,12 @@ languages:
   be: Bielorruso
   tl: Tagalog
 brewing_stand:
-  not-working: "&4¡No puedes usar objetos de Slimefun en un soporte para pociones!"
+  not-working: "&4¡No puedes usar objetos de Honeymod en un soporte para pociones!"
 villagers:
-  no-trading: "&4¡No puedes comerciar objetos de Slimefun con los aldeanos!"
+  no-trading: "&4¡No puedes comerciar objetos de Honeymod con los aldeanos!"
 cartography_table:
-  not-working: "&4No puedes usar items de Slimefun en una Mesa de Cartografía!"
+  not-working: "&4No puedes usar items de Honeymod en una Mesa de Cartografía!"
 cauldron:
-  no-discoloring: "&4No puedes descolorar Armaduras de Slimefun"
+  no-discoloring: "&4No puedes descolorar Armaduras de Honeymod"
 miner:
   no-ores: "&ePerdón, ¡No encuentro ningún mineral cerca!"

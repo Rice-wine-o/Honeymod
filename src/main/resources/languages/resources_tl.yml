@@ -6,7 +6,7 @@ tooltips:
   unit: Unit
   units: Units
 resources:
-  slimefun:
+  honeymod:
     oil: Langis
     nether_ice: Nether Ice
     salt: Asin

@@ -3,7 +3,7 @@ commands:
   help: 이 도움말 화면을 표시합니다
   cheat: 당신은 치트 아이템을 허용
   give: 슬라임펀 아이템을 주다.
-  guide: Slimefun 가이드 책 제공
+  guide: Honeymod 가이드 책 제공
   timings: 서버에 대한 Lag-Info
   teleporter: 다른 플레이어의 웨이포인트 보기
   versions: 설치된 모든 애드온 리스트
@@ -43,8 +43,8 @@ guide:
     settings: 설정 & 정보
     languages: 당신이 원하는 언어를 선택하십시오.
     credits: 슬라임펀4 기부자들입니다.
-    wiki: Slimefun4 위키
-    addons: Slimefun4의 애드온
+    wiki: Honeymod4 위키
+    addons: Honeymod4의 애드온
     bugs: 버그 리포트
     source: 소스 코드
   credits:
@@ -66,7 +66,7 @@ guide:
     versions-notice: '이것들은 버그를 보고할 때 매우 중요하다!
 
 '
-    wiki: 공식 Slimefun Wiki에서 이 항목보기
+    wiki: 공식 Honeymod Wiki에서 이 항목보기
     recipes:
       machine: 이 기계로 만든 조합법
       miner: 이 마이너로 얻을 수있는 자원
@@ -74,7 +74,7 @@ guide:
       gold-pan: 얻을 수 있는 리소스
   back:
     title: 뒤
-    guide: Slimefun 가이드로 돌아 가기
+    guide: Honeymod 가이드로 돌아 가기
     settings: 설정 패널로 돌아갑니다
   locked: 잠금
   locked-category:
@@ -214,7 +214,7 @@ backpack:
   already-open: "&c죄송합니다. 이 백팩은 다른 곳에 열려 있습니다!"
   no-stack: "&c백팩을 쌓을 수 없습니다."
 workbench:
-  not-enhanced: "&4일반 작업대에서는 Slimefun 아이템을 사용할 수 없습니다."
+  not-enhanced: "&4일반 작업대에서는 Honeymod 아이템을 사용할 수 없습니다."
 gps:
   deathpoint: "&4데스포인트 &7%date%"
   waypoint:

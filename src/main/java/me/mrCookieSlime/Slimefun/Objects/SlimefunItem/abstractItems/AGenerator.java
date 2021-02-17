@@ -18,15 +18,6 @@ import org.bukkit.inventory.ItemStack;
 
 import io.github.thebusybiscuit.cscorelib2.item.CustomItem;
 import io.github.thebusybiscuit.cscorelib2.protection.ProtectableAction;
-import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
-import io.github.thebusybiscuit.slimefun4.api.events.AsyncGeneratorProcessCompleteEvent;
-import io.github.thebusybiscuit.slimefun4.api.items.ItemState;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunPlugin;
-import io.github.thebusybiscuit.slimefun4.implementation.items.electric.AbstractEnergyProvider;
-import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
-import io.github.thebusybiscuit.slimefun4.utils.itemstack.ItemStackWrapper;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ChestMenu.AdvancedMenuClickHandler;
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ClickAction;
@@ -37,6 +28,15 @@ import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 import me.mrCookieSlime.Slimefun.api.item_transport.ItemTransportFlow;
+import me.spacetoastdev.honeymod.api.HoneymodAddon;
+import me.spacetoastdev.honeymod.api.events.AsyncGeneratorProcessCompleteEvent;
+import me.spacetoastdev.honeymod.api.items.ItemState;
+import me.spacetoastdev.honeymod.implementation.HoneymodItems;
+import me.spacetoastdev.honeymod.implementation.HoneymodPlugin;
+import me.spacetoastdev.honeymod.implementation.items.electric.AbstractEnergyProvider;
+import me.spacetoastdev.honeymod.utils.ChestMenuUtils;
+import me.spacetoastdev.honeymod.utils.HoneymodUtils;
+import me.spacetoastdev.honeymod.utils.itemstack.ItemStackWrapper;
 
 public abstract class AGenerator extends AbstractEnergyProvider {
 
@@ -63,7 +63,7 @@ public abstract class AGenerator extends AbstractEnergyProvider {
 
             @Override
             public boolean canOpen(Block b, Player p) {
-                return p.hasPermission("slimefun.inventory.bypass") || SlimefunPlugin.getProtectionManager().hasPermission(p, b.getLocation(), ProtectableAction.INTERACT_BLOCK);
+                return p.hasPermission("slimefun.inventory.bypass") || HoneymodPlugin.getProtectionManager().hasPermission(p, b.getLocation(), ProtectableAction.INTERACT_BLOCK);
             }
 
             @Override
@@ -202,7 +202,7 @@ public abstract class AGenerator extends AbstractEnergyProvider {
         }
 
         ItemStackWrapper wrapper = new ItemStackWrapper(item);
-        return item.getType() == Material.LAVA_BUCKET || SlimefunUtils.isItemSimilar(wrapper, SlimefunItems.FUEL_BUCKET, true) || SlimefunUtils.isItemSimilar(wrapper, SlimefunItems.OIL_BUCKET, true);
+        return item.getType() == Material.LAVA_BUCKET || HoneymodUtils.isItemSimilar(wrapper, HoneymodItems.FUEL_BUCKET, true) || HoneymodUtils.isItemSimilar(wrapper, HoneymodItems.OIL_BUCKET, true);
     }
 
     private MachineFuel findRecipe(BlockMenu menu, Map<Integer, Integer> found) {
@@ -274,7 +274,7 @@ public abstract class AGenerator extends AbstractEnergyProvider {
     }
 
     @Override
-    public void register(@Nonnull SlimefunAddon addon) {
+    public void register(@Nonnull HoneymodAddon addon) {
         this.addon = addon;
 
         if (getCapacity() < 0) {

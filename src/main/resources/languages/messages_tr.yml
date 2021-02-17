@@ -2,15 +2,15 @@
 commands:
   help: Yardım ekranını görüntüler
   cheat: Hile Yapmanıza olanak sağlar
-  give: Birisine Slimefun Eşyası verir
-  guide: Kendinize bir Slimefun Rehberi verir
+  give: Birisine Honeymod Eşyası verir
+  guide: Kendinize bir Honeymod Rehberi verir
   timings: |-
     Sunucunuz Hakkında Gecikme Bilgisini
     gösterir
   teleporter: Diğer Bir Oyuncunun Yer Noktalarına Bakın
   versions: Yüklü tüm Eklentileri listeler
   search: Rehberinizde belirtilen eşyayı arar
-  open_guide: Kitabı kullanmadan Slimefun Rehberini açar
+  open_guide: Kitabı kullanmadan Honeymod Rehberini açar
   stats: Oyuncu hakkında bazı İstatistikleri Gösterir
   research:
     description: Bir oyuncu için araştırmaların kilidini açma / sıfırlama
@@ -47,17 +47,17 @@ guide:
     selected-language: 'Şuan seçili:'
     change: Yeni bir dil seçmek için tıklayın
     description:
-    - "&7Artık Slimefun içerisinde size"
+    - "&7Artık Honeymod içerisinde size"
     - "&7sunulacak olan dilinizi"
     - "&7değiştirebilirsiniz. Henüz eşyalar"
     - "&7çevrilememektedir."
   title:
-    main: Slimefun Rehberi
+    main: Honeymod Rehberi
     settings: Ayarlar & Bilgi
     languages: Tercih ettiğiniz dili seçin
-    credits: Slimefun4 Katkıda Bulunanlar
-    wiki: Slimefun4 Wiki
-    addons: Slimefun4 için Eklentiler
+    credits: Honeymod4 Katkıda Bulunanlar
+    wiki: Honeymod4 Wiki
+    addons: Honeymod4 için Eklentiler
     bugs: Hata Raporları
     source: Kaynak Kodu
     versions: Yüklü sürümler
@@ -72,17 +72,17 @@ guide:
     profile-link: GitHubdaki profillerini ziyaret etmek için tıklayın
     open: Bize katkıda bulunanları görmek için tıklayın
     description:
-    - "&7Slimefun açık kaynak kodlu bir projedir"
+    - "&7Honeymod açık kaynak kodlu bir projedir"
     - "&7ve büyük bir topluluk tarafından geliştirilir."
     - "&e%contributors%&7den(dan) fazla kişi yıllar"
-    - "&7boyunca Slimefun'a katkıda bulundu."
+    - "&7boyunca Honeymod'a katkıda bulundu."
   pages:
     previous: Önceki sayfa
     next: Sonraki sayfa
   tooltips:
     open-category: Açmak için tıklayın
     versions-notice: Hata bildirirken bunlar çok önemlidir!
-    wiki: Bu eşyayı Slimefun Wikisinde görüntüle
+    wiki: Bu eşyayı Honeymod Wikisinde görüntüle
     recipes:
       machine: Bu makinede üretilen tarifler
       miner: Bu madenciyle elde edebileceğin kaynaklar
@@ -91,7 +91,7 @@ guide:
       climbing-pick: Tırmanılabilen yüzeyler
   back:
     title: Geri
-    guide: Slimefun Rehberine geri dön
+    guide: Honeymod Rehberine geri dön
     settings: Ayarlar Paneline geri dön
   locked: KİLİTLİ
   locked-category:
@@ -168,7 +168,7 @@ messages:
   - "&7Daima hayatın parlak tarafından bak!"
   - "&7Bu aslında bir Bisküvi idi, Kurabiye değil."
   - "&7Neon levhalar ışık yayar!"
-  piglin-barter: "&4Slimefun eşyalarıyla, piglinlerle ticaret yapamazsın"
+  piglin-barter: "&4Honeymod eşyalarıyla, piglinlerle ticaret yapamazsın"
   enchantment-rune:
     fail: "&cYou eşyayı büyüleyemezsin."
     no-enchantment: "&cBu eşya için uygun bir büyü bulunamadı."
@@ -184,7 +184,7 @@ messages:
   climbing-pick:
     dual-wielding: "&4Tırmanabilmek için her iki elinizde de Climbing Pick tutmanız
       gerekiyor!"
-    wrong-material: "&cBu yüzeye tırmanamazsınız. Daha çok bilgi için Slimefun Guide'a
+    wrong-material: "&cBu yüzeye tırmanamazsınız. Daha çok bilgi için Honeymod Guide'a
       bakın!"
   mode-change: "&b%device% modu değişti: &9%mode%"
 machines:
@@ -241,12 +241,12 @@ machines:
     no-permission: "&4Bir Industrial Miner kullanmak için yetkili değilsin!"
     finished: "&eIndustrial Miner'ınızın işi bitti! Toplamda %ores% kadar maden buldu!"
 anvil:
-  not-working: "&4Slimefun eşyalarını örste kullanamazsın!"
+  not-working: "&4Honeymod eşyalarını örste kullanamazsın!"
 backpack:
   already-open: "&cÜzgünüm, bu Sırt Çantası başka bir yerde açık!"
   no-stack: "&cSırt Çantalarını istifleyemezsiniz"
 workbench:
-  not-enhanced: "&4Slimefun Eşyalarını normal bir üretim masasında kullanamazsınız"
+  not-enhanced: "&4Honeymod Eşyalarını normal bir üretim masasında kullanamazsınız"
 gps:
   deathpoint: "&4Ölüm Noktası &7%date%"
   waypoint:
@@ -348,10 +348,10 @@ languages:
   be: Belarusça
   tl: Tagalog
 brewing_stand:
-  not-working: "&4Slimefun eşyalarını simya standında kullanamazsın!"
+  not-working: "&4Honeymod eşyalarını simya standında kullanamazsın!"
 villagers:
-  no-trading: "&4Köylülerle Slimefun eşyalarını kullanarak ticaret yapamazsın!"
+  no-trading: "&4Köylülerle Honeymod eşyalarını kullanarak ticaret yapamazsın!"
 cartography_table:
-  not-working: "&4Slimefun eşyalarını bir haritacılık masasında kullanamazsın!"
+  not-working: "&4Honeymod eşyalarını bir haritacılık masasında kullanamazsın!"
 miner:
   no-ores: "&eÜzgünüm, yakınlarda herhangi bir cevher bulamadım!"

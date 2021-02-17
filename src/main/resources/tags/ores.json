@@ -6,6 +6,6 @@
 		},
 		"minecraft:gold_ore",
 		"minecraft:iron_ore",
-		"#slimefun:fortune_compatible_ores"
+		"#honeymod:fortune_compatible_ores"
 	]
 }
